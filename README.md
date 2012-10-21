@@ -58,9 +58,16 @@ In addition (if there is time left), we are interested in the difference between
 
 ## Expected Results
 
-We expect to see a big difference by changing the controlling variable.
+-Even though modern ships are quite optimized in regard to evacuation time, they are always a compromise between safety and luxury.
+ Therefore we are convinced to find a superior adjustment of the decks geometries to increase the survival rate.
+-Since the rescue boats can not be averaged but are rather concentrated over one or two decks, we consider the staircases as the bottlenecks.
+-In alinging this variables we are persuaded of a reduction of the overall evacuation time.
 
-(What are the answers to the above questions that you expect to find before starting your research?)
+-We suppose smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is
+ going to be an optimum in size which we are willing to find.
+
+-By controlling the rescue we assume to detect a huge decrease in evacuation time. Further we have the hypothesis that disorder can be minimized. 
+ The crew who is familiar with the decks and the emergency exits is able to guide the passengers in minimum time to the rescue boats.
 
 
 ## References 
@@ -79,8 +86,9 @@ We expect to see a big difference by changing the controlling variable.
 
 ## Research Methods
 
-(Cellular Automata, Agent-Based Model, Continuous Modeling...) (If you are not sure here: 1. Consult your colleagues, 2. ask the teachers, 3. remember that you can change it afterwards)
-
+Since the work process is still in its initial stage it is very difficult to determine the exact research Methods. 
+Certainly our coding is going to be based on the work mentioned above.[3]
+Considering everything else we dicided to continuously update this part of the research plan during the work progress.
 
 ## Other
 
