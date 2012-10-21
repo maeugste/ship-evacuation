@@ -60,7 +60,9 @@ In addition (if there is time left), we are interested in the difference between
 
 -Even though modern ships are quite optimized in regard to evacuation time, they are always a compromise between safety and luxury.
  Therefore we are convinced to find a superior adjustment of the decks geometries to increase the survival rate.
+
 -Since the rescue boats can not be averaged but are rather concentrated over one or two decks, we consider the staircases as the bottlenecks.
+
 -In alinging this variables we are persuaded of a reduction of the overall evacuation time.
 
 -We suppose smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is
