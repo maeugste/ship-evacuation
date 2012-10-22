@@ -9,9 +9,9 @@
 The evacuation of a passenger liner due to fire, sinking or other issues leads to several problems. A large amount of passengers try to safe their lives and get to a rescue boat. Narrow and branched floors, smoke, inflowing water, the absence of illumination, rude passengers and so forth can make the evacuation difficult and reduce the number of survivors.
 
 There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers [2]. With dry runs the staff is prepared for the case of emergency et cetera. 
-In real life ship corridor reproduction the behavior of distressed people is studied.
+In real life ship corridor reproduction, the behavior of distressed people is studied.
 
-Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is “a  PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel.” [5]
+Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a  PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel.” [5]
 
 Our approach is similarly to model a passenger ship with a common geometrical outline and ground view. In an optimization process we will thereafter look for an ideal ground view, rescue boat distribution and their size to minimize the time needed for evacuation. 
 Finally we will make a statement on possible improvements.
@@ -65,7 +65,7 @@ In addition (if there is time left), we are interested in the difference between
 
 -In alinging this variables we are persuaded of a reduction of the overall evacuation time.
 
--We suppose smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is
+-We suppose that smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is
  going to be an optimum in size which we are willing to find.
 
 -By controlling the rescue we assume to detect a huge decrease in evacuation time. Further we have the hypothesis that disorder can be minimized. 
@@ -90,7 +90,7 @@ In addition (if there is time left), we are interested in the difference between
 
 Since the work process is still in its initial state it is very difficult to determine the exact research methods. 
 Certainly our coding is going to be based on the work mentioned above.[3]
-Considering everything else we dicided to continuously update this part of the research plan during the work progress.
+Considering everything else we decided to continuously update this part of the research plan during the work progress.
 
 ## Other
 
