@@ -86,6 +86,8 @@ In addition (if there is time left), we are interested in the difference between
 
 [6] http://www.cruisedeckplans.com. Floor plans of common passenger ships
 
+[7] http://travel.travelocity.com/ecruise/ShipDetailsDeck.do?shipId=227&deckId=Deck%2014. Floor plan of the Costa Concordia.
+
 ## Research Methods
 
 Since the work process is still in its initial state it is very difficult to determine the exact research methods. 
@@ -94,4 +96,4 @@ Considering everything else we decided to continuously update this part of the r
 
 ## Other
 
-There are very detailed floor plans of common passenger ships available on the webpage [6]. It will be a good source to make further abstractions to get graphical data for our simulation program.
+There are very detailed floor plans of common passenger ships available on the webpages [6] and [7]. It will be a good source to make further abstractions to get graphical data for our simulation program.
