@@ -88,7 +88,7 @@ In addition (if there is time left), we are interested in the difference between
 
 ## Research Methods
 
-Since the work process is still in its initial stage it is very difficult to determine the exact research Methods. 
+Since the work process is still in its initial state it is very difficult to determine the exact research methods. 
 Certainly our coding is going to be based on the work mentioned above.[3]
 Considering everything else we dicided to continuously update this part of the research plan during the work progress.
 
