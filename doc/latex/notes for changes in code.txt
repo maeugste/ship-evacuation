@@ -1,0 +1,11 @@
+vary the number of exits
+-->different colour code
+original code: exit, wall, staris up, stairs down
+-->keep track of explicit exit -->different exits have different intensity 
+
+floorchange
+-->people move stairs up and down-->assumptions: above exit floor only move down, 
+
+closing exits
+-->one exit can only hold a specific number of agents. has to be closed if that number of agents exited.
+-->recompile the colour code to change exit to wall
