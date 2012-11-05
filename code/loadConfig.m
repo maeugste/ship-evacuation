@@ -35,18 +35,8 @@ for i=1:config.floor_count
     file_name = [config_path '/' file];
     img_build = imread(file_name);
     
-    % decode images
-    config.floor(i).img_wall = (img_build(:, :, 1) ==   0 ...
-                              & img_build(:, :, 2) ==   0 ...
-                              & img_build(:, :, 3) ==   0);
-                          
-    config.floor(i).img_spawn = (img_build(:, :, 1) == 255 ...
-                               & img_build(:, :, 2) ==   0 ...
-                               & img_build(:, :, 3) == 255);
-                           
-    config.floor(i).img_exit = (img_build(:, :, 1) ==   0 ...
-                              & img_build(:, :, 2) == 255 ...
-                              & img_build(:, :, 3) ==   0);
+   
+    
                           
                    %different exits -->need different colours to
                    %keep track of specific exits, loop over all exits
@@ -66,8 +56,9 @@ for i=1:config.floor_count
 %pixel is exit if 1-->0, 3-->0, and if 2 is between 255 and 230 or if no
 %red or blue
 
+
+ % decode images
     config.floor(i).img_exit = (img_build(:, :, 1) ==   0 ...
-                              
                               & img_build(:, :, 3) ==   0);
 
                          
