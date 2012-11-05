@@ -62,7 +62,8 @@ for i=1:config.floor_count
 %pixel is exit if 1-->0, 3-->0, and if 2 is between 255 and 230 or if no
 %red or blue
 
-    config.floor(i).img_exit = (img_build(:, :, 1) ==   0 ..
+    config.floor(i).img_exit = (img_build(:, :, 1) ==   0 ...
+                              & img_build(:, :, 2) ~=   0 ...
                               & img_build(:, :, 3) ==   0);
 
                          
