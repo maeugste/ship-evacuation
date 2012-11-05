@@ -4,7 +4,9 @@ original code: exit, wall, staris up, stairs down
 -->keep track of explicit exit -->different exits have different intensity 
 
 floorchange
--->people move stairs up and down-->assumptions: above exit floor only move down, 
+-->people move stairs up and down-->assumptions: above exit floor the agents will only move down, 
+in file "apply forces and move" we split the loop over the floors into two loops. one over the floors above the exit floor, where the agents only use the stairs down.
+this keeps the code fast, since we do not have to loop twice over all floors. we also can keep the simple concept of a vector of booleans. for each agent one number--> if agent reached a staircase and therefore changes floor; 1 for true, else 0(already there when vector created).  it also keeps the pictures simple because we do not have to mess with the "staircase problem".
 
 closing exits
 -->one exit can only hold a specific number of agents. has to be closed if that number of agents exited.
