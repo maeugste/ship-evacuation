@@ -25,3 +25,6 @@ building image:
  stairs: for each down stairs spot (connected color) there must be an up stairs
  at the same spot on the floor below. this allows multiple stairs per floor.
 
+Rescue boat (Exits) 13 per side green:
+descending from right front to right back and then left front to left back.
+#00ff00,#00fe00,#00fd00,.... #00e700,#00e600
