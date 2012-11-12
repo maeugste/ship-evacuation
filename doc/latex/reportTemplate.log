@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  5 NOV 2012 21:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  12 NOV 2012 12:56
 entering extended mode
 **C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate.tex
 
@@ -275,7 +275,7 @@ Package epstopdf Info: Source file: <ETHlogo.eps>
 (epstopdf)                    date: 2012-10-21 09:13:08
 (epstopdf)                    size: 179075 bytes
 (epstopdf)             Output file: <ETHlogo-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-11-05 18:03:54
+(epstopdf)                    date: 2012-11-05 21:15:52
 (epstopdf)                    size: 14376 bytes
 (epstopdf)             Command: <epstopdf --outfile=ETHlogo-eps-converted-to.pd
 f ETHlogo.eps>
@@ -312,7 +312,11 @@ Overfull \hbox (5.3226pt too wide) in paragraph at lines 42--64
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [4] [5]
+ [4]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 116.
+
+[5]
 (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.aux)
  ) 
 Here is how much of TeX's memory you used:
@@ -327,7 +331,7 @@ Here is how much of TeX's memory you used:
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on reportTemplate.pdf (5 pages, 81942 bytes).
+Output written on reportTemplate.pdf (5 pages, 82587 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
