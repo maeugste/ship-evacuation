@@ -2,10 +2,12 @@
 \usepackage{geometry}                
 \geometry{letterpaper}                   
 
+\usepackage{url}
+\usepackage{listings}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{amssymb, amsmath}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -91,17 +93,44 @@ The whole project was completed as a team. For sure we took into consideration a
 \section{Introduction and Motivations}
 \subsection{Introduction}
 The evacuation of a passenger liner due to fire, sinking or other issues leads to several problems. A large amount of passengers try to safe their lives and get to a rescue boat. Narrow and branched floors, smoke, inflowing water, the absence of illumination, rude passengers and so forth can make the evacuation difficult and reduce the number of survivors.
-There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers [2]. With dry runs the staff is prepared for the case of emergency et cetera. In real life ship corridor reproduction, the behavior of distressed people is studied.
-Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel.” [5]
+There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers \cite{SOLAS}. With dry runs the staff is prepared for the case of emergency et cetera. In real life ship corridor reproduction, the behavior of distressed people is studied.
+Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel.” \cite{EXODUS}
 Our approach is similarly to model a passenger ship with a common geometrical outline and ground view. In an optimization process we will thereafter look for an ideal ground view, rescue boat distribution and their size to minimize the time needed for evacuation. Finally we will make a statement on possible improvements.
 \newpage
 \subsection{Motivation}
-Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements. Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
+Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements.\cite{concordia} Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
 
 \section{Description of the Model}
+\subsection{General Model}
 
+We will base the modeling part on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler. \cite{Building} In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in c with a MATLAB surface to rapidly simulate the evacuation of multi-level buildings.
+
+An implementation of a common ship shape will be necessary.\cite{shipdecks} We want to keep the following variables fix in order to be able to make strong conclusions.
+Independent parameters are:
+\begin{itemize}
+\item Number of passengers
+\item Overall capacity of the rescue boats
+\item Ship size and shape
+\item Area used by specific rooms (coaches for passengers, lounge area, corridors)
+\end{itemize}
+Our target is to decrease the evacuation time. Measurements will be made on the time to evacuate ...
+\begin{itemize}
+\item 10\%
+\item 50\%
+\item 90\%
+\item100\% of all passengers.
+\end{itemize}
+In order to optimize, we change the following dependent variables:
+\begin{itemize}
+\item Disposition of the specific room types (e.g. changing the geometry of the corridors without changing the total area used for corridors)
+\item Rescue boat size, number and position
+\item Control of the passenger flow by crew members (e.g. is there staff to lead the passengers and how are they doing it?)
+\end{itemize}
 \section{Fundamental Questions}
-To find these bottlenecks we run a mathematical model of a ship structure with several decks and its passengers. After we localised these places we are interested in the answers of the folowing questions:
+To find these bottlenecks we run a mathematical model of a ship structure \cite{shipdecks} with several decks and its passengers. After we localised these places we are interested in the answers of the folowing questions:
+
+
+
 \section{Implementation}
 
 \section{Simulation Results and Discussion}
@@ -110,8 +139,14 @@ To find these bottlenecks we run a mathematical model of a ship structure with s
 
 \section{References}
 
-\begin{thebibliography}
-	\bibitem Helbing, Dirk (1995): Social Force Model for Pedestrians Dynamics.
+\begin{thebibliography}{9}
+\bibitem{Helbling} Helbing, Dirk (1995): Social Force Model for Pedestrians Dynamics.
+\bibitem{Building} Hardmeier,Jenal,Kueng,Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
+\bibitem{SOLAS} SOLAS (1974): International Convention for the Safety of Life at Sea. \url{http://www.imo.org/about/conventions/listofconventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx}
+\bibitem{ship} SHIP EVACUATION: \url{http://www.shipevacuation.com/}
+\bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa%20Serena}
+\bibitem{EXODUS} University of Greenwich (2011):  maritimeEXODUS. \url{http://fseg.gre.ac.uk/fire/marine_evac_model.html}
+\bibitem{concordia} Haverie of Costa Concordia (2012): \url{http://de.wikipedia.org/wiki/Costa_Concordia#Havarie_2012}
 	
 \end{thebibliography}
 

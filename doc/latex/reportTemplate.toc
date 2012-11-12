@@ -4,8 +4,9 @@
 \contentsline {subsection}{\numberline {3.1}Introduction}{4}
 \contentsline {subsection}{\numberline {3.2}Motivation}{5}
 \contentsline {section}{\numberline {4}Description of the Model}{5}
-\contentsline {section}{\numberline {5}Fundamental Questions}{5}
-\contentsline {section}{\numberline {6}Implementation}{5}
-\contentsline {section}{\numberline {7}Simulation Results and Discussion}{5}
-\contentsline {section}{\numberline {8}Summary and Outlook}{5}
-\contentsline {section}{\numberline {9}References}{5}
+\contentsline {subsection}{\numberline {4.1}General Model}{5}
+\contentsline {section}{\numberline {5}Fundamental Questions}{6}
+\contentsline {section}{\numberline {6}Implementation}{6}
+\contentsline {section}{\numberline {7}Simulation Results and Discussion}{6}
+\contentsline {section}{\numberline {8}Summary and Outlook}{6}
+\contentsline {section}{\numberline {9}References}{6}
