@@ -71,6 +71,33 @@ for fi = data.floor_exit:data.floor_count
         if data.floor(fi).img_exit(round(newp(1)), round(newp(2)))
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
+            
+            fprintf('agent exited from upper loop\n');
+           
+            %save current exit nr
+            data.current_exit = data.exit_nr(round(newp(1)), round(newp(2)));
+            
+            fprintf(int2str(data.current_exit));
+            
+            %update exit_left
+            data.exit_left(1,data.current_exit) = data.exit_left(1,data.exit_nr(round(newp(1)), round(newp(2)))) - 1;
+          
+            %close exit if there is no more free space
+            if data.exit_left(1,data.current_exit) < 1
+            
+                %change current exit to wall
+                data.floor(data.floor_exit).img_wall = data.floor(data.floor_exit).img_wall == 1 ...
+                              | (data.exit_nr == (data.current_exit));
+                data.floor(data.floor_exit).img_exit = data.floor(data.floor_exit).img_exit == 1 ...
+                              & (data.exit_nr ~= (data.current_exit));
+                          
+                %redo initEscapeRoutes and initWallForces with new exit and wall parameters
+                data = initEscapeRoutes(data);
+                data = initWallForces(data);
+                
+                fprintf('new routes from upper loop\n');
+                
+            end
         end
     end
     
@@ -83,6 +110,10 @@ for fi = data.floor_exit:data.floor_count
     % delete these and exited agents
     data.floor(fi).agents = data.floor(fi).agents(~(floorchange|exited));
 end
+
+
+
+
 
 % loop over all floors lower than exit floor
 for fi = 1:data.floor_exit
@@ -151,6 +182,32 @@ for fi = 1:data.floor_exit
         if data.floor(fi).img_exit(round(newp(1)), round(newp(2)))
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
+            
+            fprintf('agent exited from lower loop\n');
+            
+            %save current exit nr
+            data.current_exit = data.exit_nr(round(newp(1)), round(newp(2)));
+                       
+            %update exit_left
+            data.exit_left(1,data.current_exit) = data.exit_left(1,data.exit_nr(round(newp(1)), round(newp(2)))) - 1;
+          
+                        %close exit if there is no more free space
+            if data.exit_left(1,data.current_exit) < 1
+            
+                %change current exit to wall
+                data.floor(data.floor_exit).img_wall = data.floor(data.floor_exit).img_wall == 1 ...
+                              | (data.exit_nr == (data.current_exit));
+                data.floor(data.floor_exit).img_exit = data.floor(data.floor_exit).img_exit == 1 ...
+                              & (data.exit_nr ~= (data.current_exit));
+                          
+                %redo initEscapeRoutes and initWallForces with new exit and wall parameters
+                data = initEscapeRoutes(data);
+                data = initWallForces(data);    
+                
+                fprintf('new routes from lower loop\n');
+                
+            end
+        
         end
     end
     

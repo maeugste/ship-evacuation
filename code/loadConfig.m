@@ -75,6 +75,30 @@ for i=1:config.floor_count
                                      & img_build(:, :, 2) ==   0 ...
                                      & img_build(:, :, 3) == 255);
                                  
+                                 
+    if i == config.floor_exit
+        
+        %make the exit_nr matrix where the number of exit is indicated in each
+        %pixel
+
+        %make a zeroes matrix as big as img_exit
+        config.exit_nr=zeros(size(config.floor(config.floor_exit).img_exit)); 
+
+        %make a zeros vector as long as floor_exit
+        config.exit_left = zeros(1,config.exit_count);
+
+        %loop over all exits
+        for e=1:config.exit_count 
+    
+            %build the exit_nr matrix
+            config.exit_nr = config.exit_nr + e*( img_build(:, :, 1) == 0 & img_build(:, :, 2) == (256-e) & img_build(:, :, 3) == 0 ) ;
+  
+            %build the exit_left matrix
+            config.exit_left(1,e) = config.(sprintf('exit_%d_nr', e));
+  
+        end  
+    end
+                                 
     %init the plot image here, because this won't change
     config.floor(i).img_plot = 5*config.floor(i).img_wall ...
         + 4*config.floor(i).img_stairs_up ...
