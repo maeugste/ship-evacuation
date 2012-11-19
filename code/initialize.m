@@ -38,12 +38,16 @@ title(sprintf('agents that reached the exit (total agents: %i)', data.total_agen
 %floors plot
 data.figure_floors=figure;
 data.figure_floors_subplots_w = data.floor_count;
-data.figure_floors_subplots_h = 2;
+data.figure_floors_subplots_h = 4;
 for i=1:config.floor_count
-    data.floor(i).agents_on_floor_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w ...
-    , data.floor_count - i+1 + data.figure_floors_subplots_w);
-    data.floor(i).building_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w ...
-    , data.floor_count - i+1);
+        data.floor(i).agents_on_floor_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w, 3*data.floor_count - i+1 + data.figure_floors_subplots_w);
+        if i == config.floor_exit - 1
+            data.floor(i).building_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w, [(2*config.floor_count+1):3*config.floor_count])
+        elseif i == config.floor_exit
+            data.floor(i).building_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w, [(config.floor_count+1):2*config.floor_count])
+        elseif i == config.floor_exit + 1
+            data.floor(i).building_plot = subplot(data.figure_floors_subplots_h, data.figure_floors_subplots_w, [1:config.floor_count])
+        end
 end
 
 
