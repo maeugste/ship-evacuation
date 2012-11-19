@@ -50,13 +50,18 @@
 \vspace{2mm} \large Manuela Eugster
 \end{minipage}
 
+\bigskip
+\bigskip
 \begin{minipage}{6cm}
-\vspace{2mm} \large Raphael Brechbuehle
+\vspace{2mm} \large Raphael Brechbuehler
 \end{minipage}
 &
 \begin{minipage}{6cm}
 \vspace{2mm}\large Andreas Reber
 \end{minipage}
+
+\bigskip
+\bigskip
 
 \begin{minipage}{6cm}
 \vspace{2mm} \large Fabian Schmid
@@ -70,7 +75,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\includegraphics[width=\textwidth]{declaration.jpg}
 
 % IMPORTANT
 % you MUST include the ETH declaration of originality here; it is available for download on the course website or at http://www.ethz.ch/faculty/exams/plagiarism/index_EN; it can be printed as pdf and should be filled out in handwriting
@@ -116,7 +121,7 @@ What is the influence of the rescue boats?
 \item Where do they have to be positioned?
 \end{itemize}
 
-Further we analyse the difference between un- and controlled passenger flow:
+If we have time to spare we analyse the difference between uncontrolled and controlled passenger flow:
 \begin{itemize}
 \item Is the crew able to prevent chaos in the evacuation process?
 \item What is the best way to lead the passengers out of the ship?
@@ -129,7 +134,7 @@ In addition we are keen to know if our model is a good abstraction of the realit
 
 We will base the modeling part on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler. \cite{Building} In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in c with a MATLAB surface to rapidly simulate the evacuation of multi-level buildings.\bigskip
 
-Similar to the the building we necessarily need an  implementation of a common ship shape \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
+Similar to the building we necessarily need an  implementation of a common ship shape \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
 \begin{itemize}
 \item Number of passengers
 \item Overall capacity of the rescue boats
@@ -163,7 +168,7 @@ In order to optimize the evacuation time, we change the following dependent vari
 \item In alinging this variables we are persuaded of a reduction of the overall evacuation time.
 \item We suppose that smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is going to be an optimum in size which we are willing to find.
 \item By controlling the rescue we assume to detect a huge decrease in evacuation time. Further we have the hypothesis that disorder can be minimized. The crew who is familiar with the decks and the emergency exits is able to guide the passengers in minimum time to the rescue boats.
-\item There are many parameters we do not model in our simulation. E.g. fire and smoke, the tilt of the ship or handicapped passengers are disregarded. By leaving out this details we get a very simplified model. However, by starting the optimization process by data of a nowadays passenger liner \cite{shipdecks} we hope to see some real evacuation dynamics in this system and therefore make conclusion on the fundamental questions discussed in the next section.
+\item There are many parameters we do not model in our simulation. For example fire and smoke, the tilt of the ship or handicapped and petrified passengers are disregarded. By leaving out this details we get a very simplified model. However, by starting the optimization process by data of a nowadays passenger liner \cite{shipdecks} we hope to see some real evacuation dynamics in this system and therefore make conclusion on the fundamental questions.
 \end{itemize}
 \subsection{Simulation Results}
 \subsection{Comparison}
