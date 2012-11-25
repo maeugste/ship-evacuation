@@ -18,3 +18,5 @@ hold off;
 
 title(sprintf('agents on floor %i', floor_idx));
 
+
+
