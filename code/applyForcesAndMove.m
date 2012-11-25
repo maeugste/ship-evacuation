@@ -62,7 +62,7 @@ for fi = data.floor_exit:data.floor_count
         % reset forces for next timestep
         data.floor(fi).agents(ai).f = [0 0];
         
-        % check if agent reached a staircase and indicate floor change
+        % check if agent reached a staircase down and indicate floor change
         if data.floor(fi).img_stairs_down(round(newp(1)), round(newp(2)))
             floorchange(ai) = 1;
         end
@@ -173,7 +173,7 @@ for fi = 1:data.floor_exit
         % reset forces for next timestep
         data.floor(fi).agents(ai).f = [0 0];
         
-        % check if agent reached a staircase and indicate floor change
+        % check if agent reached a staircase up and indicate floor change
         if data.floor(fi).img_stairs_up(round(newp(1)), round(newp(2)))
             floorchange(ai) = 1;
         end

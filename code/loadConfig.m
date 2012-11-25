@@ -44,18 +44,7 @@ for i=1:config.floor_count
                                & img_build(:, :, 2) ==   0 ...
                                & img_build(:, :, 3) == 255);
   
-                   %different exits -->need different colours to
-                   %keep track of specific exits, loop over all exits
- 
-%     for k=1:config.exit_number
-%    
-%         config.floor(i).img_exit = (img_build(:, :, 1) ==   0 ...
-%                               & img_build(:, :, 2) == (255-k) ...
-%                               & img_build(:, :, 3) ==   0);
-%                           
-%     end
-%  how to integrate the .img_exit ???    
-
+      
 
 
 %second possibility: 
