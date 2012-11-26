@@ -37,6 +37,7 @@ title(sprintf('agents that reached the exit (total agents: %i)', data.total_agen
 
 % floors plot
 data.figure_floors=figure;
+% figure('units','normalized','outerposition',[0 0 1 1])
 data.figure_floors_subplots_w = data.floor_count;
 data.figure_floors_subplots_h = 4;
 for i=1:config.floor_count

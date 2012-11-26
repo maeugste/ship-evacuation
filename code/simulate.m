@@ -17,6 +17,12 @@ fprintf('Start simulation...\n');
 % tic until simulation end
 simstart = tic;
 
+%make video while simulation
+if data.save_frames==1
+           vidObj=VideoWriter('video.avi');
+           open(vidObj);
+        end
+
 while (data.time < data.duration)
     % tic until timestep end
     tstart=tic;
@@ -43,8 +49,13 @@ while (data.time < data.duration)
         end
 
         if data.save_frames==1
-            print('-depsc2',sprintf('frames/%s_%04i.eps', ...
-                data.frame_basename,data.step), data.figure_floors);
+%             print('-depsc2',sprintf('frames/%s_%04i.eps', ...
+%                 data.frame_basename,data.step), data.figure_floors);
+
+%          make video while simulate   
+            currFrame=getframe(data.figure_floors);
+            writeVideo(vidObj,currFrame);
+            
         end
         
         set(0,'CurrentFigure',data.figure_exit);
@@ -83,6 +94,9 @@ while (data.time < data.duration)
     end
     
 end
+
+%make video while simulation
+close(vidObj);
 
 % toc of whole simulation
 data.output.simulation_time = toc(simstart);
