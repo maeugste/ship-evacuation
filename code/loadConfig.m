@@ -43,9 +43,8 @@ for i=1:config.floor_count
     config.floor(i).img_spawn = (img_build(:, :, 1) == 255 ...
                                & img_build(:, :, 2) ==   0 ...
                                & img_build(:, :, 3) == 255);
-  
-      
-%different exits
+
+%second possibility: 
 %pixel is exit if 1-->0, 3-->0, and if 2 is between 255 and 230 or if no
 %red or blue
 
@@ -71,7 +70,7 @@ for i=1:config.floor_count
         %make a zeroes matrix as big as img_exit
         config.exit_nr=zeros(size(config.floor(config.floor_exit).img_exit)); 
 
-        %make a zeros vector as long as exit_count
+        %make a zeros vector as long as floor_exit
         config.exit_left = zeros(1,config.exit_count);
 
         %loop over all exits
@@ -95,3 +94,5 @@ for i=1:config.floor_count
     config.color_map = [1 1 1; 0.9 0.9 0.9; 0 1 0; 0.4 0.4 1; 1 0.4 0.4; 0 0 0];
 end
 
+% save config to output
+save('output','config')

@@ -72,12 +72,12 @@ for fi = data.floor_exit:data.floor_count
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
             
-            fprintf('agent exited from upper loop\n');
+%             fprintf('agent exited from upper loop\n');
            
             %save current exit nr
             data.current_exit = data.exit_nr(round(newp(1)), round(newp(2)));
             
-            fprintf(int2str(data.current_exit));
+%             fprintf(int2str(data.current_exit));
             
             %update exit_left
             data.exit_left(1,data.current_exit) = data.exit_left(1,data.exit_nr(round(newp(1)), round(newp(2)))) - 1;
@@ -95,7 +95,7 @@ for fi = data.floor_exit:data.floor_count
                 data = initEscapeRoutes(data);
                 data = initWallForces(data);
                 
-                fprintf('new routes from upper loop\n');
+%                 fprintf('new routes from upper loop\n');
                 
             end
         end
@@ -183,7 +183,7 @@ for fi = 1:data.floor_exit
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
             
-            fprintf('agent exited from lower loop\n');
+%             fprintf('agent exited from lower loop\n');
             
             %save current exit nr
             data.current_exit = data.exit_nr(round(newp(1)), round(newp(2)));
@@ -204,7 +204,7 @@ for fi = 1:data.floor_exit
                 data = initEscapeRoutes(data);
                 data = initWallForces(data);    
                 
-                fprintf('new routes from lower loop\n');
+%                 fprintf('new routes from lower loop\n');
                 
             end
         
