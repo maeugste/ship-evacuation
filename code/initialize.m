@@ -50,10 +50,11 @@ for i=1:config.floor_count
         end
 end
 
-% init agents_per_floor_matrizes
+% init output matrizes
 data.output = struct;
 data.output.config = config;
-data.output.agents_per_floor=zeros(data.floor_count,data.duration/data.dt);
+data.output.agents_per_floor = zeros(data.floor_count,data.duration/data.dt);
+data.output.exit_left = zeros(data.exit_count,data.duration/data.dt);
 
 
 
