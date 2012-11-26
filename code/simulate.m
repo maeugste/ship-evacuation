@@ -25,13 +25,9 @@ while (data.time < data.duration)
     data = addAgentRepulsiveForce(data);
     data = applyForcesAndMove(data);
     
-    % dump agents_per_floor to output
     for floor=1:data.floor_count
-          data.output.agents_per_floor(floor,data.step) = length(data.floor(floor).agents);
+          data.output.agents_per_floor(floor,data.step)= length(data.floor(floor).agents);
     end
-    
-    % dump exit_left to output
-    data.output.exit_left(:,data.step) = data.exit_left';
        
     if mod(data.step,data.save_step) == 0
         
@@ -63,7 +59,7 @@ while (data.time < data.duration)
         data.telapsed = toc(tstart);
         % toc of whole simulation
         data.output.simulation_time = toc(simstart);
-                
+        
         % save output  
         output = data.output;
         save('output','output')
