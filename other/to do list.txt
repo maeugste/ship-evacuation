@@ -3,3 +3,4 @@ to do:
 -->stop simulation as x % of agents exited
 
 -->control passenger-flow?
+-->one plot...different colors?
