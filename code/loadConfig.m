@@ -45,9 +45,7 @@ for i=1:config.floor_count
                                & img_build(:, :, 3) == 255);
   
       
-
-
-%second possibility: 
+%different exits
 %pixel is exit if 1-->0, 3-->0, and if 2 is between 255 and 230 or if no
 %red or blue
 
@@ -73,7 +71,7 @@ for i=1:config.floor_count
         %make a zeroes matrix as big as img_exit
         config.exit_nr=zeros(size(config.floor(config.floor_exit).img_exit)); 
 
-        %make a zeros vector as long as floor_exit
+        %make a zeros vector as long as exit_count
         config.exit_left = zeros(1,config.exit_count);
 
         %loop over all exits
