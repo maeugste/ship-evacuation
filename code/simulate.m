@@ -66,7 +66,7 @@ while (data.time < data.duration)
                 
         % save output  
         output = data.output;
-        save('output','output')
+        save(data.output_file_name,'output')
         fprintf('Frame %i done (took %.3fs; %.3fs out of %.3gs simulated).\n', data.step, data.telapsed, data.time, data.duration);
         
     end

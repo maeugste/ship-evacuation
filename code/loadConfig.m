@@ -94,5 +94,3 @@ for i=1:config.floor_count
     config.color_map = [1 1 1; 0.9 0.9 0.9; 0 1 0; 0.4 0.4 1; 1 0.4 0.4; 0 0 0];
 end
 
-% save config to output
-save('output','config')

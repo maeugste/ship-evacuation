@@ -56,6 +56,9 @@ data.output.config = config;
 data.output.agents_per_floor = zeros(data.floor_count,data.duration/data.dt);
 data.output.exit_left = zeros(data.exit_count,data.duration/data.dt);
 
+% prepare output file name
+data.output_file_name = ['output' data.frame_basename];
+
 
 
 
