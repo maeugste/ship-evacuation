@@ -19,7 +19,7 @@ simstart = tic;
 
 %make video while simulation
 if data.save_frames==1
-           vidObj=VideoWriter('video.avi');
+           vidObj=VideoWriter(data.video_file_name);
            open(vidObj);
         end
 

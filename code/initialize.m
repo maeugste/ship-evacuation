@@ -60,7 +60,8 @@ data.output.exit_left = zeros(data.exit_count,data.duration/data.dt);
 % prepare output file name
 data.output_file_name = ['output_' data.frame_basename];
 
-
+% prepare video file name
+data.video_file_name = ['video_' data.frame_basename '.avi'];
 
 
 
