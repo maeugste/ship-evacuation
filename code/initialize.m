@@ -54,7 +54,7 @@ end
 % init output matrizes
 data.output = struct;
 data.output.config = config;
-data.output.agents_per_floor = zeros(data.floor_count,data.duration/data.dt);
+data.output.agents_per_floor = ones(data.floor_count,data.duration/data.dt).*(-1);
 data.output.exit_left = zeros(data.exit_count,data.duration/data.dt);
 
 % prepare output file name
