@@ -74,7 +74,7 @@ for fi = data.floor_exit:data.floor_count
                         fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
                         exited(ai) = 1;
                         data.agents_exited = data.agents_exited +1;
-                        data.deleted_agents=data.deleted_agents+1;
+                        data.output.deleted_agents=data.output.deleted_agents+1;
                         newp = [1 1];
                    end
                end
@@ -84,7 +84,7 @@ for fi = data.floor_exit:data.floor_count
             fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
-            data.deleted_agents=data.deleted_agents+1;
+            data.output.deleted_agents=data.output.deleted_agents+1;
             newp = [1 1];
         end
         
@@ -219,7 +219,7 @@ for fi = 1:data.floor_exit
                         fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
                         exited(ai) = 1;
                         data.agents_exited = data.agents_exited +1;
-                        data.deleted_agents=data.deleted_agents+1;
+                        data.output.deleted_agents=data.output.deleted_agents+1;
                         newp = [1 1];
                    end
                end
@@ -229,7 +229,7 @@ for fi = 1:data.floor_exit
             fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
             exited(ai) = 1;
             data.agents_exited = data.agents_exited +1;
-            data.deleted_agents=data.deleted_agents+1;
+            data.output.deleted_agents=data.output.deleted_agents+1;
             newp = [1 1];
         end
         

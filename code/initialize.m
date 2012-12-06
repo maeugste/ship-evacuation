@@ -64,7 +64,7 @@ data.output_file_name = ['output_' data.frame_basename];
 data.video_file_name = ['video_' data.frame_basename '.avi'];
 
 % set deleted_agents to zero
-data.deleted_agents = 0;
+data.output.deleted_agents = 0;
 
 
 
