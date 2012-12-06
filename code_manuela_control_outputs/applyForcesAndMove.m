@@ -126,7 +126,14 @@ for fi = data.floor_exit:data.floor_count
                               & (data.exit_nr ~= (data.current_exit));
                           
                 %redo initEscapeRoutes and initWallForces with new exit and wall parameters
+                 if data.control_exit~=1
                 data = initEscapeRoutes(data);
+    
+                %control exits
+                else
+                 data = initEscapeRoutes_even(data);
+                 data = initEscapeRoutes_odd(data);
+                end
                 data = initWallForces(data);
                 
 %                 fprintf('new routes from upper loop\n');
@@ -268,8 +275,15 @@ for fi = 1:data.floor_exit
                               & (data.exit_nr ~= (data.current_exit));
                           
                 %redo initEscapeRoutes and initWallForces with new exit and wall parameters
+                if data.control_exit~=1
                 data = initEscapeRoutes(data);
-                data = initWallForces(data);    
+    
+                %control exits
+                else
+                 data = initEscapeRoutes_even(data);
+                 data = initEscapeRoutes_odd(data);
+                end
+                data = initWallForces(data);       
                 
 %                 fprintf('new routes from lower loop\n');
                 
