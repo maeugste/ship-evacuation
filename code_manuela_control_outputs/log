@@ -111,4 +111,71 @@ WARNING: clogging agent 168 on floor 4 (20). Position (151.500314,1447.192097).
 WARNING: clogging agent 168 on floor 4 (21). Position (151.500314,1447.192097).
 Frame 300 done (took 3.208s; 5.980s out of 3.6e+03s simulated).
 WARNING: clogging agent 168 on floor 4 (22). Position (151.500314,1447.192097).
-WARNING: c
+WARNING: cLoad config file...
+Init escape routes...
+{Reference to non-existent field
+'control_exit'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('initialize', 'C:\Users\manuela\Documents\GitHub\ship-evacuation\code_manuela_control_outputs\initialize.m', 19)" style="font-weight:bold">initialize</a> (<a href="matlab: opentoline('C:\Users\manuela\Documents\GitHub\ship-evacuation\code_manuela_control_outputs\initialize.m',19,0)">line 19</a>)
+if data.control_exit~=1
+
+Error in <a href="matlab:helpUtils.errorDocCallback('simulate', 'C:\Users\manuela\Documents\GitHub\ship-evacuation\code_manuela_control_outputs\simulate.m', 14)" style="font-weight:bold">simulate</a> (<a href="matlab: opentoline('C:\Users\manuela\Documents\GitHub\ship-evacuation\code_manuela_control_outputs\simulate.m',14,0)">line 14</a>)
+data = initialize(config);
+} 
+simulate('../data/ship_deck/ship_deck.conf')
+Load config file...
+Init escape routes...
+Init wall forces...
+Init agents...
+Init plots...
+Start simulation...
+WARNING: clogging agent 225 on floor 8 (1). Position (151.496121,349.582335).
+WARNING: clogging agent 225 on floor 8 (2). Position (151.497859,349.588127).
+WARNING: clogging agent 225 on floor 8 (3). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (4). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (5). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (6). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (7). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (8). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (9). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (10). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (11). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (12). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (13). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (14). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (15). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (16). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (17). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (18). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (19). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (20). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (21). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (22). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (23). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (24). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (25). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (26). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (27). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (28). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (29). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (30). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (31). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (32). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (33). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (34). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (35). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (36). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (37). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (38). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (39). Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (40). Position (151.499596,349.594033).
+WARNING: agent 225 on floor 8 velocity set random to get out of wall. Position (151.499596,349.594033).
+WARNING: clogging agent 225 on floor 8 (41). Position (151.598063,349.624918).
+WARNING: agent 225 on floor 8 velocity set random to get out of wall. Position (151.598063,349.624918).
+WARNING: clogging agent 225 on floor 8 (42). Position (151.631732,349.598340).
+WARNING: agent 225 on floor 8 velocity set random to get out of wall. Position (151.631732,349.598340).
+WARNING: clogging agent 225 on floor 8 (43). Position (150.539672,350.174106).
+WARNING: agent 225 on floor 8 velocity set random to get out of wall. Position (150.539672,350.174106).
+WARNING: clogging agent 347 on floor 1 (1). Position (151.096809,890.477768).
+WARNING: clogging agent 347 on floor 1 (2). Position (151.103449,890.491418).
+WARNING: clogging agent 3

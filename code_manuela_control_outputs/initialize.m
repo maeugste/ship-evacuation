@@ -16,7 +16,15 @@ data = config;
 data.pixel_per_meter = 1/data.meter_per_pixel;
 
 fprintf('Init escape routes...\n');
-data = initEscapeRoutes(data);
+if data.control_exit~=1
+    data = initEscapeRoutes(data);
+    
+    %control exits
+else
+    data = initEscapeRoutes_even(data);
+    data = initEscapeRoutes_odd(data);
+end
+
 fprintf('Init wall forces...\n');
 data = initWallForces(data);
 fprintf('Init agents...\n');
