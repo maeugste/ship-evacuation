@@ -1,6 +1,9 @@
 function simulate(config_file)
 % run this to start the simulation
 
+% start recording the matlab output window for debugging reasons
+diary log
+
 if nargin==0
     config_file='../data/config1.conf';
 end
@@ -105,5 +108,8 @@ data.output.simulation_time = toc(simstart);
 output = data.output;
 save('output','output')
 fprintf('Simulation done in %i seconds and saved data to output file.\n', data.output.simulation_time);
+
+% save diary
+diary
 
 

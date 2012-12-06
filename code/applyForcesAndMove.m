@@ -50,10 +50,44 @@ for fi = data.floor_exit:data.floor_count
                    v * data.dt / data.meter_per_pixel;
         end
         
-        if data.floor(fi).img_wall(round(newp(1)), round(newp(2)))
-            newp = data.floor(fi).agents(ai).p;
-            v = [0 0];
+        % check if agents position is ok
+        % repositioning after 50 times clogging
+        % deleting if agent has a NaN position
+        if ~isnan(newp)
+            if data.floor(fi).img_wall(round(newp(1)), round(newp(2)))
+               newp = data.floor(fi).agents(ai).p;
+               v = [0 0];
+               data.floor(fi).agents(ai).clogged = data.floor(fi).agents(ai).clogged + 1;
+               fprintf('WARNING: clogging agent %i on floor %i (%i). Position (%f,%f).\n',ai,fi,data.floor(fi).agents(ai).clogged,newp(1),newp(2))
+               if data.floor(fi).agents(ai).clogged >= 40
+                    nx = rand(1)*2 - 1;
+                    ny = rand(1)*2 - 1;
+                    n = [nx ny];
+                    v = n*data.v_max/2;
+                    fprintf('WARNING: agent %i on floor %i velocity set random to get out of wall. Position (%f,%f).\n',ai,fi,newp(1),newp(2))
+                   
+                   % get agent's new position
+                   newp = data.floor(fi).agents(ai).p + ...
+                   v * data.dt / data.meter_per_pixel;
+                   if isnan(newp)
+                        % get rid of disturbing agent
+                        fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
+                        exited(ai) = 1;
+                        data.agents_exited = data.agents_exited +1;
+                        data.deleted_agents=data.deleted_agents+1;
+                        newp = [1 1];
+                   end
+               end
+            end 
+        else
+            % get rid of disturbing agent
+            fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
+            exited(ai) = 1;
+            data.agents_exited = data.agents_exited +1;
+            data.deleted_agents=data.deleted_agents+1;
+            newp = [1 1];
         end
+        
         
         % update agent's velocity and position
         data.floor(fi).agents(ai).v = v;
@@ -103,8 +137,7 @@ for fi = data.floor_exit:data.floor_count
     
     % add appropriate agents to next lower floor
     if fi > data.floor_exit
-        data.floor(fi-1).agents = [data.floor(fi-1).agents ...
-                                   data.floor(fi).agents(floorchange)];
+        data.floor(fi-1).agents = [data.floor(fi-1).agents data.floor(fi).agents(floorchange)];
     end
     
     % delete these and exited agents
@@ -147,7 +180,7 @@ for fi = 1:data.floor_exit
             % get agent's position
             p = data.floor(fi).agents(ai).p;
             
-            % get wall distance gradient (which is off course perpendicular
+            % get wall distance gradient (which is of course perpendicular
             % to the nearest wall)
             nx = lerp2(data.floor(fi).img_wall_dist_grad_x, p(1), p(2));
             ny = lerp2(data.floor(fi).img_wall_dist_grad_y, p(1), p(2));
@@ -161,9 +194,43 @@ for fi = 1:data.floor_exit
                    v * data.dt / data.meter_per_pixel;
         end
         
-        if data.floor(fi).img_wall(round(newp(1)), round(newp(2)))
-            newp = data.floor(fi).agents(ai).p;
-            v = [0 0];
+        
+        % check if agents position is ok
+        % repositioning after 50 times clogging
+        % deleting if agent has a NaN position
+        if ~isnan(newp)
+            if data.floor(fi).img_wall(round(newp(1)), round(newp(2)))
+               newp = data.floor(fi).agents(ai).p;
+               v = [0 0];
+               data.floor(fi).agents(ai).clogged = data.floor(fi).agents(ai).clogged + 1;
+               fprintf('WARNING: clogging agent %i on floor %i (%i). Position (%f,%f).\n',ai,fi,data.floor(fi).agents(ai).clogged,newp(1),newp(2))
+               if data.floor(fi).agents(ai).clogged >= 40
+                    nx = rand(1)*2 - 1;
+                    ny = rand(1)*2 - 1;
+                    n = [nx ny];
+                    v = n*data.v_max/2;
+                    fprintf('WARNING: agent %i on floor %i velocity set random to get out of wall. Position (%f,%f).\n',ai,fi,newp(1),newp(2))
+                   
+                   % get agent's new position
+                   newp = data.floor(fi).agents(ai).p + ...
+                   v * data.dt / data.meter_per_pixel;
+                   if isnan(newp)
+                        % get rid of disturbing agent
+                        fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
+                        exited(ai) = 1;
+                        data.agents_exited = data.agents_exited +1;
+                        data.deleted_agents=data.deleted_agents+1;
+                        newp = [1 1];
+                   end
+               end
+            end 
+        else
+            % get rid of disturbing agent
+            fprintf('WARNING: position of an agent is NaN! Deleted this agent.\n')
+            exited(ai) = 1;
+            data.agents_exited = data.agents_exited +1;
+            data.deleted_agents=data.deleted_agents+1;
+            newp = [1 1];
         end
         
         % update agent's velocity and position
@@ -221,7 +288,7 @@ for fi = 1:data.floor_exit
     data.floor(fi).agents = data.floor(fi).agents(~(floorchange|exited));
 end
 
-if n_velocity_clamps > 0
-    fprintf(['WARNING: clamped velocity of %d agents, ' ...
-            'possible simulation instability.\n'], n_velocity_clamps);
-end
+% if n_velocity_clamps > 0
+%     fprintf(['WARNING: clamped velocity of %d agents, ' ...
+%             'possible simulation instability.\n'], n_velocity_clamps);
+% end
