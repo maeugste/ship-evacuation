@@ -1,0 +1,114 @@
+Load config file...
+Init escape routes...
+Init wall forces...
+Init agents...
+Init plots...
+Start simulation...
+Frame 10 done (took 4.549s; 0.180s out of 3.6e+03s simulated).
+Frame 20 done (took 3.402s; 0.380s out of 3.6e+03s simulated).
+Frame 30 done (took 3.166s; 0.580s out of 3.6e+03s simulated).
+Frame 40 done (took 3.152s; 0.780s out of 3.6e+03s simulated).
+Frame 50 done (took 3.127s; 0.980s out of 3.6e+03s simulated).
+Frame 60 done (took 3.257s; 1.180s out of 3.6e+03s simulated).
+Frame 70 done (took 3.254s; 1.380s out of 3.6e+03s simulated).
+Frame 80 done (took 3.229s; 1.580s out of 3.6e+03s simulated).
+Frame 90 done (took 3.165s; 1.780s out of 3.6e+03s simulated).
+WARNING: clogging agent 71 on floor 2 (1). Position (151.203101,890.480462).
+WARNING: clogging agent 71 on floor 2 (2). Position (151.208332,890.491053).
+WARNING: clogging agent 71 on floor 2 (3). Position (151.210131,890.494827).
+Frame 100 done (took 3.180s; 1.980s out of 3.6e+03s simulated).
+WARNING: clogging agent 71 on floor 2 (4). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (5). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (6). Position (151.211943,890.498682).
+WARNING: clogging agent 358 on floor 9 (1). Position (81.499563,1080.285553).
+WARNING: clogging agent 71 on floor 2 (7). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (8). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (9). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (10). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (11). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (12). Position (151.211943,890.498682).
+Frame 110 done (took 3.151s; 2.180s out of 3.6e+03s simulated).
+WARNING: clogging agent 71 on floor 2 (13). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (14). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (15). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (16). Position (151.211943,890.498682).
+WARNING: clogging agent 450 on floor 5 (1). Position (140.384755,1454.507882).
+WARNING: clogging agent 71 on floor 2 (17). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (18). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (19). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (20). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (21). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (22). Position (151.211943,890.498682).
+Frame 120 done (took 3.171s; 2.380s out of 3.6e+03s simulated).
+WARNING: clogging agent 71 on floor 2 (23). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (24). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (25). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (26). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (27). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (28). Position (151.211943,890.498682).
+WARNING: clogging agent 450 on floor 5 (2). Position (140.393435,1454.518349).
+WARNING: clogging agent 71 on floor 2 (29). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (30). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (31). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (32). Position (151.211943,890.498682).
+Frame 130 done (took 3.202s; 2.580s out of 3.6e+03s simulated).
+WARNING: clogging agent 71 on floor 2 (33). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (34). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (35). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (36). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (37). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (38). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (39). Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (40). Position (151.211943,890.498682).
+WARNING: agent 71 on floor 2 velocity set random to get out of wall. Position (151.211943,890.498682).
+WARNING: clogging agent 71 on floor 2 (41). Position (151.066890,890.639214).
+WARNING: agent 71 on floor 2 velocity set random to get out of wall. Position (151.066890,890.639214).
+WARNING: clogging agent 71 on floor 2 (42). Position (151.004754,890.834359).
+WARNING: agent 71 on floor 2 velocity set random to get out of wall. Position (151.004754,890.834359).
+Frame 140 done (took 3.209s; 2.780s out of 3.6e+03s simulated).
+WARNING: clogging agent 450 on floor 5 (3). Position (140.407271,1454.535004).
+WARNING: clogging agent 71 on floor 2 (43). Position (150.932293,890.951872).
+WARNING: agent 71 on floor 2 velocity set random to get out of wall. Position (150.932293,890.951872).
+WARNING: clogging agent 71 on floor 2 (44). Position (150.844928,891.165357).
+WARNING: agent 71 on floor 2 velocity set random to get out of wall. Position (150.844928,891.165357).
+Frame 150 done (took 3.237s; 2.980s out of 3.6e+03s simulated).
+Frame 160 done (took 3.184s; 3.180s out of 3.6e+03s simulated).
+Frame 170 done (took 3.181s; 3.380s out of 3.6e+03s simulated).
+WARNING: clogging agent 450 on floor 6 (1). Position (147.390291,558.506288).
+Frame 180 done (took 3.157s; 3.580s out of 3.6e+03s simulated).
+Frame 190 done (took 3.192s; 3.780s out of 3.6e+03s simulated).
+WARNING: clogging agent 303 on floor 4 (1). Position (159.581484,762.502232).
+Frame 200 done (took 3.232s; 3.980s out of 3.6e+03s simulated).
+Frame 210 done (took 3.235s; 4.180s out of 3.6e+03s simulated).
+Frame 220 done (took 3.177s; 4.380s out of 3.6e+03s simulated).
+Frame 230 done (took 3.200s; 4.580s out of 3.6e+03s simulated).
+Frame 240 done (took 3.184s; 4.780s out of 3.6e+03s simulated).
+Frame 250 done (took 3.218s; 4.980s out of 3.6e+03s simulated).
+Frame 260 done (took 3.206s; 5.180s out of 3.6e+03s simulated).
+Frame 270 done (took 3.200s; 5.380s out of 3.6e+03s simulated).
+WARNING: clogging agent 169 on floor 4 (1). Position (151.510802,1447.203223).
+WARNING: clogging agent 169 on floor 4 (2). Position (151.501888,1447.193875).
+Frame 280 done (took 3.196s; 5.580s out of 3.6e+03s simulated).
+WARNING: clogging agent 168 on floor 4 (3). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (4). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (5). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (6). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (7). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (8). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (9). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (10). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (11). Position (151.500314,1447.192097).
+Frame 290 done (took 3.210s; 5.780s out of 3.6e+03s simulated).
+WARNING: clogging agent 168 on floor 4 (12). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (13). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (14). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (15). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (16). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (17). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (18). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (19). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (20). Position (151.500314,1447.192097).
+WARNING: clogging agent 168 on floor 4 (21). Position (151.500314,1447.192097).
+Frame 300 done (took 3.208s; 5.980s out of 3.6e+03s simulated).
+WARNING: clogging agent 168 on floor 4 (22). Position (151.500314,1447.192097).
+WARNING: c
