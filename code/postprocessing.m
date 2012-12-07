@@ -12,6 +12,7 @@ config = output.config;
 exit_left = output.exit_left;
 simulation_time_real = output.simulation_time;
 dt = config.dt;
+deleted_agents = output.deleted_agents;
 
 
 % get users screen size
@@ -21,7 +22,7 @@ screen_size = get(0, 'ScreenSize');
 agents_on_boat = sum(agents_per_floor(:,1:1:length(agents_per_floor)));
 
 % check if whole simulation was performed
-steps=config.duration/dt;
+steps=config.duration/dt-1;
 for i=1:steps
     if agents_on_boat(i)<0
         steps=i-2;
@@ -152,6 +153,8 @@ fprintf('Steps simulated: %i\n', steps)
 fprintf('Simulation time: %f min\n', simulation_time_sim/60)
 fprintf('Agents on ship on start: %i\n', agents_start)
 fprintf('Agents on ship on simulation end: %i\n', agents_on_boat(end))
+fprintf('Agents deleted due to NaN-positions: %i\n', deleted_agents)
+
 fprintf('t_10: %f\n', t10)
 fprintf('t_50: %f\n', t50)
 fprintf('t_90: %f\n', t90)
