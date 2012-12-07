@@ -17,14 +17,16 @@ for i=1:data.floor_count
 if i<data.floor_exit
     boundary_data(data.floor(i).img_stairs_up) = -1;
     
+    
 elseif i>data.floor_exit
         boundary_data(data.floor(i).img_stairs_down) = -1;
-        
+        data.floor(i).img_stairs_down;
 else
-    bla=((data.floor(i).img_exit~=0).*not(mod(data.floor(i).img_exit,2)));
-        boundary_data(((data.floor(i).img_exit~=0).*not(mod(data.floor(i).img_exit,2)))) = -1; 
-        
-        
+   
+     
+        temp1=double(mod(data.exit_nr,2));   %matrix in which every number which is even turns to zero, odd turns to one
+        temp2=logical((data.floor(i).img_exit)-(temp1));
+        boundary_data(temp2)=-1;             %boundary_data considers only the exits with even numbers --> -1 where those are
         
 end
     exit_dist = fastSweeping(boundary_data) * data.meter_per_pixel;

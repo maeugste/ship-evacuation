@@ -32,9 +32,10 @@ for i=1:data.floor_count
             data.floor(i).agents(cur_agent).clogged = 0; %to check if agent is hanging in the wall
             
             
-            %contorl exit
-            data.floor(i).agents(cur_agent).nr=round(rand(1));
+            %control exit
             
+            data.floor(i).agents(cur_agent).nr=logical(round(rand(1)));
+           
             %even-->0
             %odd-->1
             

@@ -20,8 +20,11 @@ if i<data.floor_exit
 elseif i>data.floor_exit
         boundary_data(data.floor(i).img_stairs_down) = -1;
         
-    else 
-        boundary_data(((data.floor(i).img_exit~=0).*mod(data.floor(i).img_exit,2))) = -1;
+else 
+        
+        temp=logical(mod(data.exit_nr,2));   %matrix in which every number which is even turns to zero, odd turns to one
+    
+        boundary_data(temp) = -1;      %boundary_data considers only the exits with odd numbers
         
 end
     exit_dist = fastSweeping(boundary_data) * data.meter_per_pixel;

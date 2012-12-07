@@ -20,7 +20,12 @@ if data.control_exit~=1
     data = initEscapeRoutes(data);
     
     %control exits
-else
+   
+   
+    
+    
+else 
+    
     data = initEscapeRoutes_even(data);
     data = initEscapeRoutes_odd(data);
 end
