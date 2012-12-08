@@ -26,7 +26,7 @@ else
      
         temp1=double(mod(data.exit_nr,2));   %matrix in which every number which is even turns to zero, odd turns to one
         temp2=logical((data.floor(i).img_exit)-(temp1));
-        boundary_data(temp2)=-1;             %boundary_data considers only the exits with even numbers --> -1 where those are
+        boundary_data(temp2)=-1;             %boundary_data considers only the exits with even numbers --> set -1 where those are
         
 end
     exit_dist = fastSweeping(boundary_data) * data.meter_per_pixel;

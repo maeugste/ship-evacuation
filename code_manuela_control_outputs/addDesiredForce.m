@@ -23,6 +23,11 @@ for fi = 1:data.floor_count
                 ex = lerp2(data.floor(fi).img_dir_x_even, p(1), p(2));
                 ey = lerp2(data.floor(fi).img_dir_y_even, p(1), p(2));
                 e = [ex ey];
+                 % get force
+                Fi = m * (v0*e - v)/data.tau;
+        
+                % add force
+                data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
                 end
                 
                 %odd agents
@@ -30,6 +35,11 @@ for fi = 1:data.floor_count
             % get direction towards nearest exit
                 ex = lerp2(data.floor(fi).img_dir_x_odd, p(1), p(2));
                 ey = lerp2(data.floor(fi).img_dir_x_odd, p(1), p(2));
+                 % get force
+                 Fi = m * (v0*e - v)/data.tau;
+        
+                % add force
+                 data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
                 e = [ex ey];
                 end
         
