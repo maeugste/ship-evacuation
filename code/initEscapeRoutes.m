@@ -5,7 +5,7 @@ function data = initEscapeRoutes(data)
 for i=1:data.floor_count
 
     boundary_data = zeros(size(data.floor(i).img_wall));
-
+    boundary_data(data.floor(i).img_wall) =  1;
     
 if i<data.floor_exit
     boundary_data(data.floor(i).img_stairs_up) = -1;
