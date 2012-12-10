@@ -288,7 +288,7 @@ for fi = 1:data.floor_exit
     data.floor(fi).agents = data.floor(fi).agents(~(floorchange|exited));
 end
 
-if data.switch_done==0 && data.open_on_x_agents_on_boat>data.agents_per_floor*data.floor_count-sum(data.output.exit_left(:,data.step))
+if data.switch_done==0 && data.step ~=1 && data.open_on_x_agents_on_boat>sum(data.output.agents_per_floor(:,data.step-1))
      data.floor(data.floor_exit).img_exit = data.floor(data.floor_exit).img_exit_second;
      data.floor(data.floor_exit).img_wall = data.floor(data.floor_exit).img_wall_second;
      data = initEscapeRoutes(data);
