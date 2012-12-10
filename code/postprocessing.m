@@ -107,7 +107,7 @@ hold on
 grid on
 set(gca,'FontSize',16)
 plot(time,agents_left/agents_start*100,'LineWidth', 2)
-axis([0 time(end) 0 agents_left(end)/agents_start*100])
+axis([0 800 0 100])
 title(sprintf('rescued agents (of total %i agents)',agents_start));
 xlabel('time [s]')
 ylabel('rescued agents out of all agents [%]')
@@ -126,7 +126,7 @@ for i=1:config.floor_count
 end
 legend(list)
 
-axis([0 time(end) 0 max(max(agents_per_floor))+10])
+axis([0 800 0 1000])
 title(sprintf('agents per floor (of total %i agents)',agents_start));
 xlabel('time [s]')
 ylabel('agents per floor')
@@ -136,15 +136,18 @@ f3 = figure;
 hold on
 grid on
 set(gca,'FontSize',16)
-list = cell(config.exit_count,1);
-color = hsv(config.exit_count);
-for i=1:config.exit_count
+list = cell(config.exit_count/2,1);
+color = hsv(config.exit_count/2);
+for i=1:config.exit_count/2
     plot(time,exit_left(i,:),'LineWidth', 2,'color',color(i,:))
-    list{i} = [sprintf('boat %i',i)];
+    list{i} = [sprintf('boat %i / --- %i',i,i+13)];
+end
+for i=config.exit_count/2+1:config.exit_count
+    plot(time,exit_left(i,:),'--','LineWidth', 2,'color',color(i-config.exit_count/2,:))
 end
 legend(list)
 
-axis([0 time(end) 0 max(max(exit_left))+10])
+axis([0 800 0 200])
 title('rescue boat capacity');
 xlabel('time [s]')
 ylabel('free places on rescue boat')

@@ -288,12 +288,12 @@ for fi = 1:data.floor_exit
     data.floor(fi).agents = data.floor(fi).agents(~(floorchange|exited));
 end
 
-if data.switch_done==false && data.open_on_x_agents_on_boat>data.agents_per_floor*data.floor_count-sum(data.output.exit_left(:,data.step))
+if data.switch_done==0 && data.open_on_x_agents_on_boat>data.agents_per_floor*data.floor_count-sum(data.output.exit_left(:,data.step))
      data.floor(data.floor_exit).img_exit = data.floor(data.floor_exit).img_exit_second;
      data.floor(data.floor_exit).img_wall = data.floor(data.floor_exit).img_wall_second;
      data = initEscapeRoutes(data);
      data = initWallForces(data);
-     data.switch_done=true;
+     data.switch_done=1;
      fprintf('ALL BOATS ARE OPEN NOW FOR EVACUATION! Opened on time %i\n',data.step*data.dt)
 end
 

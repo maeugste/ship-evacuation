@@ -113,4 +113,4 @@ end
 
 % set the boolean to check if switch from first to second mode has already
 % been executed
-config.switch_done = false;
+config.switch_done = 0;
