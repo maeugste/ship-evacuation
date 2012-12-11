@@ -41,7 +41,7 @@ for fi = 1:data.floor_count
         
                 % add force
                  data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
-                e = [ex ey];
+                
                 end
         
                     

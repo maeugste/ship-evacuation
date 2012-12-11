@@ -22,6 +22,9 @@ else
         boundary_data(temp) = -1;      %boundary_data considers only the exits with odd numbers
         
 end
+
+
+fprintf('Init escaperoutes_odd...\n');
     exit_dist = fastSweeping(boundary_data) * data.meter_per_pixel;
     [data.floor(i).img_dir_x_odd, data.floor(i).img_dir_y_odd] = ...
         getNormalizedGradient(boundary_data, -exit_dist);

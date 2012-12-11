@@ -20,10 +20,17 @@ else
    
      
         temp1=double(mod(data.exit_nr,2));   %matrix in which every number which is even turns to zero, odd turns to one
-        temp2=logical((data.floor(i).img_exit)-(temp1));
-        boundary_data(temp2)=-1;             %boundary_data considers only the exits with even numbers --> set -1 where those are
-        
+%         temp2=logical((data.floor(i).img_exit)-(temp1));
+%         boundary_data(temp2)=-1;             %boundary_data considers only the exits with even numbers --> set -1 where those are
+        temp2=((data.floor(i).img_exit)-(temp1));
+        temp3=logical(mod(temp2,2));
+        boundary_data(temp3)=-1;
+
+
+
 end
+
+fprintf('Init escaperoutes_even...\n');
     exit_dist = fastSweeping(boundary_data) * data.meter_per_pixel;
     [data.floor(i).img_dir_x_even, data.floor(i).img_dir_y_even] = ...
         getNormalizedGradient(boundary_data, -exit_dist);
