@@ -9,6 +9,7 @@
 \usepackage{epstopdf}
 \usepackage[numbers]{natbib}
 \usepackage{amssymb, amsmath}
+\usepackage{array}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 %\title{Title}
@@ -172,9 +173,22 @@ In order to optimize the evacuation time, we change the following dependent vari
 \item There are many parameters we do not model in our simulation. For example fire and smoke, the tilt of the ship or handicapped and petrified passengers are disregarded. By leaving out this details we get a very simplified model. However, by starting the optimization process by data of a nowadays passenger liner \cite{shipdecks} we hope to see some real evacuation dynamics in this system and therefore make conclusion on the fundamental questions.
 \end{itemize}
 \subsection{Simulation Results}
-\subsubsection{Original ship}
-As listed above we were interested in the following measurments of the overall evacuation time:
-10\% of the 
+\subsubsection{Standard ship}
+As listed above we were interested in the time in which a certain percentage of all agents was evacuated:
+\newline
+
+\begin{figure}
+\centering
+\begin{tabular}
+{|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
+percantage of agents.& 10\% &  50\% & 90\% &100\% \\ \hline
+evacuation time & 69s &272s & 468s & 694s \\ \hline \hline
+\end{tabular}
+\caption{Needed time to evacuate a certain percentage of all agents.}
+\end{figure}
+
+Further our standard ship simulation 
+
 \subsubsection{Modified rescueboat size}
 \subsubsection{Modified room disposition}
 \subsubsection{Merge of modified room disposition and rescueboat size}

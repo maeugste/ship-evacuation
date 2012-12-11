@@ -11,7 +11,11 @@
 \contentsline {subsection}{\numberline {5.2}Ship Decks}{8}
 \contentsline {section}{\numberline {6}Simulation Results and Discussion}{8}
 \contentsline {subsection}{\numberline {6.1}Expected Results}{8}
-\contentsline {subsection}{\numberline {6.2}Simulation Results}{9}
+\contentsline {subsection}{\numberline {6.2}Simulation Results}{8}
+\contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{8}
+\contentsline {subsubsection}{\numberline {6.2.2}Modified rescueboat size}{9}
+\contentsline {subsubsection}{\numberline {6.2.3}Modified room disposition}{9}
+\contentsline {subsubsection}{\numberline {6.2.4}Merge of modified room disposition and rescueboat size}{9}
 \contentsline {subsection}{\numberline {6.3}Comparison}{9}
 \contentsline {subsection}{\numberline {6.4}Discussion}{9}
 \contentsline {section}{\numberline {7}Summary and Outlook}{9}
