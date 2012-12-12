@@ -114,7 +114,7 @@ Our approach is similarly to model a passenger ship with a common geometrical ou
 Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements \cite{concordia}. Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
 
 \subsection{Fundamental Questions}
-To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localised these places we are interested in the answers of the folowing questions:
+To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localised these places we are interested in the answers of the following questions:
 
 \bigskip
 How much time can be saved by varying the dependent variables mentioned below:
@@ -128,20 +128,35 @@ What is the influence of the rescue boats?
 \item Are small or bigger boats better?
 \item Where do they have to be positioned?
 \end{itemize}
-
 If we have time to spare we analyse the difference between uncontrolled and controlled passenger flow:
 \begin{itemize}
 \item Is the crew able to prevent chaos in the evacuation process?
 \item What is the best way to lead the passengers out of the ship?
 \end{itemize}
-
 In addition we are keen to know if our model is a good abstraction of the reality?
-
 \section{Description of the Model}
-\subsection{General Model}
-
 We will base the modeling part on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler. \cite{Building} In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in c with a MATLAB surface to rapidly simulate the evacuation of multi-level buildings.\bigskip
+\subsection{Social Force Model }
+The simulation is based on the social force model for pedestrian dynamics introduced by Dirk Helbling and Peter Molnar \cite{Helbling}.
+The general idea is that a pedestrian can be represented by a particle of a certain mass. Depending on the specific problem, there are defined forces acting on this particle. Due to these forces the particle  moves with a certain speed and velocity in a defined direction.
+In our model the following forces are acting on an agent: 
+\begin{itemize}
+\item $f_{D}$, pulls the agent into the desired direction
+\item $f_{ij}$ repulsive forces, keeps a certain distance between agent $i$ and agent $j$
+\item $f_{iW}$ wall force, prevents agents $i$ from running into walls
+\end{itemize}
+For each timestep in the simulation, the forces acting on agent $i$ are calculated. 
+Knowing the forces, we can calculate the change in velocity at this timestep:
+\begin{equation}
+m_{i}\frac{\mathsf{d}\mathbf{v}_{i}}{\mathsf{d}t}=m_{i}f_{D}+\sum \limits_{j(\neq{i})}{f_{ij}}+\sum \limits_{W}{f_{iW}}
+\end{equation}
+Finally, knowing the change in position the new position can be calculatet:
+\begin{equation}
+\mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i}\mathbf{dt}
+\end{equation}
+For more detailed information about the forces and their implementation please refer to \cite{Building}chapter 4.
 
+\subsection{General Model}
 Similar to the building we necessarily need an  implementation of a common ship shape \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
 \begin{itemize}
 \item Number of passengers (4400 agents)
@@ -163,7 +178,7 @@ In order to optimize the evacuation time, we change the following dependent vari
 \item Control of the passenger flow by crew members (e.g. is there staff to lead the passengers and how are they doing it?)
 \end{itemize}
 
-
+\subsection{Force Model}
 
 
 \section{Implementation}
@@ -184,7 +199,7 @@ applyForcesAndMove.m
 \newline
 \underline{New variables:}
 \newline 
-To define the floor in which the exits are we introduced a new variable "floor\underline{ }exit" in the config file.
+To define the floor in which the exits are we introduced a new variable \textit{floor\underline{ }exit} in the config file.
 \newline
 \underline{Modifications:}
 \newline
@@ -514,13 +529,19 @@ evacuation time & 72s &259s & 461s & 595s \\ \hline \hline
 \end{figure}
  
 \subsubsection{Modified rescueboat size}
+As we could see in the simulations with the standard ship, the rescueboats which are nearest to the stairs are filled first. This behavior is very intuitive. As soon as the nearest lifeboats are full, the agents continue to fill the other lifeboats. 
+The greatest extension of the evacuation time occurs as follows:
+Towards the end of the simulation, not all lifeboats are still open. Therefore leftover agents, which walked in the direction of a lifeboat that closed in the meantime,have to cross a big distance to reach a lifeboat with free space.\newline
+We tried to avoid this delay by increasing the capacity of the lifeboats near to the stairs and removed some, which are the farthest away for the agents left over towards the end of the evacuation.
+
+
 
 \begin{table}[h]
 \centering
 \begin{tabular}
 {|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
 percentage of agents.& 10\% &  50\% & 90\% & 99\% \\ \hline
-evacuation time & 71s &257s & 419s & 571s \\ \hline \hline
+evacuation time & 71.44s &257.12s & 419.4s & 571.4s \\ \hline \hline
 \end{tabular}
 \caption{Varied boatsize simulation: Needed time to evacuate a certain percentage of all agents.}
 \end{table}
@@ -533,8 +554,13 @@ evacuation time & 71s &257s & 419s & 571s \\ \hline \hline
 \subsubsection{Crew command}
 \subsection{Comparison}
 \subsubsection{Standard - Modified room disposition}
-The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by almost 20s. Further 50\% of all agents entered the exits approximately 13s earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same. Another point which was actually not important for our research is that you get a much higher agent densitiy on the exit floor. 
+The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by almost 20 seconds. Further 50\% of all agents entered the exits approximately 13 seconds earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same. Another point which was actually not important for our research is that you get a much higher agent densitiy on the exit floor. 
 \subsubsection{Standard - Modified rescueboat size}
+
+As the results above show, there is no significant acceleration in the first part of the evacuation achieved by changing the distribution of the lifeboats .  
+ But, there is clearly a difference in second half of the evacuation. The last 10\% of agents are evacuated 48.6 seconds faster and the last 1\% even 42.6 seconds faster. 
+This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
+
 \subsubsection{Standard - Controlles outputs}
 \subsubsection{Standard - Crew command}
 \subsection{Discussion}
