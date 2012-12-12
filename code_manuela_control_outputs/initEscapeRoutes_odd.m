@@ -10,14 +10,15 @@ for i=1:data.floor_count
     boundary_data(data.floor(i).img_wall) =  1;
 
 if i<data.floor_exit
+    
     boundary_data(data.floor(i).img_stairs_up) = -1;
     
     
 elseif i>data.floor_exit
         boundary_data(data.floor(i).img_stairs_down) = -1;
-         data.floor(i).img_stairs_down;
         
-else 
+        
+    else 
         
         temp=logical(mod(data.exit_nr,2));   %matrix in which every number which is even turns to zero, odd turns to one
         boundary_data(temp) = -1;      %boundary_data considers only the exits with odd numbers

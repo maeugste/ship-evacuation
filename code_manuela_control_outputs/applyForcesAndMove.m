@@ -132,8 +132,13 @@ for fi = data.floor_exit:data.floor_count
     
                 %control exits
                 else
+                    if data.floor(fi).agents(ai).nr==0   %agents with number 0 --> only use  even exits
+                        
                  data = initEscapeRoutes_even(data);
+                 
+                    else
                  data = initEscapeRoutes_odd(data);
+                    end
                 end
                 data = initWallForces(data);
                 

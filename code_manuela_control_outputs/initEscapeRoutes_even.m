@@ -15,7 +15,7 @@ if i<data.floor_exit
     
 elseif i>data.floor_exit
         boundary_data(data.floor(i).img_stairs_down) = -1;
-        data.floor(i).img_stairs_down;
+        
 else
    
      
