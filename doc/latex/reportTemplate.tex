@@ -101,15 +101,25 @@
 
 \section{Abstract}
 
+
+
+
+
+
 \section{Individual contributions}
 The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implenting the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification.
+
+
+
+
+
+\newpage
 \section{Introduction and Motivations}
 \subsection{Introduction}
 The evacuation of a passenger liner due to fire, sinking or other issues leads to several problems. A large amount of passengers try to safe their lives and get to a rescue boat. Narrow and branched floors, smoke, inflowing water, the absence of illumination, rude passengers and so forth can make the evacuation difficult and reduce the number of survivors.
 There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers \cite{SOLAS}. With dry runs the staff is prepared for the case of emergency et cetera. In real life ship corridor reproduction, the behavior of distressed people is studied.
 Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel” \cite{EXODUS}.
 Our approach is similarly to model a passenger ship with a common geometrical outline and ground view. In an optimization process we will thereafter look for an ideal ground view, rescue boat distribution and their size to minimize the time needed for evacuation. Finally we will make a statement on possible improvements.
-\newpage
 \subsection{Motivation}
 Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements \cite{concordia}. Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
 
@@ -134,57 +144,82 @@ If we have time to spare we analyse the difference between uncontrolled and cont
 \item What is the best way to lead the passengers out of the ship?
 \end{itemize}
 In addition we are keen to know if our model is a good abstraction of the reality?
-\section{Description of the Model}
-We will base the modeling part on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler. \cite{Building} In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in c with a MATLAB surface to rapidly simulate the evacuation of multi-level buildings.\bigskip
-\subsection{Social Force Model }
-The simulation is based on the social force model for pedestrian dynamics introduced by Dirk Helbling and Peter Molnar \cite{Helbling}.
-The general idea is that a pedestrian can be represented by a particle of a certain mass. Depending on the specific problem, there are defined forces acting on this particle. Due to these forces the particle  moves with a certain speed and velocity in a defined direction.
-In our model the following forces are acting on an agent: 
-\begin{itemize}
-\item $f_{D}$, pulls the agent into the desired direction
-\item $f_{ij}$ repulsive forces, keeps a certain distance between agent $i$ and agent $j$
-\item $f_{iW}$ wall force, prevents agents $i$ from running into walls
-\end{itemize}
-For each timestep in the simulation, the forces acting on agent $i$ are calculated. 
-Knowing the forces, we can calculate the change in velocity at this timestep:
+
+
+
+
+
+
+
+
+\newpage
+\section{Description of the model}
+We base our model on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler \cite{Building}. In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in in the language C with a MATLAB interface to rapidly simulate the evacuation of multi-level buildings.\bigskip
+
+\subsection{Social force model }
+Our approach is the social force model described by Helbling, Farkas and Vicsek \cite{EscapePanic}. In order to observe an escape panic situation and especially bottlenecks, they built up a continuous-space model. In mathematical terms they took Newtons second law and introduced a mix of socio psychological and physical forces for each so called pedestrian. 
+
 \begin{equation}
 m_{i}\frac{\mathsf{d}\mathbf{v}_{i}}{\mathsf{d}t}=m_{i}f_{D}+\sum \limits_{j(\neq{i})}{f_{ij}}+\sum \limits_{W}{f_{iW}}
 \end{equation}
-Finally, knowing the change in position the new position can be calculatet:
-\begin{equation}
-\mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i}\mathbf{dt}
-\end{equation}
-For more detailed information about the forces and their implementation please refer to \cite{Building}chapter 4.
 
-\subsection{General Model}
-Similar to the building we necessarily need an  implementation of a common ship shape \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
+Each pedestrian has his own mass and a direction $e_i^0$ in witch he wants to move with a certain velocity $v_i^0$. He tries to adapt his own velocity to the wanted velocity with a given characteristic time $tau_i$.
+
+\begin{equation}
+f_{D}=\frac{v_{i}^{0}(t)\mathbf{e}_{i}^{0}(t)-\mathbf{v}_{i}(t)}{\tau_{i}}
+\end{equation}
+
+There are additionally interaction forces $f_{ij}$ between the pedestrian and other people including an exponential part for the tendency of two pedestrians to stay away from each other. The second and third term are zero if the two pedestrians are not in touch. Elsewise there is a force in tangential direction $t$ and in radial direction away from each other. 
+
+\begin{equation}
+f_{ij} = \left\{A_{i}exp[(r_{ij}-d_{ij})/B_{i}]+kg(r_{ij}-d_{ij})\right\}\mathbf{n}_{ij}+\kappa g(r_{ij}-d_{ij})\triangle v_{ji}^t\mathbf{t}_{ij}
+\end{equation}
+
+To be able to handle with walls there is another forces $f_{iW}$ introduced. Its direction is away from the surrounding walls and the structure is similar to the one for the interaction between pedestrians.
+
+\begin{equation}
+f_{iW}=\left\{A_{i}exp[(r_{i}-d_{iW})/B_{i}]+kg(r_{i}-d_{iW})\right\}\mathbf{n}_{iW}-\kappa g(r_{i}-d_{iW})(\mathbf{v}_{i}\cdot\mathbf{t}_{iW})\mathbf{t}_{iW}
+\end{equation}
+
+\subsection{Ship structure}
+To apply the force model on a realistic situation a ship has to be implemented as well. Floor plans from the Costa Serena were taken \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
+
 \begin{itemize}
 \item Number of passengers (4400 agents)
 \item Overall capacity of the rescue boats (4680 seats)
-\item Ship size and shape
-\item Area used by specific rooms (coaches for passengers, lounge area, corridors)
+\item Ship size and outer shape
 \end{itemize}
-Our target is to decrease the evacuation time. Measurements will be made on the time to evacuate:
-\begin{itemize}
-\item 10\%
-\item 50\%
-\item 90\%
-\item 99\% of all passengers.
-\end{itemize}
+
 In order to optimize the evacuation time, we change the following dependent variables:
 \begin{itemize}
-\item Disposition of the specific room types (e.g. changing the geometry of the corridors without changing the total area used for corridors)
+\item Stairs and their positions
 \item Rescue boat size, number and position
 \item Control of the passenger flow by crew members (e.g. is there staff to lead the passengers and how are they doing it?)
 \end{itemize}
 
-\subsection{Force Model}
 
 
+
+\newpage
 \section{Implementation}
-\subsection{Code}
-As mentioned above our code is based on the work of a previous project. In order to answer our qestion we had to make several adjustments and adapt it to our simulation model. In this chapter we are going to explain the most significant changes. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
-\subsubsection{Code adjustment - Exits}
+As mentioned above our code is based on the work of a previous project. In order to answer our question we had to make several adjustments and adapt it to our simulation model. In this chapter we are going to explain the most significant changes we did. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
+
+\subsection{Basic code}
+The builders of the code we base on created a flexible model to simulate building structures. The floors can be feed as graphic data into the system where different colors stand for different areas. Black are walls, red stairs up, blue stairs down, green exits and purpe agent spawning areas. The data is evaluated in matlab in matrices. Information on parameters such as timestep, simulation time, force characteristics et cetera can be read in using a config file which is evaluated on simulation start.\\
+With a fast sweeping algorithm in C a vector field is created for every floor pointing in direction of the shortest way towards stairs and exits. In a loop over all passengers the acting forces on them are calculated and via forward Euler converted into velocities. 
+
+\begin{equation}
+\mathbf{v}_{i,new} = \mathbf{v}_{i,previous} + \frac{\sum {f}}{m_{i}}dt
+\end{equation}
+
+Again with the forward Euler scheme positions are calculated that were reached in a finite timestep.\\
+
+\begin{equation}
+\mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i,new}dt
+\end{equation}
+
+\subsection{Code adjustments}
+\subsubsection{Exits}
 \underline{Reason:}
 \newline
 The first change which was necessary was due to the fact that the exits in our simulation are not simply on the lowest floor.
@@ -207,7 +242,7 @@ Since we defined our exit, we are able to easily modify the by splitting the loo
 \newline
 Because of this modification it is not necessary to loop twice over all floors. Consequently our code remains fast and efficient. We also kept the simple concept of vectors out of booleans. Means for each agent there is one number set: If the agent reaches a staircase and therefore changes the floor he is a 1 otherwise he is a 0. The assumption also is a great simplification for the pictures since we do not have to mess with the problem of having overlapping stairs.
 
-\subsubsection{Code adjustment - Different exits}
+\subsubsection{Different exits}
 \underline{Reason:}
 \newline
 Because the exits model rescueboats, which can only hold a limited number of agents, we were forced to find a way how to differ the exits from each other and to assign a specific number to every exit.
@@ -244,7 +279,7 @@ config.exit\underline{ }nr = config.exit\underline{ }nr + e*( img\underline{ }bu
 \end{tabular}
 \caption{Implementation of the exit\underline{ }nr matrix}
 \end{figure}
-\subsubsection{Code adjustment - Closing exits during simulation}
+\subsubsection{Closing exits during simulation}
 
 \underline{Reason:}
 \newline
@@ -351,7 +386,7 @@ data.floor(data.floor\underline{ }exit).img\underline{ }exit = data.floor(data.f
 \caption{Implementation to close filled  boats}
 \end{figure}
 
-\subsubsection{Code adjustment - Controlled evacuation}
+\subsubsection{Controlled evacuation}
 
 \underline{Reason:}
 \newline
@@ -460,10 +495,21 @@ data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
 \caption{Implementation to randomly split agents to even and odd}
 \end{figure}
 
-
-
-
 \subsection{Ship Decks}
+
+\subsection{Simulation output}
+
+\subsection{Parameters}
+
+
+
+
+
+
+
+
+
+\newpage
 \section{Simulation Results and Discussion}
 \subsection{Expected Results}
 \begin{itemize}
@@ -571,10 +617,11 @@ This decrease in evacuation time is an effect of the reduced time the last agent
 
 \begin{thebibliography}{9}
 \bibitem{Helbling} Helbing, Dirk (1995): Social Force Model for Pedestrians Dynamics.
+\bibitem{EscapePanic} Helbling, Dirk et al (2000): Simulating dynamical features of escape panic.
 \bibitem{Building} Hardmeier,Jenal,Kueng,Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
 \bibitem{SOLAS} SOLAS (1974): International Convention for the Safety of Life at Sea. \url{http://www.imo.org/about/conventions/listofconventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx}
 \bibitem{ship} SHIP EVACUATION: \url{http://www.shipevacuation.com/}
-\bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa%20Serena}
+\bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa Serena}
 \bibitem{EXODUS} University of Greenwich (2011):  maritimeEXODUS. \url{http://fseg.gre.ac.uk/fire/marine_evac_model.html}
 \bibitem{concordia} Haverie of Costa Concordia (2012): \url{http://de.wikipedia.org/wiki/Costa_Concordia#Havarie_2012}
 	
