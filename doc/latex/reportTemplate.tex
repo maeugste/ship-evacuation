@@ -152,7 +152,7 @@ Our target is to decrease the evacuation time. Measurements will be made on the 
 \item 10\%
 \item 50\%
 \item 90\%
-\item100\% of all passengers.
+\item 99\% of all passengers.
 \end{itemize}
 In order to optimize the evacuation time, we change the following dependent variables:
 \begin{itemize}
@@ -182,23 +182,23 @@ In order to optimize the evacuation time, we change the following dependent vari
 As listed above we were interested in the time in which a certain percentage of all agents was evacuated:
 \newline
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}
 {|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
-percentage of agents.& 10\% &  50\% & 90\% &100\% \\ \hline
-evacuation time & 69s &272s & 468s & 694s \\ \hline \hline
+percentage of agents.& 10\% &  50\% & 90\% &99\% \\ \hline
+evacuation time & 69s &272s & 468s & 614s \\ \hline \hline
 \end{tabular}
 \caption{Standard simulation: Needed time to evacuate a certain percentage of all agents.}
 \end{table}
 
-Further our standard ship simulation reveald the following performance:
+Further our standard ship simulation showed the following performance:
 
 \begin{figure}[htbp]
 \centering
 {\begin{minipage}[t]{7.4cm}
 \includegraphics[width=\textwidth]{run1-standard-rescueboatcapacity.pdf}
-\caption{Standard simulation: Boat capacity during simulation}
+\caption{Standard simulation: Boat capacities during simulation}
 \end{minipage}}
 {\begin{minipage}[t]{7.4cm}
 \includegraphics[width=\textwidth]{run1-standard-agentsperfloor.pdf}
@@ -207,11 +207,54 @@ Further our standard ship simulation reveald the following performance:
 \end{figure}
 
 \subsubsection{Modified room disposition}
+As we expected the standard simulation revealed, that hold-up problems occur because of the staircases. As the flow everywhere else was quite dynamic we abstained from adjusting the room disposition but instead we inserted an additional staircase. This simulation yielded the following results:
+
+\begin{table}[h]
+\centering
+\begin{tabular}
+{|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
+percentage of agents.& 10\% &  50\% & 90\% & 99\% \\ \hline
+evacuation time & 72s &259s & 461s & 595s \\ \hline \hline
+\end{tabular}
+\caption{Added stairs simulation: Needed time to evacuate a certain percentage of all agents.}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{run1-added-stairs-rescueboatcapacity.pdf}
+\caption{Added stairs simulation: Boat capacities during simulation}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{run1-added-stairs-agentsperfloor.pdf}
+\caption{Added stairs simulation: Number of agents per floor}
+\end{minipage}}
+\end{figure}
+ 
 \subsubsection{Modified rescueboat size}
-\subsubsection{Merge of modified room disposition and rescueboat size}
+
+\begin{table}[h]
+\centering
+\begin{tabular}
+{|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
+percentage of agents.& 10\% &  50\% & 90\% & 99\% \\ \hline
+evacuation time & 71s &257s & 419s & 571s \\ \hline \hline
+\end{tabular}
+\caption{Varied boatsize simulation: Needed time to evacuate a certain percentage of all agents.}
+\end{table}
+
+
+
+
+
 \subsubsection{Controlled outputs}
 \subsubsection{Crew command}
 \subsection{Comparison}
+\subsubsection{Standard - Modified room disposition}
+The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by almost 20s. Further 50\% of all agents entered the exits approximately 13s earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same. Another point which was actually not important for our research is that you get a much higher agent densitiy on the exit floor. 
+\subsubsection{Standard - Modified rescueboat size}
+\subsubsection{Standard - Controlles outputs}
+\subsubsection{Standard - Crew command}
 \subsection{Discussion}
 \section{Summary and Outlook}
 \subsection{Summary}

@@ -13,15 +13,18 @@
 \contentsline {subsection}{\numberline {6.1}Expected Results}{8}
 \contentsline {subsection}{\numberline {6.2}Simulation Results}{8}
 \contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{8}
-\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{10}
+\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{9}
 \contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{10}
-\contentsline {subsubsection}{\numberline {6.2.4}Merge of modified room disposition and rescueboat size}{10}
-\contentsline {subsubsection}{\numberline {6.2.5}Controlled outputs}{10}
-\contentsline {subsubsection}{\numberline {6.2.6}Crew command}{10}
+\contentsline {subsubsection}{\numberline {6.2.4}Controlled outputs}{10}
+\contentsline {subsubsection}{\numberline {6.2.5}Crew command}{10}
 \contentsline {subsection}{\numberline {6.3}Comparison}{10}
-\contentsline {subsection}{\numberline {6.4}Discussion}{10}
-\contentsline {section}{\numberline {7}Summary and Outlook}{10}
-\contentsline {subsection}{\numberline {7.1}Summary}{10}
-\contentsline {subsection}{\numberline {7.2}Outlook}{10}
-\contentsline {section}{\numberline {8}References}{10}
+\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{10}
+\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{11}
+\contentsline {subsubsection}{\numberline {6.3.3}Standard - Controlles outputs}{11}
+\contentsline {subsubsection}{\numberline {6.3.4}Standard - Crew command}{11}
+\contentsline {subsection}{\numberline {6.4}Discussion}{11}
+\contentsline {section}{\numberline {7}Summary and Outlook}{11}
+\contentsline {subsection}{\numberline {7.1}Summary}{11}
+\contentsline {subsection}{\numberline {7.2}Outlook}{11}
+\contentsline {section}{\numberline {8}References}{11}
 \contentsline {section}{\numberline {9}Appendix}{11}
