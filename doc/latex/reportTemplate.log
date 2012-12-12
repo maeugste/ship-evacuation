@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  11 DEC 2012 21:00
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  11 DEC 2012 23:01
 entering extended mode
 **C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate.tex
 
@@ -247,19 +247,98 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip48
 \backup@length=\skip49
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count112
+\calc@Bcount=\count113
+\calc@Adimen=\dimen128
+\calc@Bdimen=\dimen129
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count114
+\calc@Cskip=\skip52
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box30
+\AM@toc@title=\toks24
+\c@AM@survey=\count115
+\AM@templatesizebox=\box31
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count116
+\float@exts=\toks25
+\float@box=\box32
+\@float@everytoks=\toks26
+\@floatcapt=\box33
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen130
+\captionmargin@=\dimen131
+\captionwidth=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
+)
+\c@ContinuedFloat=\count117
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
+\c@subfigure=\count118
+\c@subtable=\count119
+)
 (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -294,21 +373,25 @@ LaTeX Font Info:    ... okay on input line 19.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count112
+\c@lstlisting=\count120
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen128
-\scratchbox=\box30
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen129
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks25
-) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\cover.tex
+\scratchcounter=\count121
+\scratchdimen=\dimen136
+\scratchbox=\box34
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen137
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks28
+)
+\AtBeginShipoutBox=\box35
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\cover.tex
 Package epstopdf Info: Source file: <ETHlogo.eps>
 (epstopdf)                    date: 2012-12-11 20:07:36
 (epstopdf)                    size: 179075 bytes
@@ -339,17 +422,17 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Fabian/Documents
 /GitHub/ship-evacuation/doc/latex/ETHlogo-eps-converted-to.pdf>]
-Overfull \hbox (5.3226pt too wide) in paragraph at lines 45--72
+Overfull \hbox (5.3226pt too wide) in paragraph at lines 50--77
  [] 
  []
 
 [2] <declaration.jpg, id=15, 598.1547pt x 845.0772pt>
 File: declaration.jpg Graphic file (type jpg)
  <use declaration.jpg>
-Package pdftex.def Info: declaration.jpg used on input line 79.
+Package pdftex.def Info: declaration.jpg used on input line 84.
 (pdftex.def)             Requested size: 430.00462pt x 607.53958pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 79--80
+Overfull \hbox (17.0pt too wide) in paragraph at lines 84--85
 [][] 
  []
 
@@ -366,53 +449,76 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
  [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
  [6]
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []|\OT1/cmr/m/n/12 percantage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
 []|\OT1/cmr/m/n/12 evacuation
  []
 
-[8]
-Underfull \hbox (badness 1286) in paragraph at lines 202--203
+<run1-standard-rescueboatcapacity.pdf, id=33, 845.1575pt x 597.23125pt>
+File: run1-standard-rescueboatcapacity.pdf Graphic file (type pdf)
+
+<use run1-standard-rescueboatcapacity.pdf>
+Package pdftex.def Info: run1-standard-rescueboatcapacity.pdf used on input lin
+e 200.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+
+<run1-standard-agentsperfloor.pdf, id=34, 845.1575pt x 597.23125pt>
+File: run1-standard-agentsperfloor.pdf Graphic file (type pdf)
+
+<use run1-standard-agentsperfloor.pdf>
+Package pdftex.def Info: run1-standard-agentsperfloor.pdf used on input line 20
+4.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+ [8] [9 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/run1-standa
+rd-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documen
+ts/GitHub/ship-evacuation/doc/latex/run1-standard-agentsperfloor.pdf, page is r
+otated 90 degrees>]
+Underfull \hbox (badness 1286) in paragraph at lines 224--225
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-[9] [10]
+[10] [11]
 (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.aux)
  ) 
 Here is how much of TeX's memory you used:
- 4554 strings out of 493921
- 63053 string characters out of 3144873
- 130496 words of memory out of 3000000
- 7773 multiletter control sequences out of 15000+200000
+ 6887 strings out of 493921
+ 100523 string characters out of 3144873
+ 179896 words of memory out of 3000000
+ 10065 multiletter control sequences out of 15000+200000
  13835 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,11n,32p,701b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,39p,701b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
@@ -420,9 +526,9 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on reportTemplate.pdf (10 pages, 1174055 bytes).
+Output written on reportTemplate.pdf (11 pages, 1313179 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
