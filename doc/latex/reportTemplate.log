@@ -1,8 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  12 DEC 2012 11:07
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  12 DEC 2012 16:12
 entering extended mode
-**C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate.tex
+**C:/Users/Fabian/Documents/ETH/5.Semester/Lecture*with*Matlab/results/doc/late
+x/reportTemplate.tex
 
-(C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate.tex
+("C:/Users/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/late
+x/reportTemplate.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -326,19 +328,21 @@ Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count118
 \c@subtable=\count119
 )
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+("C:\Users\Fabian\Documents\ETH\5.Semester\Lecture with Matlab\results\doc\late
+x\reportTemplate.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -391,7 +395,9 @@ LaTeX Font Info:    ... okay on input line 24.
 \AtBeginShipoutBox=\box35
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\cover.tex
+
+("C:\Users\Fabian\Documents\ETH\5.Semester\Lecture with Matlab\results\doc\late
+x\cover.tex"
 Package epstopdf Info: Source file: <ETHlogo.eps>
 (epstopdf)                    date: 2012-12-11 20:07:36
 (epstopdf)                    size: 179075 bytes
@@ -402,8 +408,7 @@ Package epstopdf Info: Source file: <ETHlogo.eps>
 f ETHlogo.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
-
-<ETHlogo-eps-converted-to.pdf, id=1, 179.67125pt x 45.16875pt>
+ <ETHlogo-eps-converted-to.pdf, id=1, 179.67125pt x 45.16875pt>
 File: ETHlogo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ETHlogo-eps-converted-to.pdf>
@@ -421,18 +426,19 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Fabian/Documents
-/GitHub/ship-evacuation/doc/latex/ETHlogo-eps-converted-to.pdf>]
-Overfull \hbox (5.3226pt too wide) in paragraph at lines 50--77
+/ETH/5.Semester/Lecture with Matlab/results/doc/latex/ETHlogo-eps-converted-to.
+pdf>]
+Overfull \hbox (5.3226pt too wide) in paragraph at lines 52--79
  [] 
  []
 
 [2] <declaration.jpg, id=15, 598.1547pt x 845.0772pt>
 File: declaration.jpg Graphic file (type jpg)
  <use declaration.jpg>
-Package pdftex.def Info: declaration.jpg used on input line 84.
+Package pdftex.def Info: declaration.jpg used on input line 86.
 (pdftex.def)             Requested size: 430.00462pt x 607.53958pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 84--85
+Overfull \hbox (17.0pt too wide) in paragraph at lines 86--87
 [][] 
  []
 
@@ -440,136 +446,212 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 84--85
 Overfull \vbox (51.06302pt too high) has occurred while \output is active []
 
 
-[3 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/declaration.jpg>
-]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.toc)
+[3 <C:/Users/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/la
+tex/declaration.jpg>]
+("C:\Users\Fabian\Documents\ETH\5.Semester\Lecture with Matlab\results\doc\late
+x\reportTemplate.toc" [4])
 \tf@toc=\write3
-[4]
+ [5]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
+ [6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 122.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
- [6]
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
+ [7] [8] [9]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 217--230
+ [][] 
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 252--275
+ [][] 
+ []
+
+[10]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 285--294
+ [][] 
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 304--308
+\OT1/cmr/m/n/12 data.exit$[]$left(1,data.current$[]$exit) = data.exit$[]$left(1
+,data.exit$[]$nr(round(newp(1)),
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 301--310
+ [][] 
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 317--336
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (10.4728pt too wide) in paragraph at lines 341--365
+\OT1/cmr/m/n/12 init$[]$agents.m, ad-dDe-sired-Force.m, initEscapeRoutes$[]$eve
+n.m, initEscapeRoutes$[]$odd.m,
+ []
+
+[11]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 368--379
+ [][] 
+ []
+
+[12]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 386--395
+ [][] 
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 402--411
+ [][] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 418--445
+ [][] 
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
+Underfull \hbox (badness 10000) in paragraph at lines 471--471
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+[]|\OT1/cmr/m/n/12 evacuation
+ []
+
+<run1-standard-rescueboatcapacity.pdf, id=58, 845.1575pt x 597.23125pt>
+File: run1-standard-rescueboatcapacity.pdf Graphic file (type pdf)
+
+<use run1-standard-rescueboatcapacity.pdf>
+Package pdftex.def Info: run1-standard-rescueboatcapacity.pdf used on input lin
+e 482.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+
+<run1-standard-agentsperfloor.pdf, id=59, 845.1575pt x 597.23125pt>
+File: run1-standard-agentsperfloor.pdf Graphic file (type pdf)
+
+<use run1-standard-agentsperfloor.pdf>
+Package pdftex.def Info: run1-standard-agentsperfloor.pdf used on input line 48
+6.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+ [15 <C:/Users/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/
+latex/run1-standard-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Use
+rs/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/latex/run1-s
+tandard-agentsperfloor.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[]|\OT1/cmr/m/n/12 percentage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\OT1/cmr/m/n/12 evacuation
+ []
+
+<run1-added-stairs-rescueboatcapacity.pdf, id=69, 845.1575pt x 597.23125pt>
+File: run1-added-stairs-rescueboatcapacity.pdf Graphic file (type pdf)
+
+<use run1-added-stairs-rescueboatcapacity.pdf>
+Package pdftex.def Info: run1-added-stairs-rescueboatcapacity.pdf used on input
+ line 507.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+
+<run1-added-stairs-agentsperfloor.pdf, id=70, 845.1575pt x 597.23125pt>
+File: run1-added-stairs-agentsperfloor.pdf Graphic file (type pdf)
+
+<use run1-added-stairs-agentsperfloor.pdf>
+Package pdftex.def Info: run1-added-stairs-agentsperfloor.pdf used on input lin
+e 511.
+(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--522
+[]|\OT1/cmr/m/n/12 percentage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--523
 []|\OT1/cmr/m/n/12 evacuation
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<run1-standard-rescueboatcapacity.pdf, id=33, 845.1575pt x 597.23125pt>
-File: run1-standard-rescueboatcapacity.pdf Graphic file (type pdf)
-
-<use run1-standard-rescueboatcapacity.pdf>
-Package pdftex.def Info: run1-standard-rescueboatcapacity.pdf used on input lin
-e 200.
-(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
-
-<run1-standard-agentsperfloor.pdf, id=34, 845.1575pt x 597.23125pt>
-File: run1-standard-agentsperfloor.pdf Graphic file (type pdf)
-
-<use run1-standard-agentsperfloor.pdf>
-Package pdftex.def Info: run1-standard-agentsperfloor.pdf used on input line 20
-4.
-(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
-[]|\OT1/cmr/m/n/12 percentage
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
-[]|\OT1/cmr/m/n/12 evacuation
- []
-
-<run1-added-stairs-rescueboatcapacity.pdf, id=39, 845.1575pt x 597.23125pt>
-File: run1-added-stairs-rescueboatcapacity.pdf Graphic file (type pdf)
-
-<use run1-added-stairs-rescueboatcapacity.pdf>
-Package pdftex.def Info: run1-added-stairs-rescueboatcapacity.pdf used on input
- line 225.
-(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
-
-<run1-added-stairs-agentsperfloor.pdf, id=40, 845.1575pt x 597.23125pt>
-File: run1-added-stairs-agentsperfloor.pdf Graphic file (type pdf)
-
-<use run1-added-stairs-agentsperfloor.pdf>
-Package pdftex.def Info: run1-added-stairs-agentsperfloor.pdf used on input lin
-e 229.
-(pdftex.def)             Requested size: 210.55022pt x 148.788pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
-[]|\OT1/cmr/m/n/12 percentage
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
-[]|\OT1/cmr/m/n/12 evacuation
- []
-
-[9 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/run1-standard-re
-scueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documents/Gi
-tHub/ship-evacuation/doc/latex/run1-standard-agentsperfloor.pdf, page is rotate
-d 90 degrees>] [10 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/
-run1-added-stairs-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users
-/Fabian/Documents/GitHub/ship-evacuation/doc/latex/run1-added-stairs-agentsperf
-loor.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 1286) in paragraph at lines 267--268
+[16 <C:/Users/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/l
+atex/run1-added-stairs-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/
+Users/Fabian/Documents/ETH/5.Semester/Lecture with Matlab/results/doc/latex/run
+1-added-stairs-agentsperfloor.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 1286) in paragraph at lines 549--550
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-[11]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate.aux)
- ) 
+[17] [18]
+("C:\Users\Fabian\Documents\ETH\5.Semester\Lecture with Matlab\results\doc\late
+x\reportTemplate.aux") ) 
 Here is how much of TeX's memory you used:
- 6897 strings out of 493921
- 100941 string characters out of 3144873
- 180896 words of memory out of 3000000
- 10073 multiletter control sequences out of 15000+200000
- 13835 words of font info for 54 fonts, out of 3000000 for 9000
+ 6902 strings out of 493921
+ 101219 string characters out of 3144873
+ 181896 words of memory out of 3000000
+ 10077 multiletter control sequences out of 15000+200000
+ 14182 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,11n,39p,701b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on reportTemplate.pdf (11 pages, 1449566 bytes).
+ 42i,14n,39p,721b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.p
+fb>
+Output written on reportTemplate.pdf (18 pages, 1486825 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
