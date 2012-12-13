@@ -17,6 +17,7 @@
 \usepackage{color}
 
 
+
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 %\title{Title}
@@ -101,18 +102,30 @@
 
 \section{Abstract}
 
+
+
+
+
+
 \section{Individual contributions}
 The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implenting the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification.
+
+
+
+
+
+\newpage
 \section{Introduction and Motivations}
 \subsection{Introduction}
 The evacuation of a passenger liner due to fire, sinking or other issues leads to several problems. A large amount of passengers try to safe their lives and get to a rescue boat. Narrow and branched floors, smoke, inflowing water, the absence of illumination, rude passengers and so forth can make the evacuation difficult and reduce the number of survivors.
 There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers \cite{SOLAS}. With dry runs the staff is prepared for the case of emergency et cetera. In real life ship corridor reproduction, the behavior of distressed people is studied.
 Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a PC based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat and toxic gases and angle of heel” \cite{EXODUS}.
 Our approach is similarly to model a passenger ship with a common geometrical outline and ground view. In an optimization process we will thereafter look for an ideal ground view, rescue boat distribution and their size to minimize the time needed for evacuation. Finally we will make a statement on possible improvements.
-\newpage
 \subsection{Motivation}
 Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements \cite{concordia}. Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
 
+
+\newpage
 \subsection{Fundamental Questions}
 To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localised these places we are interested in the answers of the following questions:
 
@@ -134,57 +147,75 @@ If we have time to spare we analyse the difference between uncontrolled and cont
 \item What is the best way to lead the passengers out of the ship?
 \end{itemize}
 In addition we are keen to know if our model is a good abstraction of the reality?
-\section{Description of the Model}
-We will base the modeling part on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler. \cite{Building} In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in c with a MATLAB surface to rapidly simulate the evacuation of multi-level buildings.\bigskip
-\subsection{Social Force Model }
-The simulation is based on the social force model for pedestrian dynamics introduced by Dirk Helbling and Peter Molnar \cite{Helbling}.
-The general idea is that a pedestrian can be represented by a particle of a certain mass. Depending on the specific problem, there are defined forces acting on this particle. Due to these forces the particle  moves with a certain speed and velocity in a defined direction.
-In our model the following forces are acting on an agent: 
-\begin{itemize}
-\item $f_{D}$, pulls the agent into the desired direction
-\item $f_{ij}$ repulsive forces, keeps a certain distance between agent $i$ and agent $j$
-\item $f_{iW}$ wall force, prevents agents $i$ from running into walls
-\end{itemize}
-For each timestep in the simulation, the forces acting on agent $i$ are calculated. 
-Knowing the forces, we can calculate the change in velocity at this timestep:
+
+
+
+\newpage
+\section{Description of the model}
+We base our model on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal , Beat Kueng and Felix Thaler \cite{Building}. In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in in the language C with a MATLAB interface to rapidly simulate the evacuation of multi-level buildings.\bigskip
+
+\subsection{Social force model }
+Our approach is the social force model described by Helbling, Farkas and Vicsek \cite{EscapePanic}. In order to observe an escape panic situation and especially bottlenecks, they built up a continuous-space model. In mathematical terms they took Newtons second law and introduced a mix of socio psychological and physical forces for each so called pedestrian. 
+
 \begin{equation}
 m_{i}\frac{\mathsf{d}\mathbf{v}_{i}}{\mathsf{d}t}=m_{i}f_{D}+\sum \limits_{j(\neq{i})}{f_{ij}}+\sum \limits_{W}{f_{iW}}
 \end{equation}
-Finally, knowing the change in position the new position can be calculatet:
-\begin{equation}
-\mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i}\mathbf{dt}
-\end{equation}
-For more detailed information about the forces and their implementation please refer to \cite{Building}chapter 4.
 
-\subsection{General Model}
-Similar to the building we necessarily need an  implementation of a common ship shape \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
+Each pedestrian has his own mass and a direction $e_i^0$ in witch he wants to move with a certain velocity $v_i^0$. He tries to adapt his own velocity to the wanted velocity with a given characteristic time $tau_i$.
+
+\begin{equation}
+f_{D}=\frac{v_{i}^{0}(t)\mathbf{e}_{i}^{0}(t)-\mathbf{v}_{i}(t)}{\tau_{i}}
+\end{equation}
+
+There are additionally interaction forces $f_{ij}$ between the pedestrian and other people including an exponential part for the tendency of two pedestrians to stay away from each other. The second and third term are zero if the two pedestrians are not in touch. Elsewise there is a force in tangential direction $t$ and in radial direction away from each other. 
+
+\begin{equation}
+f_{ij} = \left\{A_{i}exp[(r_{ij}-d_{ij})/B_{i}]+kg(r_{ij}-d_{ij})\right\}\mathbf{n}_{ij}+\kappa g(r_{ij}-d_{ij})\triangle v_{ji}^t\mathbf{t}_{ij}
+\end{equation}
+
+To be able to handle with walls there is another forces $f_{iW}$ introduced. Its direction is away from the surrounding walls and the structure is similar to the one for the interaction between pedestrians.
+
+\begin{equation}
+f_{iW}=\left\{A_{i}exp[(r_{i}-d_{iW})/B_{i}]+kg(r_{i}-d_{iW})\right\}\mathbf{n}_{iW}-\kappa g(r_{i}-d_{iW})(\mathbf{v}_{i}\cdot\mathbf{t}_{iW})\mathbf{t}_{iW}
+\end{equation}
+\newpage
+\subsection{Ship structure}
+To apply the force model on a realistic situation a ship has to be implemented as well. Floor plans from the Costa Serena were taken \cite{shipdecks}. In order to make strong conclusions we want to keep the following variables independent:
+
 \begin{itemize}
 \item Number of passengers (4400 agents)
 \item Overall capacity of the rescue boats (4680 seats)
-\item Ship size and shape
-\item Area used by specific rooms (coaches for passengers, lounge area, corridors)
+\item Ship size and outer shape
 \end{itemize}
-Our target is to decrease the evacuation time. Measurements will be made on the time to evacuate:
-\begin{itemize}
-\item 10\%
-\item 50\%
-\item 90\%
-\item 99\% of all passengers.
-\end{itemize}
+
 In order to optimize the evacuation time, we change the following dependent variables:
 \begin{itemize}
-\item Disposition of the specific room types (e.g. changing the geometry of the corridors without changing the total area used for corridors)
+\item Stairs and their positions
 \item Rescue boat size, number and position
 \item Control of the passenger flow by crew members (e.g. is there staff to lead the passengers and how are they doing it?)
 \end{itemize}
 
-\subsection{Force Model}
 
-
+\newpage
 \section{Implementation}
-\subsection{Code}
-As mentioned above our code is based on the work of a previous project. In order to answer our qestion we had to make several adjustments and adapt it to our simulation model. In this chapter we are going to explain the most significant changes. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
-\subsubsection{Code adjustment - Exits}
+As mentioned above our code is based on the work of a previous project. In order to answer our question we had to make several adjustments and adapt it to our simulation model. In this chapter we are going to explain the most significant changes we did. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
+
+\subsection{Basic code}
+The builders of the code we base on created a flexible model to simulate building structures. The floors can be feed as graphic data into the system where different colors stand for different areas. Black are walls, red stairs up, blue stairs down, green exits and purpe agent spawning areas. The data is evaluated in matlab in matrices. Information on parameters such as timestep, simulation time, force characteristics et cetera can be read in using a config file which is evaluated on simulation start.\\
+With a fast sweeping algorithm in C a vector field is created for every floor pointing in direction of the shortest way towards stairs and exits. In a loop over all passengers the acting forces on them are calculated and via forward Euler converted into velocities. 
+
+\begin{equation}
+\mathbf{v}_{i,new} = \mathbf{v}_{i,previous} + \frac{\sum {f}}{m_{i}}dt
+\end{equation}
+\\
+Again with the forward Euler scheme positions are calculated that were reached in a finite timestep.\\
+
+\begin{equation}
+\mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i,new}dt
+\end{equation}
+
+\subsection{Code adjustments}
+\subsubsection{Exits}
 \underline{Reason:}
 \newline
 The first change which was necessary was due to the fact that the exits in our simulation are not simply on the lowest floor.
@@ -207,7 +238,7 @@ Since we defined our exit, we are able to easily modify the by splitting the loo
 \newline
 Because of this modification it is not necessary to loop twice over all floors. Consequently our code remains fast and efficient. We also kept the simple concept of vectors out of booleans. Means for each agent there is one number set: If the agent reaches a staircase and therefore changes the floor he is a 1 otherwise he is a 0. The assumption also is a great simplification for the pictures since we do not have to mess with the problem of having overlapping stairs.
 
-\subsubsection{Code adjustment - Different exits}
+\subsubsection{Different exits}
 \underline{Reason:}
 \newline
 Because the exits model rescueboats, which can only hold a limited number of agents, we were forced to find a way how to differ the exits from each other and to assign a specific number to every exit.
@@ -244,7 +275,7 @@ config.exit\underline{ }nr = config.exit\underline{ }nr + e*( img\underline{ }bu
 \end{tabular}
 \caption{Implementation of the exit\underline{ }nr matrix}
 \end{figure}
-\subsubsection{Code adjustment - Closing exits during simulation}
+\subsubsection{Closing exits during simulation}
 
 \underline{Reason:}
 \newline
@@ -291,7 +322,7 @@ config.exit\underline{ }left(1,e) = config.(sprintf(\textcolor{magenta}{'exit\un
 \end{figure}
 
 \bigskip
-In the loop where the forces are calculated and the agents moved, (in function apllyForcesandMove.m) we added a piece of code, which updates the exit\underline{ }left matrix at every time-step.
+In the loop where the forces are calculated and the agents moved, (in function applyForcesandMove.m) we added a piece of code, which updates the exit\underline{ }left matrix at every time-step.
 \newline
 First, we get the number of the current exit.
 
@@ -350,8 +381,8 @@ data.floor(data.floor\underline{ }exit).img\underline{ }exit = data.floor(data.f
 \end{tabular}
 \caption{Implementation to close filled  boats}
 \end{figure}
-
-\subsubsection{Code adjustment - Controlled evacuation}
+\newpage
+\subsubsection{Controlled evacuation}
 
 \underline{Reason:}
 \newline
@@ -393,7 +424,6 @@ boundary\underline{ }data(temp2)=-1; \textcolor{green}{\%boundary\underline{ }da
 \end{tabular}
 \caption{Implementation to init escape routes for even numbers}
 \end{figure}
-
 $\rightarrow$ initEscapeRoutes\underline{ }.m, this function only considers the exits which are identified by an odd number
 
 \begin{figure}[H]
@@ -460,10 +490,246 @@ data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
 \caption{Implementation to randomly split agents to even and odd}
 \end{figure}
 
+\newpage
+\subsection{Video creation}
+\underline{Reason:}
+\newline
+In the basic code there was a graphical output into eps-formated files possible on every timestep. The images then had to be converted into a video file in a postprocessing part. This is not an optimal implementation for a fast system. Furthermore it turned out that we could increase the simulation speed by factor two just by saving not on every single timestep but only on every 10$^t$$^h$ or 100$^t$$^h$. Another issue was the conversion from eps to a video file. To simplify the handling, we used a MATLAB function to create directly a video out of the figures instead of making a detour via images.
+\newline
+\underline{Function:}
+\newline
+simulate.m, initialize.m
+\newline
+\underline{New variables:}
+\newline
+save\underline{ }frame
+\newline
+\underline{Modification:}
+\newline
 
+\begin{figure}[H]
+\centering
+\begin{tabular}
+{|>{\large}m{\textwidth}|} \hline
+\bigskip
+\textcolor{green}{\% prepare video file name}
+\newline
+data.video\underline{ }file\underline{ }name = [\textcolor{magenta}{$'$video\underline{ }$'$} data.frame\underline{ }basename \textcolor{magenta}{$'$.avi$'$}];
+\newline
+\newline
+\textcolor{green}{\% make video while simulation}
+\newline
+\textcolor{blue}{If} data.save\underline{ }frames==1
+\newline
+             vidObj=VideoWriter(data.video\underline{ }file\underline{ }name);
+\newline
+             open(vidObj);
+\newline
+\textcolor{blue}{end}
+\newline
+\newline
+\textcolor{green}{\% make video while simulate   }
+\newline
+currFrame=getframe(data.figure\underline{ }floors);
+\newline
+writeVideo(vidObj,currFrame);
+\newline
+\newline
+\textcolor{green}{\% make video while simulation}
+\newline
+currFrame=getframe(data.figure\underline{ }floors);
+\newline
+writeVideo(vidObj,currFrame);
+\newline
+\newline
+\textcolor{green}{\% make video while simulation}
+\newline
+close(vidObj);
+\bigskip
+\\ \hline
+\end{tabular}
+\caption{Implementation to produce video file}
+\end{figure}
+
+\subsection{System output}
+\underline{Reason:}
+\newline
+Storing the simulation output is important to be able to analyse and optimize the system. The output of the basic code was just a plot with agents left the building over time and the above mentioned graphical output of the floor plans over time. We extended the output and created a dump struct where all the important variables are listed over time. That struct is the system output at simulation end and it can be used in a postprocessing part to generate meaningful graphs and data.
+\newline
+\underline{Function:}
+\newline
+simulate.m
+\newline
+\underline{New variables:}
+\newline
+output
+\newline
+\newpage
+\underline{Modification:}
+
+\begin{figure}[H]
+\centering
+\begin{tabular}
+{|>{\large}m{\textwidth}|} \hline
+\bigskip
+\textcolor{green}{\% init output matrizes}
+\newline
+data.output = struct;
+\newline
+data.output.config = config;
+\newline
+data.output.agents\underline{ }per\underline{ }floor = ones(data.floor\underline{ }count,data.duration/data.dt).$*$(-1);
+\newline
+data.output.exit\underline{ }left = zeros(data.exit\underline{ }count,data.duration/data.dt);
+\newline
+\newline
+\textcolor{green}{\% prepare output file name}
+\newline
+data.output\underline{ }file\underline{ }name = [\textcolor{magenta}{$'$output\underline{ }$'$} data.frame\underline{ }basename];
+\newline
+\newline
+\textcolor{green}{\% set deleted\underline{ }agents to zero}
+\newline
+data.output.deleted\underline{ }agents = 0;
+\newline
+\newline
+\textcolor{green}{\% dump agents\underline{ }per\underline{ }floor to output }
+\newline
+\textcolor{blue}{for} floor=1:data.floor\underline{ }count
+\newline
+data.output.agents\underline{ }per\underline{ }floor(floor,data.step) = length(data.floor(floor).agents);
+\newline
+\textcolor{blue}{end}
+\newline
+\newline
+\textcolor{green}{\% dump exit\underline{ }left to output}
+\newline
+data.output.exit\underline{ }left(:,data.step) = data.exit\underline{ }left';
+\newline
+\newline
+\textcolor{green}{\% toc of whole simulation}
+\newline
+data.output.simulation\underline{ }time = toc(simstart);
+\newline
+\newline
+\textcolor{green}{\% save output}
+\newline
+output = data.output;
+\newline
+save(data.output\underline{ }file\underline{ }name,\textcolor{magenta}{$'$output$'$})
+\newline
+fprintf('\textcolor{magenta}{$'$Frame \%i done (took \%.3fs; \%.3fs out of \%.3gs simulated). n$'$}, 
+\newline
+data.step, data.telapsed, data.time, data.duration);
+\newline
+\newline
+\textcolor{green}{\% save complete simulation}
+\newline
+output = data.output;
+\newline
+save(textcolor{magenta}{$'$output$'$,$'$output$'$})
+\bigskip
+\\ \hline
+\end{tabular}
+\caption{Implementation to produce the output}
+\end{figure}
+
+\subsection{Postprocesing}
+\underline{Reason:}
+\newline
+To analyse the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic \$t\underline{ }10\$, \$t\underline{ }50\$, \$t\underline{ }90\$ and \$t\underline{ }99\$ times.
+\newline
+\underline{Function:}
+\newline
+postprocessing.m
+\newline
+\underline{New variables:}
+\newline
+none of relevance
+\newline
+\underline{Modification:}
+\newline
+We created the whole script ourself. It can be found in the annex.
+\subsection{Parameter input and config file}
+The social force model can be adjusted using different parameters e.g. to weight the importance of different forces among each other or to define the decay rate of these forces over the distance. Also the mass and radii of the passengers as well as their maximal velocity can be set. The parameters are written down in the config files that are passed to the MATLAB interface on simulation start. For sake of simplicity we adopted the force model parameters for the previous group. The parameters concerning the ship shape were adjusted so that they represent reality as far as possible.
+\newline
+In the table in the annex a typical simulation input of the config file and some explanations can be found.
 
 
 \subsection{Ship Decks}
+
+\underline{Ship Deck Implementation:}
+\newline
+The Costa Concordia has 14 decks which are all different from each other. They are connected by stairs and elevators in different configurations and they full fill different purposes. There are decks for entertainment, eating, shopping, sport and so on.
+Due to the big differences of each deck, it is enormous time consuming to implement all these decks with all details in a model. So it is necessary to simplify the decks in a reasonable manner.
+Further the picture source is not perfect in size and data type so there is a manual conversion needed.
+In this chapter it is shown what assumptions were made and with which conversion techniques the decks were implemented into the model.
+\newline
+-Conversion
+\newline
+First of all the decks have to match each other in pixel size and position to allow a flawless connection of the decks. So the size of some decks has to be adjusted and the stair overlay has to be matched as good as possible.
+Secondly doors, numbers, names and symbols are removed to have one connected surface without unreal obstacles.
+\newline
+Now that the surfaces are clean and connected, the colours have to be replaced by predefined colours of the code. Violet for spawn of agents, black for walls, red for upstairs, blue for downstairs and different green type for each rescue boat.
+\newline
+In the Figures \ref{Deck-stairs} and \ref{Deck-elevator} a small portion of a deck with stairs, rooms, doors and elevators is shown before and after conversion. In the converted picture is a red one pixel row included for the stairs, which is hard to see because of low contrast. The stairs conversion will just be explained in the next part.
+
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{Decksetup-stairs.pdf}
+\caption{Deck before conversion}
+\label{Deck-stairs}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{Decksetup-elevator.pdf}
+\caption{Deck after conversion}
+\label{Deck-elevator}
+\end{minipage}}
+\end{figure}
+
+In most of the cases stairs from one to another floor are designed in a spiral way to minimize the consumed space. That leads to a problem by implementing the stairs into the model. It is not possible to make a clean transition from one floor to another without using some tricks.
+\newline
+In the work "Modeling Situations of Evacuation in a Multi-level Building"\cite{Building}, which is the base of this project, are special additional floors to overcome the mentioned problem. These additional floors which represents the stairs, are a fine method to create an infinite amount of floors and connections without any trouble. But it needs that additional floor for each connection.
+\newline
+While there is a finite number of floors on the ship and the agents only march in the direction of the rescue floor the connection can be simplified. So there is a new technique used to get rid of these additional floors.
+\newline
+In the Figure \ref{Decktwostairs} a spiralling stairs connection between floor 01 and floor 02 is shown as example. The lines and arrows in light blue are used to clarify the technique.
+The agents arrive from the left on floor 01 and go into the direction of the arrow until they reach the red one pixel line. There they are skipped up on the floor 02 and try to go to the red one pixel line again. The line is now moved 2 pixels to the right and the agents go around to be skipped again on the floor 03 and so on.
+With that technique only a certain amount of floors can be realised corresponding to the pixel length of the stairs. But for the ship in that project it is sufficient, so that technique is used to implement the spiralling stairs.
+
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics [angle=-90, width=0.5\textwidth]{Decktwostairs.pdf}
+\caption{Stairs connection between floor 01 and floor 02}
+\label{Decktwostairs}
+\end{minipage}}
+\end{figure}
+-Similarities and Reduction
+\newline
+The most important floor for the simulation is of course floor 04 because it holds all the rescue boats as seen on the Figure \ref{Decksconverted}. There all agents have to pass and it is reasonable to have it very detailed. Floor 05 and 03 are the ones just above and beyond and will also have a non neglectable influence on the agent’s movement.
+\newline
+The further we move the less important the deck configuration gets, because it is assumed that the stairs will be the bottlenecks. As long as the stairs correspond good to the reality, the further decks can differ more.
+So it is decided to convert deck 02, 03, 04 and 05 in detail and make a copy with adjusted stairs for each other floor. Floor 02 is used for the copy because it gets the closest to the floor 01, 06 and 07 and is by that still a good approximation.
+\newline
+Floor 08 until 14 differ more from floor 02 but as long as they are far away from floor 04 it will not have a big influence. These last floors are also smaller than floor 02 and therefore the amount of floors is reduced to only 11 with approximately the same area as the original 14 floors.
+
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[angle=-90,width=\textwidth]{Decks.pdf}
+\caption{Originaldecks before conversion}
+\label{Decks}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[angle=-90,width=\textwidth]{Decksconverted.pdf}
+\caption{Deck approximated and converted}
+\label{Decksconverted}
+\end{minipage}}
+\end{figure}
+
+\newpage
 \section{Simulation Results and Discussion}
 \subsection{Expected Results}
 \begin{itemize}
@@ -479,7 +745,7 @@ data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
 As listed above we were interested in the time in which a certain percentage of all agents was evacuated:
 \newline
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}
 {|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
@@ -506,7 +772,7 @@ Further our standard ship simulation showed the following performance:
 \subsubsection{Modified room disposition}
 As we expected the standard simulation revealed that hold-up problems occur because of the staircases. As the flow everywhere else was quite dynamic we abstained from adjusting the room disposition but instead we inserted an additional staircase. This simulation yielded the following results:
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}
 {|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
@@ -548,6 +814,9 @@ evacuation time & 71.44s &257.12s & 419.4s & 571.4s \\ \hline \hline
 
 
 
+
+
+
 \subsubsection{Crew command}
 \subsection{Comparison}
 \subsubsection{Standard - Modified room disposition}
@@ -557,7 +826,6 @@ The Analysis of the simulation results showed that there is a huge potential in 
 As the results above show, there is no significant acceleration in the first part of the evacuation achieved by changing the distribution of the lifeboats .  
  But, there is clearly a difference in second half of the evacuation. The last 10\% of agents are evacuated 48.6 seconds faster and the last 1\% even 42.6 seconds faster. 
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
-
 
 \subsubsection{Standard - Crew command}
 \subsection{Discussion}
@@ -581,17 +849,20 @@ Some ideas:
 \item The optimal combination of the different modifications we analyzed in this project could be found and therefore a minimal evacuation time.
 \end{itemize}
 \section{References}
+
 \begin{thebibliography}{9}
 \bibitem{Helbling} Helbing, Dirk (1995): Social Force Model for Pedestrians Dynamics.
+\bibitem{EscapePanic} Helbling, Dirk et al (2000): Simulating dynamical features of escape panic.
 \bibitem{Building} Hardmeier,Jenal,Kueng,Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
 \bibitem{SOLAS} SOLAS (1974): International Convention for the Safety of Life at Sea. \url{http://www.imo.org/about/conventions/listofconventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx}
 \bibitem{ship} SHIP EVACUATION: \url{http://www.shipevacuation.com/}
-\bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa%20Serena}
+\bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa Serena}
 \bibitem{EXODUS} University of Greenwich (2011):  maritimeEXODUS. \url{http://fseg.gre.ac.uk/fire/marine_evac_model.html}
 \bibitem{concordia} Haverie of Costa Concordia (2012): \url{http://de.wikipedia.org/wiki/Costa_Concordia#Havarie_2012}
 	
 \end{thebibliography}
 \section{Appendix}
+
 \subsection{Code}
 
 % define colors
@@ -625,13 +896,87 @@ Some ideas:
   stringstyle=\color{stringcolor}
 }
 
+\subsubsection{\textit{standard} code}
+
+\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code/addAgentRepulsiveForce.m}
+\lstinputlisting[caption=addDesiredForce.m]{../../code/addDesiredForce.m}
+\lstinputlisting[caption=addWallForce.m]{../../code/addWallForce.m}
+\lstinputlisting[caption=applyForcesAndMove.m]{../../code/applyForcesAndMove.m}
+\lstinputlisting[caption=checkForIntersection.m]{../../code/checkForIntersection.m}
+\lstinputlisting[caption=compileC.m]{../../code/compileC.m}
+\lstinputlisting[caption=initAgents.m]{../../code/initAgents.m}
+\lstinputlisting[caption=initEscapeRoutes.m]{../../code/initEscapeRoutes.m}
+\lstinputlisting[caption=initialize.m]{../../code/initialize.m}
+\lstinputlisting[caption=initWallForces.m]{../../code/initWallForces.m}
+\lstinputlisting[caption=loadConfig.m]{../../code/loadConfig.m}
+\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code/plotAgentsPerFloor.m}
+\lstinputlisting[caption=plotExitedAgents.m]{../../code/plotExitedAgents.m}
+\lstinputlisting[caption=plotFloor.m]{../../code/plotFloor.m}
+\lstinputlisting[caption=plotFloor.m]{../../code/postprocessing.m}
+\lstinputlisting[caption=simulate.m]{../../code/simulate.m}
 
 
+
+
+\subsubsection{\textit{control exit} code}
+
+\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code_control_exit/addAgentRepulsiveForce.m}
+\lstinputlisting[caption=addDesiredForce.m]{../../code_control_exit/addDesiredForce.m}
+\lstinputlisting[caption=addWallForce.m]{../../code_control_exit/addWallForce.m}
+\lstinputlisting[caption=applyForcesAndMove.m]{../../code_control_exit/applyForcesAndMove.m}
+\lstinputlisting[caption=checkForIntersection.m]{../../code_control_exit/checkForIntersection.m}
+\lstinputlisting[caption=compileC.m]{../../code_control_exit/compileC.m}
+\lstinputlisting[caption=initAgents.m]{../../code_control_exit/initAgents.m}
+\lstinputlisting[caption=initEscapeRoutes.m]{../../code_control_exit/initEscapeRoutes.m}
+\lstinputlisting[caption=initEscapeRoutes\_even.m]{../../code_control_exit/initEscapeRoutes_even.m}
+\lstinputlisting[caption=initEscapeRoutes\_odd.m]{../../code_control_exit/initEscapeRoutes_odd.m}
+\lstinputlisting[caption=initialize.m]{../../code_control_exit/initialize.m}
+\lstinputlisting[caption=initWallForces.m]{../../code_control_exit/initWallForces.m}
+\lstinputlisting[caption=loadConfig.m]{../../code_control_exit/loadConfig.m}
+\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_control_exit/plotAgentsPerFloor.m}
+\lstinputlisting[caption=plotExitedAgents.m]{../../code_control_exit/plotExitedAgents.m}
+\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/plotFloor.m}
+\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/postprocessing.m}
+\lstinputlisting[caption=simulate.m]{../../code_control_exit/simulate.m}
+
+
+\subsubsection{\textit{C} code}
+
+\lstinputlisting[language=C,caption=createRangeTree.c]{../../code/createRangeTree.c}
+\lstinputlisting[language=C,caption=fastSweeping.c]{../../code/fastSweeping.c}
+\lstinputlisting[language=C,caption=getNormalizedGradient.c]{../../code/getNormalizedGradient.c}
+\lstinputlisting[language=C,caption=lerp2.c]{../../code/lerp2.c}
+\lstinputlisting[language=C,caption=rangeQuery.c]{../../code/rangeQuery.c}
+\lstinputlisting[language=C,caption=tree.h]{../../code/tree.h}
+\lstinputlisting[language=C,caption=tree\_build.h]{../../code/tree_build.h}
+\lstinputlisting[language=C,caption=tree\_build.c]{../../code/tree_build.c}
+\lstinputlisting[language=C,caption=tree\_free.c]{../../code/tree_free.c}
+\lstinputlisting[language=C,caption=tree\_query.h]{../../code/tree_query.h}
+\lstinputlisting[language=C,caption=tree\_query.c]{../../code/tree_query.c}
+\lstinputlisting[language=C,caption=tree\_types.h]{../../code/tree_types.h}
+
+
+\subsubsection{\textit{crew command} code}
+
+\lstinputlisting[caption=addAgentRepulsiveForce.m]{C:/Users/manuela/Documents/GitHub/ship-evacuation/code_crew_command/addAgentRepulsiveForce.m}
+\lstinputlisting[caption=addDesiredForce.m]{../../code_crew_command/addDesiredForce.m}
+\lstinputlisting[caption=addWallForce.m]{../../code_crew_command/addWallForce.m}
+\lstinputlisting[caption=applyForcesAndMove.m]{../../code_crew_command/applyForcesAndMove.m}
+\lstinputlisting[caption=checkForIntersection.m]{../../code_crew_command/checkForIntersection.m}
+\lstinputlisting[caption=compileC.m]{../../code_crew_command/compileC.m}
+\lstinputlisting[caption=initAgents.m]{../../code_crew_command/initAgents.m}
+\lstinputlisting[caption=initEscapeRoutes.m]{../../code_crew_command/initEscapeRoutes.m}
+\lstinputlisting[caption=initialize.m]{../../code_crew_command/initialize.m}
+\lstinputlisting[caption=initWallForces.m]{../../code_crew_command/initWallForces.m}
+\lstinputlisting[caption=loadConfig.m]{../../code_crew_command/loadConfig.m}
+\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_crew_command/plotAgentsPerFloor.m}
+\lstinputlisting[caption=plotExitedAgents.m]{../../code_crew_command/plotExitedAgents.m}
+\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/plotFloor.m}
+\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/postprocessing.m}
+\lstinputlisting[caption=simulate.m]{../../code_crew_command/simulate.m}
 
 
 
 \end{document}  
-
-
 
  

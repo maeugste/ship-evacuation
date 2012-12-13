@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  13 DEC 2012 17:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  13 DEC 2012 17:55
 entering extended mode
-**C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate_ma
-nuela_dont_touch!_kap7.tex
+**C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/report_ship_evacu
+ation.tex
 
-(C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/reportTemplate_man
-uela_dont_touch!_kap7.tex
+(C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/report_ship_evacua
+tion.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -328,20 +328,20 @@ Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count118
 \c@subtable=\count119
 )
-(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate_man
-uela_dont_touch!_kap7.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacua
+tion.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -426,17 +426,17 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/manuela/Document
 s/GitHub/ship-evacuation/doc/latex/ETHlogo-eps-converted-to.pdf>]
-Overfull \hbox (5.3226pt too wide) in paragraph at lines 52--79
+Overfull \hbox (5.3226pt too wide) in paragraph at lines 53--80
  [] 
  []
 
 [2] <declaration.jpg, id=15, 598.1547pt x 845.0772pt>
 File: declaration.jpg Graphic file (type jpg)
  <use declaration.jpg>
-Package pdftex.def Info: declaration.jpg used on input line 86.
+Package pdftex.def Info: declaration.jpg used on input line 87.
 (pdftex.def)             Requested size: 430.00462pt x 607.53958pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 86--87
+Overfull \hbox (17.0pt too wide) in paragraph at lines 87--88
 [][] 
  []
 
@@ -446,222 +446,547 @@ Overfull \vbox (51.06302pt too high) has occurred while \output is active []
 
 [3 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/declaration.jpg
 >]
-(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate_man
-uela_dont_touch!_kap7.toc [4])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacua
+tion.toc [4])
 \tf@toc=\write3
- [5]
+ [5] [6]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 122.
+ [7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
- [7] [8] [9]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 232--245
- [][] 
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 267--290
- [][] 
  []
 
 [11]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 300--309
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 263--276
+ [][] 
+ []
+
+[12]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 298--321
+ [][] 
+ []
+
+[13]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 331--340
  [][] 
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 319--323
+Underfull \hbox (badness 4429) in paragraph at lines 350--354
 \OT1/cmr/m/n/12 data.exit$[]$left(1,data.current$[]$exit) = data.exit$[]$left(1
 ,data.exit$[]$nr(round(newp(1)),
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 316--325
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 347--356
  [][] 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 332--351
- [][] 
- []
-
-
-Overfull \hbox (10.4728pt too wide) in paragraph at lines 356--380
-\OT1/cmr/m/n/12 init$[]$agents.m, ad-dDe-sired-Force.m, initEscapeRoutes$[]$eve
-n.m, initEscapeRoutes$[]$odd.m,
- []
-
-[12]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 383--394
- [][] 
- []
-
-
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 401--410
- [][] 
- []
-
-
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 417--426
- [][] 
- []
-
-[13]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 433--460
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 363--382
  [][] 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 479--481
+Overfull \hbox (10.4728pt too wide) in paragraph at lines 387--411
+\OT1/cmr/m/n/12 init$[]$agents.m, ad-dDe-sired-Force.m, initEscapeRoutes$[]$eve
+n.m, initEscapeRoutes$[]$odd.m,
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 414--425
+ [][] 
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 431--440
+ [][] 
+ []
+
+[15]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 447--456
+ [][] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 463--490
+ [][] 
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 495--509
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--486
+Underfull \hbox (badness 10000) in paragraph at lines 515--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--549
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 512--551
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--567
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--632
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 572--634
+ [][] 
+ []
+
+[19] [20] <Decksetup-stairs.pdf, id=82, 597.23125pt x 421.575pt>
+File: Decksetup-stairs.pdf Graphic file (type pdf)
+
+<use Decksetup-stairs.pdf>
+Package pdftex.def Info: Decksetup-stairs.pdf used on input line 680.
+(pdftex.def)             Requested size: 210.55022pt x 148.62128pt.
+
+<Decksetup-elevator.pdf, id=83, 597.23125pt x 421.575pt>
+File: Decksetup-elevator.pdf Graphic file (type pdf)
+
+<use Decksetup-elevator.pdf>
+Package pdftex.def Info: Decksetup-elevator.pdf used on input line 685.
+(pdftex.def)             Requested size: 210.55022pt x 148.62128pt.
+ [21 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/Decksetup-sta
+irs.pdf, page is rotated 90 degrees> <C:/Users/manuela/Documents/GitHub/ship-ev
+acuation/doc/latex/Decksetup-elevator.pdf, page is rotated 90 degrees>] <Decktw
+ostairs.pdf, id=93, 597.23125pt x 421.575pt>
+File: Decktwostairs.pdf Graphic file (type pdf)
+
+<use Decktwostairs.pdf>
+Package pdftex.def Info: Decktwostairs.pdf used on input line 704.
+(pdftex.def)             Requested size: 597.22978pt x 421.57396pt.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [22 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/Decktwostairs
+.pdf, page is rotated 90 degrees>]
+<Decks.pdf, id=100, 845.1575pt x 597.23125pt>
+File: Decks.pdf Graphic file (type pdf)
+ <use Decks.pdf>
+Package pdftex.def Info: Decks.pdf used on input line 721.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+
+<Decksconverted.pdf, id=101, 845.1575pt x 597.23125pt>
+File: Decksconverted.pdf Graphic file (type pdf)
+
+<use Decksconverted.pdf>
+Package pdftex.def Info: Decksconverted.pdf used on input line 726.
+(pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
+ [23 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/Decks.pdf, pa
+ge is rotated 90 degrees> <C:/Users/manuela/Documents/GitHub/ship-evacuation/do
+c/latex/Decksconverted.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 745--747
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
+Underfull \hbox (badness 10000) in paragraph at lines 753--753
 []|\OT1/cmr/m/n/12 evacuation
  []
 
-<run1-standard-rescueboatcapacity.pdf, id=63, 845.1575pt x 597.23125pt>
+[24] <run1-standard-rescueboatcapacity.pdf, id=120, 845.1575pt x 597.23125pt>
 File: run1-standard-rescueboatcapacity.pdf Graphic file (type pdf)
 
 <use run1-standard-rescueboatcapacity.pdf>
 Package pdftex.def Info: run1-standard-rescueboatcapacity.pdf used on input lin
-e 497.
+e 763.
 (pdftex.def)             Requested size: 210.55022pt x 148.788pt.
 
-<run1-standard-agentsperfloor.pdf, id=64, 845.1575pt x 597.23125pt>
+<run1-standard-agentsperfloor.pdf, id=121, 845.1575pt x 597.23125pt>
 File: run1-standard-agentsperfloor.pdf Graphic file (type pdf)
 
 <use run1-standard-agentsperfloor.pdf>
-Package pdftex.def Info: run1-standard-agentsperfloor.pdf used on input line 50
-1.
+Package pdftex.def Info: run1-standard-agentsperfloor.pdf used on input line 76
+7.
 (pdftex.def)             Requested size: 210.55022pt x 148.788pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
+Underfull \hbox (badness 10000) in paragraph at lines 779--779
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
+Underfull \hbox (badness 10000) in paragraph at lines 780--780
 []|\OT1/cmr/m/n/12 evacuation
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<run1-added-stairs-rescueboatcapacity.pdf, id=65, 845.1575pt x 597.23125pt>
+<run1-added-stairs-rescueboatcapacity.pdf, id=122, 845.1575pt x 597.23125pt>
 File: run1-added-stairs-rescueboatcapacity.pdf Graphic file (type pdf)
 
 <use run1-added-stairs-rescueboatcapacity.pdf>
 Package pdftex.def Info: run1-added-stairs-rescueboatcapacity.pdf used on input
- line 522.
+ line 788.
 (pdftex.def)             Requested size: 210.55022pt x 148.788pt.
 
-<run1-added-stairs-agentsperfloor.pdf, id=66, 845.1575pt x 597.23125pt>
+<run1-added-stairs-agentsperfloor.pdf, id=123, 845.1575pt x 597.23125pt>
 File: run1-added-stairs-agentsperfloor.pdf Graphic file (type pdf)
 
 <use run1-added-stairs-agentsperfloor.pdf>
 Package pdftex.def Info: run1-added-stairs-agentsperfloor.pdf used on input lin
-e 526.
+e 792.
 (pdftex.def)             Requested size: 210.55022pt x 148.788pt.
- [15] [16 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/run1-sta
-ndard-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users/manuela/Doc
-uments/GitHub/ship-evacuation/doc/latex/run1-standard-agentsperfloor.pdf, page 
-is rotated 90 degrees> <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/l
-atex/run1-added-stairs-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/
-Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/run1-added-stairs-agen
-tsperfloor.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 543--543
+ [25 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/run1-standard
+-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users/manuela/Document
+s/GitHub/ship-evacuation/doc/latex/run1-standard-agentsperfloor.pdf, page is ro
+tated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 809--809
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--544
+Underfull \hbox (badness 10000) in paragraph at lines 810--810
 []|\OT1/cmr/m/n/12 evacuation
  []
 
 
-Overfull \hbox (3.43767pt too wide) in paragraph at lines 544--544
+Overfull \hbox (3.43767pt too wide) in paragraph at lines 810--810
  \OT1/cmr/m/n/10.95 257.12s| 
  []
 
-[17] [18]
-Underfull \hbox (badness 1286) in paragraph at lines 587--588
+[26 <C:/Users/manuela/Documents/GitHub/ship-evacuation/doc/latex/run1-added-sta
+irs-rescueboatcapacity.pdf, page is rotated 90 degrees> <C:/Users/manuela/Docum
+ents/GitHub/ship-evacuation/doc/latex/run1-added-stairs-agentsperfloor.pdf, pag
+e is rotated 90 degrees>] [27]
+Underfull \hbox (badness 1286) in paragraph at lines 857--858
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+[28] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [19]
-(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\reportTemplate_man
-uela_dont_touch!_kap7.aux) ) 
+)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\addAgentRepulsiveForce.
+m [29] [30])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\addDesiredForce.m
+[31]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\addWallForce.m
+[32])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\applyForcesAndMove.m
+[33]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][]  
+ []
+
+[34] [35] [36]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+[37]
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[38])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\checkForIntersection.m
+[39]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\compileC.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\initAgents.m [40])
+[41] (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\initEscapeRoutes.m
+) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\initialize.m [42]
+[43]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\initWallForces.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\loadConfig.m [44]
+[45]
+Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\plotAgentsPerFloor.m
+[46])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\plotExitedAgents.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\plotFloor.m
+Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+[47]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\postprocessing.m
+[48] [49] [50])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\simulate.m [51]
+[52] [53])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\addAgentRe
+pulsiveForce.m [54] [55])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\addDesired
+Force.m [56] [57])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\addWallFor
+ce.m) [58]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\applyForce
+sAndMove.m [59]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][]  
+ []
+
+[60] [61] [62]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 219--220
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+[63]
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 235--236
+[][][][][][][][][][][][][][][]  
+ []
+
+[64] [65])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\checkForIn
+tersection.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\compileC.m
+) [66]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initAgents
+.m [67])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initEscape
+Routes.m [68])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initEscape
+Routes_even.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initEscape
+Routes_odd.m [69])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initialize
+.m [70] [71])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\initWallFo
+rces.m [72])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\loadConfig
+.m [73]
+Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[74])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\plotAgents
+PerFloor.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\plotExited
+Agents.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\plotFloor.
+m
+Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+[75])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\postproces
+sing.m [76] [77] [78] [79])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_control_exit\simulate.m
+[80] [81]) ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\createRangeTree.c
+[82]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\fastSweeping.c
+[83] [84] [85] [86] [87] [88])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\getNormalizedGradient.c
+[89] [90] [91]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\lerp2.c
+[92]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\rangeQuery.c
+[93]) (C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree.h)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_build.h [94])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_build.c [95]
+[96] [97] [98])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_free.c [99])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_query.h)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_query.c [100]
+[101] [102]) [103]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code\tree_types.h [104])
+(C:/Users/manuela/Documents/GitHub/ship-evacuation/code_crew_command/addAgentRe
+pulsiveForce.m [105] [106]) [107]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\addDesired
+Force.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\addWallFor
+ce.m [108])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\applyForce
+sAndMove.m [109]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+[110]
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][]  
+ []
+
+[111] [112]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+[113]
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[114]
+Overfull \hbox (32.25404pt too wide) in paragraph at lines 291--292
+[][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[115])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\checkForIn
+tersection.m) [116]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\compileC.m
+)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\initAgents
+.m [117])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\initEscape
+Routes.m) [118]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\initialize
+.m [119])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\initWallFo
+rces.m [120])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\loadConfig
+.m [121]
+Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[122])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\plotAgents
+PerFloor.m [123])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\plotExited
+Agents.m)
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\plotFloor.
+m
+Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+) [124]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\postproces
+sing.m [125] [126] [127])
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\code_crew_command\simulate.m
+[128] [129]) [130] [131]
+(C:\Users\manuela\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacua
+tion.aux) ) 
 Here is how much of TeX's memory you used:
- 6957 strings out of 493921
- 101412 string characters out of 3147276
- 204735 words of memory out of 3000000
- 10123 multiletter control sequences out of 15000+200000
- 16015 words of font info for 61 fonts, out of 3000000 for 9000
+ 8578 strings out of 493921
+ 129180 string characters out of 3147276
+ 271546 words of memory out of 3000000
+ 11570 multiletter control sequences out of 15000+200000
+ 17008 words of font info for 65 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,14n,40p,727b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on reportTemplate_manuela_dont_touch!_kap7.pdf (19 pages, 153500
-4 bytes).
+ 42i,14n,52p,825b,2062s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmtt9.pfb>
+Output written on report_ship_evacuation.pdf (131 pages, 3402889 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 536 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
