@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {3}Introduction and Motivations}{7}
 \contentsline {subsection}{\numberline {3.1}Introduction}{7}
 \contentsline {subsection}{\numberline {3.2}Motivation}{7}
-\contentsline {subsection}{\numberline {3.3}Fundamental Questions}{7}
+\contentsline {subsection}{\numberline {3.3}Fundamental Questions}{8}
 \contentsline {section}{\numberline {4}Description of the model}{9}
 \contentsline {subsection}{\numberline {4.1}Social force model }{9}
 \contentsline {subsection}{\numberline {4.2}Ship structure}{10}
@@ -13,26 +13,28 @@
 \contentsline {subsubsection}{\numberline {5.2.1}Exits}{11}
 \contentsline {subsubsection}{\numberline {5.2.2}Different exits}{12}
 \contentsline {subsubsection}{\numberline {5.2.3}Closing exits during simulation}{13}
-\contentsline {subsubsection}{\numberline {5.2.4}Controlled evacuation}{14}
-\contentsline {subsection}{\numberline {5.3}Ship Decks}{16}
-\contentsline {subsection}{\numberline {5.4}Simulation output}{19}
-\contentsline {subsection}{\numberline {5.5}Parameters}{19}
-\contentsline {section}{\numberline {6}Simulation Results and Discussion}{20}
-\contentsline {subsection}{\numberline {6.1}Expected Results}{20}
-\contentsline {subsection}{\numberline {6.2}Simulation Results}{20}
-\contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{20}
-\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{21}
-\contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{22}
-\contentsline {subsubsection}{\numberline {6.2.4}Controlled outputs}{23}
-\contentsline {subsubsection}{\numberline {6.2.5}Crew command}{23}
-\contentsline {subsection}{\numberline {6.3}Comparison}{23}
-\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{23}
-\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{23}
-\contentsline {subsubsection}{\numberline {6.3.3}Standard - Controlles outputs}{23}
-\contentsline {subsubsection}{\numberline {6.3.4}Standard - Crew command}{23}
-\contentsline {subsection}{\numberline {6.4}Discussion}{23}
-\contentsline {section}{\numberline {7}Summary and Outlook}{23}
-\contentsline {subsection}{\numberline {7.1}Summary}{23}
-\contentsline {subsection}{\numberline {7.2}Outlook}{23}
-\contentsline {section}{\numberline {8}References}{23}
-\contentsline {section}{\numberline {9}Appendix}{24}
+\contentsline {subsubsection}{\numberline {5.2.4}Controlled evacuation}{15}
+\contentsline {subsection}{\numberline {5.3}Video creation}{17}
+\contentsline {subsection}{\numberline {5.4}System output}{18}
+\contentsline {subsection}{\numberline {5.5}Postprocesing}{20}
+\contentsline {subsection}{\numberline {5.6}Parameter input and config file}{20}
+\contentsline {subsection}{\numberline {5.7}Ship Decks}{20}
+\contentsline {section}{\numberline {6}Simulation Results and Discussion}{24}
+\contentsline {subsection}{\numberline {6.1}Expected Results}{24}
+\contentsline {subsection}{\numberline {6.2}Simulation Results}{24}
+\contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{24}
+\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{25}
+\contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{26}
+\contentsline {subsubsection}{\numberline {6.2.4}Controlled outputs}{27}
+\contentsline {subsubsection}{\numberline {6.2.5}Crew command}{27}
+\contentsline {subsection}{\numberline {6.3}Comparison}{27}
+\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{27}
+\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{27}
+\contentsline {subsubsection}{\numberline {6.3.3}Standard - Controlles outputs}{27}
+\contentsline {subsubsection}{\numberline {6.3.4}Standard - Crew command}{27}
+\contentsline {subsection}{\numberline {6.4}Discussion}{27}
+\contentsline {section}{\numberline {7}Summary and Outlook}{27}
+\contentsline {subsection}{\numberline {7.1}Summary}{27}
+\contentsline {subsection}{\numberline {7.2}Outlook}{27}
+\contentsline {section}{\numberline {8}References}{27}
+\contentsline {section}{\numberline {9}Appendix}{28}
