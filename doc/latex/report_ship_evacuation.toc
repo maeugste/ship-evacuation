@@ -37,7 +37,3 @@
 \contentsline {section}{\numberline {8}References}{28}
 \contentsline {section}{\numberline {9}Appendix}{29}
 \contentsline {subsection}{\numberline {9.1}Code}{29}
-\contentsline {subsubsection}{\numberline {9.1.1}\textit {standard} code}{29}
-\contentsline {subsubsection}{\numberline {9.1.2}\textit {control exit} code}{54}
-\contentsline {subsubsection}{\numberline {9.1.3}\textit {C} code}{82}
-\contentsline {subsubsection}{\numberline {9.1.4}\textit {crew command} code}{105}
