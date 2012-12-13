@@ -286,8 +286,16 @@ for fi = 1:data.floor_exit
     
                 %control exits
                 else
+                    
+                    if data.floor(fi).agents.nr==0; %agent with number == 0 , only use even numbers
+                        
                  data = initEscapeRoutes_even(data);
+                 
+                    else
+                 
                  data = initEscapeRoutes_odd(data);
+                 
+                    end
                 end
                 data = initWallForces(data);      
                 
