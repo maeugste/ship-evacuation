@@ -548,9 +548,6 @@ evacuation time & 71.44s &257.12s & 419.4s & 571.4s \\ \hline \hline
 
 
 
-
-
-\subsubsection{Controlled outputs}
 \subsubsection{Crew command}
 \subsection{Comparison}
 \subsubsection{Standard - Modified room disposition}
@@ -561,19 +558,29 @@ As the results above show, there is no significant acceleration in the first par
  But, there is clearly a difference in second half of the evacuation. The last 10\% of agents are evacuated 48.6 seconds faster and the last 1\% even 42.6 seconds faster. 
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
 
-\subsubsection{Standard - Controlles outputs}
+
 \subsubsection{Standard - Crew command}
 \subsection{Discussion}
 \section{Summary and Outlook}
 \subsection{Summary}
 \subsection{Outlook}
-During our work on this project, we saw a lot of possibilites to improve the model.The target of an ongoing project could be to make the model more realistic. There are a lot of possibilites to achieve this goal.
+During our work on this project, we found a lot of possibilites to improve the model. The target of an ongoing project could be to make the model more realistic. There are a lot of possibilites to achieve this goal.
 \newline
 Some suggestions:
-
-
+\begin{itemize}
+\item To take into account that not all people automatically know where exactly the nearest exit is, the initialisation of the escape routes should be modified.
+\item In our model the agents are evenly distributed over the floors and decks at the beginning of the simulation. This is however a very unrealistic scenario. In reality the agents will be uneavenly spread. The evacuation time would depend very much on the form of this distribution.
+\item Different scenarios like night, dinner-time etc. that would change the distribution of the agents significantly could be compared.
+\item In reality there are a lot of effects that could occur like fire, tilt of the ship, flooded areas, power failure, mass panic etc.
+\end{itemize}
+There are a lot of other interesting effects that could be looked at as well.
+\\
+Some ideas:
+\begin{itemize}
+\item In the ideal case, the evacuations on a ship are planned well. A good idea would be to define specific control points at which agents gahter first. From those points the agents would be led in small groups to the rescueboats by a crew member. It would be interesting to analyse the effect of such a efficient control.
+\item The optimal combination of the different modifications we analyzed in this project could be found and therefore a minimal evacuation time.
+\end{itemize}
 \section{References}
-
 \begin{thebibliography}{9}
 \bibitem{Helbling} Helbing, Dirk (1995): Social Force Model for Pedestrians Dynamics.
 \bibitem{Building} Hardmeier,Jenal,Kueng,Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
@@ -618,84 +625,8 @@ Some suggestions:
   stringstyle=\color{stringcolor}
 }
 
-\subsubsection{\textit{standard} code}
-
-\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code/addAgentRepulsiveForce.m}
-\lstinputlisting[caption=addDesiredForce.m]{../../code/addDesiredForce.m}
-\lstinputlisting[caption=addWallForce.m]{../../code/addWallForce.m}
-\lstinputlisting[caption=applyForcesAndMove.m]{../../code/applyForcesAndMove.m}
-\lstinputlisting[caption=checkForIntersection.m]{../../code/checkForIntersection.m}
-\lstinputlisting[caption=compileC.m]{../../code/compileC.m}
-\lstinputlisting[caption=initAgents.m]{../../code/initAgents.m}
-\lstinputlisting[caption=initEscapeRoutes.m]{../../code/initEscapeRoutes.m}
-\lstinputlisting[caption=initialize.m]{../../code/initialize.m}
-\lstinputlisting[caption=initWallForces.m]{../../code/initWallForces.m}
-\lstinputlisting[caption=loadConfig.m]{../../code/loadConfig.m}
-\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code/plotAgentsPerFloor.m}
-\lstinputlisting[caption=plotExitedAgents.m]{../../code/plotExitedAgents.m}
-\lstinputlisting[caption=plotFloor.m]{../../code/plotFloor.m}
-\lstinputlisting[caption=plotFloor.m]{../../code/postprocessing.m}
-\lstinputlisting[caption=simulate.m]{../../code/simulate.m}
 
 
-
-
-\subsubsection{\textit{control exit} code}
-
-\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code_control_exit/addAgentRepulsiveForce.m}
-\lstinputlisting[caption=addDesiredForce.m]{../../code_control_exit/addDesiredForce.m}
-\lstinputlisting[caption=addWallForce.m]{../../code_control_exit/addWallForce.m}
-\lstinputlisting[caption=applyForcesAndMove.m]{../../code_control_exit/applyForcesAndMove.m}
-\lstinputlisting[caption=checkForIntersection.m]{../../code_control_exit/checkForIntersection.m}
-\lstinputlisting[caption=compileC.m]{../../code_control_exit/compileC.m}
-\lstinputlisting[caption=initAgents.m]{../../code_control_exit/initAgents.m}
-\lstinputlisting[caption=initEscapeRoutes.m]{../../code_control_exit/initEscapeRoutes.m}
-\lstinputlisting[caption=initEscapeRoutes\_even.m]{../../code_control_exit/initEscapeRoutes_even.m}
-\lstinputlisting[caption=initEscapeRoutes\_odd.m]{../../code_control_exit/initEscapeRoutes_odd.m}
-\lstinputlisting[caption=initialize.m]{../../code_control_exit/initialize.m}
-\lstinputlisting[caption=initWallForces.m]{../../code_control_exit/initWallForces.m}
-\lstinputlisting[caption=loadConfig.m]{../../code_control_exit/loadConfig.m}
-\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_control_exit/plotAgentsPerFloor.m}
-\lstinputlisting[caption=plotExitedAgents.m]{../../code_control_exit/plotExitedAgents.m}
-\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/plotFloor.m}
-\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/postprocessing.m}
-\lstinputlisting[caption=simulate.m]{../../code_control_exit/simulate.m}
-
-
-\subsubsection{\textit{C} code}
-
-\lstinputlisting[language=C,caption=createRangeTree.c]{../../code/createRangeTree.c}
-\lstinputlisting[language=C,caption=fastSweeping.c]{../../code/fastSweeping.c}
-\lstinputlisting[language=C,caption=getNormalizedGradient.c]{../../code/getNormalizedGradient.c}
-\lstinputlisting[language=C,caption=lerp2.c]{../../code/lerp2.c}
-\lstinputlisting[language=C,caption=rangeQuery.c]{../../code/rangeQuery.c}
-\lstinputlisting[language=C,caption=tree.h]{../../code/tree.h}
-\lstinputlisting[language=C,caption=tree\_build.h]{../../code/tree_build.h}
-\lstinputlisting[language=C,caption=tree\_build.c]{../../code/tree_build.c}
-\lstinputlisting[language=C,caption=tree\_free.c]{../../code/tree_free.c}
-\lstinputlisting[language=C,caption=tree\_query.h]{../../code/tree_query.h}
-\lstinputlisting[language=C,caption=tree\_query.c]{../../code/tree_query.c}
-\lstinputlisting[language=C,caption=tree\_types.h]{../../code/tree_types.h}
-
-
-\subsubsection{\textit{crew command} code}
-
-\lstinputlisting[caption=addAgentRepulsiveForce.m]{C:/Users/manuela/Documents/GitHub/ship-evacuation/code_crew_command/addAgentRepulsiveForce.m}
-\lstinputlisting[caption=addDesiredForce.m]{../../code_crew_command/addDesiredForce.m}
-\lstinputlisting[caption=addWallForce.m]{../../code_crew_command/addWallForce.m}
-\lstinputlisting[caption=applyForcesAndMove.m]{../../code_crew_command/applyForcesAndMove.m}
-\lstinputlisting[caption=checkForIntersection.m]{../../code_crew_command/checkForIntersection.m}
-\lstinputlisting[caption=compileC.m]{../../code_crew_command/compileC.m}
-\lstinputlisting[caption=initAgents.m]{../../code_crew_command/initAgents.m}
-\lstinputlisting[caption=initEscapeRoutes.m]{../../code_crew_command/initEscapeRoutes.m}
-\lstinputlisting[caption=initialize.m]{../../code_crew_command/initialize.m}
-\lstinputlisting[caption=initWallForces.m]{../../code_crew_command/initWallForces.m}
-\lstinputlisting[caption=loadConfig.m]{../../code_crew_command/loadConfig.m}
-\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_crew_command/plotAgentsPerFloor.m}
-\lstinputlisting[caption=plotExitedAgents.m]{../../code_crew_command/plotExitedAgents.m}
-\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/plotFloor.m}
-\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/postprocessing.m}
-\lstinputlisting[caption=simulate.m]{../../code_crew_command/simulate.m}
 
 
 
