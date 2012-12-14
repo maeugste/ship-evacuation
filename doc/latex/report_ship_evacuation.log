@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.11)  14 DEC 2012 22:37
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.11)  14 DEC 2012 22:44
 entering extended mode
 **C:/Users/Raphael*Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/repo
 rt_ship_evacuation.tex
@@ -724,26 +724,26 @@ Underfull \hbox (badness 2293) in paragraph at lines 787--787
 ics/crew_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/Do
 cuments/GitHub/ship-evacuation/doc/latex/pics/crew_agents.pdf, page is rotated 
 90 degrees>] [26]
-Underfull \hbox (badness 1286) in paragraph at lines 836--837
+Underfull \hbox (badness 1286) in paragraph at lines 835--836
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-[27] (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
+) [27]
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\addAgentR
 epulsiveForce.m" [28] [29])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\addDesire
@@ -768,31 +768,31 @@ Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
 ][][][][][][][][][][][][][]  
  []
 
-[36]
+
 Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
 [][][][][][][][][][][][][][][][][]  
  []
 
-[37])
+[36] [37])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\checkForI
 ntersection.m" [38])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\compileC.
 m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initAgent
-s.m" [39]) [40]
+s.m" [39])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initEscap
-eRoutes.m")
+eRoutes.m" [40])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initializ
 e.m" [41] [42])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initWallF
 orces.m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\loadConfi
-g.m" [43] [44]
+g.m" [43]
 Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-)
+[44])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\plotAgent
 sPerFloor.m" [45])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\plotExite
@@ -803,22 +803,22 @@ Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-[46])
+)
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\postproce
-ssing.m" [47] [48] [49])
+ssing.m" [46] [47] [48] [49])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\simulate.
-m" [50] [51] [52]) (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+m" [50] [51]) (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
+) [52]
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\createRan
-geTree.c") [53]
+geTree.c")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\fastSweep
-ing.c" [54] [55] [56] [57] [58]) [59]
+ing.c" [53] [54] [55] [56] [57] [58])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\getNormal
-izedGradient.c" [60] [61])
+izedGradient.c" [59] [60] [61])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\lerp2.c"
 [62])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\rangeQuer
@@ -832,9 +832,9 @@ d.c" [65] [66] [67] [68] [69])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_free
 .c")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_quer
-y.h" [70])
+y.h")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_quer
-y.c" [71] [72] [73])
+y.c" [70] [71] [72] [73])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_type
 s.h" [74])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
@@ -877,40 +877,40 @@ and\checkForIntersection.m" [86])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
 and\compileC.m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
-and\initAgents.m" [87]) [88]
+and\initAgents.m" [87])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
-and\initEscapeRoutes.m")
+and\initEscapeRoutes.m" [88])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
 and\initialize.m" [89] [90])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
 and\initWallForces.m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
-and\loadConfig.m" [91] [92]
+and\loadConfig.m" [91]
 Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[93])
+[92]) [93]
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
 and\plotAgentsPerFloor.m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
 and\plotExitedAgents.m")
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
-and\plotFloor.m" [94]
+and\plotFloor.m"
 Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-)
+[94])
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
-and\simulate.m" [95] [96]) [97] [98]
+and\simulate.m" [95] [96]) [97]
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\doc\latex\repo
 rt_ship_evacuation.aux") ) 
 Here is how much of TeX's memory you used:
- 8517 strings out of 494045
- 127403 string characters out of 3146016
- 266993 words of memory out of 3000000
- 11545 multiletter control sequences out of 15000+200000
+ 8514 strings out of 494045
+ 127355 string characters out of 3146016
+ 275545 words of memory out of 3000000
+ 11542 multiletter control sequences out of 15000+200000
  17008 words of font info for 65 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  42i,15n,52p,776b,2062s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -931,9 +931,9 @@ ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report_ship_evacuation.pdf (98 pages, 5232992 bytes).
+Output written on report_ship_evacuation.pdf (97 pages, 5232695 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
+ 476 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
