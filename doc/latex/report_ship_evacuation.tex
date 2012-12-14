@@ -84,7 +84,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[width=\textwidth]{declaration.jpg}
+\includegraphics[width=\textwidth]{pics/declaration.jpg}
 
 % IMPORTANT
 % you MUST include the ETH declaration of originality here; it is available for download on the course website or at http://www.ethz.ch/faculty/exams/plagiarism/index_EN; it can be printed as pdf and should be filled out in handwriting
@@ -222,9 +222,9 @@ Again with the forward Euler scheme positions are calculated that were reached i
 
 \subsection{Code adjustments}
 
-This subsection is intended to illustrate the modifications in the code. We explain the difference between our model and the one used in \cite{Building} and the the reason why a modification was necessary. Further we define the assumptions we made to minimize the modifications. Finally we specify the modifications and where they take place. 
+This subsection is intended to illustrate the modifications in the code. We explain the difference between our model and the one used in \cite{Building} and the reason why a modification was necessary. Further we define the assumptions we made to minimize the modifications. Finally we specify the modifications and where they take place. 
 \\
-Those parts are however not essential for the results of our reserch. They are ment to be an assistance for continuative projects.
+Those parts are however not essential for the results of our research. They are ment to be an assistance for continuative projects.
 \subsubsection{Exits}
 \textbf{Reason:}
 \newline
@@ -232,7 +232,7 @@ The first change which was necessary was due to the fact that the exits in our s
 \newline
 \textbf{Assumption:}
 \newline
-In case of emergency all agents are keen to leave the ship as fast as possible. Therefore in our simulation all passengers above the exits floor are only enabled to move down and passengers lower than the exit floor move upstairs.
+In case of an emergency all agents are keen to leave the ship as fast as possible. Therefore in our simulation all passengers above the exits floor are only enabled to move down and passengers lower than the exit floor move upstairs.
 \newline
 \textbf{Function:}
 \newline
@@ -566,7 +566,7 @@ Storing the simulation output is important to be able to analyse and optimize th
 \subsection{Postprocessing}
 \textbf{Reason:}
 \newline
-To analyse the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic $t_10$, $t_50$, $t_90$ and $t_95$ times.
+To analyse the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic $t_{10}$, $t_{50}$, $t_{90}$ and $t_{95}$ times.
 \newline
 \textbf{Function:}
 \newline
@@ -598,20 +598,20 @@ Secondly doors, numbers, names and symbols are removed to have one connected sur
 Now that the surfaces are clean and connected, the colours have to be replaced by predefined colours of the code (purple for spawn of agents, black for walls, red for upstairs, blue for downstairs and different green type for each rescue boat).
 \newline
 In figures \ref{Deck-stairs} and \ref{Deck-elevator} a small portion of a deck with stairs, rooms, doors and elevators is shown before and after conversion. In the converted picture is a blue block included for the stairs, which conversion will just be explained in the next part.
-%
-%\begin{figure}[H]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{Decksetup-stairs.pdf}
-%\caption{Deck before conversion}
-%\label{Deck-stairs}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{deckconversion2.pdf}
-%\caption{Deck after conversion}
-%\label{Deck-elevator}
-%\end{minipage}}
-%\end{figure}
+
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/Decksetup-stairs.pdf}
+\caption{Deck before conversion}
+\label{Deck-stairs}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/deckconversion2.pdf}
+\caption{Deck after conversion}
+\label{Deck-elevator}
+\end{minipage}}
+\end{figure}
 
 In most of the cases stairs from one to another floor are designed in a spiral way to minimize the consumed space. That leads to a problem by implementing the stairs into the model. It is not possible to make a clean transition from one floor to another without using some tricks.
 \newline
@@ -628,7 +628,7 @@ With that technique no additional floors are needed and we get very close to the
 \begin{figure}[H]
 \centering
 {\begin{minipage}[t]{7.4cm}
-\includegraphics [width=0.5\textwidth]{Decktwostairs.pdf}
+\includegraphics [width=0.5\textwidth]{pics/Decktwostairs.pdf}
 \caption{Stairs connection between floor 10 and floor 11}
 \label{Decktwostairs}
 \end{minipage}}
@@ -642,19 +642,19 @@ So we decided to convert deck 02, 03, 04 and 05 in detail and make a copy with a
 \newline
 Floor 08 until 14 differ more from floor 02 but as long as they are far away from floor 04 it will not have a big influence. These last floors are also smaller than floor 02 and therefore the amount of floors is reduced to only 11 with approximately the same area as the original 14 floors.
 
-%\begin{figure}[H]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[angle=-90,width=\textwidth]{Decks.pdf}
-%\caption{Originaldecks before conversion}
-%\label{Decks}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[angle=-90,width=\textwidth]{Decksconverted.pdf}
-%\caption{Deck approximated and converted}
-%\label{Decksconverted}
-%\end{minipage}}
-%\end{figure}
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[angle=-90,width=\textwidth]{pics/Decks.pdf}
+\caption{Originaldecks before conversion}
+\label{Decks}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[angle=-90,width=\textwidth]{pics/Decksconverted.pdf}
+\caption{Deck approximated and converted}
+\label{Decksconverted}
+\end{minipage}}
+\end{figure}
 
 
 
@@ -792,11 +792,14 @@ But, there is clearly a difference in the second half of the evacuation. The las
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
 
 \subsubsection{Standard - Crew command}
+The results of the crew command extention are rather disappointing. On the one hand it was clear, that the first part of the simulation would become slower because the agents do not use the nearest boat. But on the other hand it was
+
+
+
+
 \subsection{Discussion}
 
 During our project we revealed a lot of adjusments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
-\newline
-\textcolor{red}{crew command discussion}
 
 
 \section{Summary and Outlook}
