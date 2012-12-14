@@ -198,10 +198,10 @@ In order to optimize the evacuation time, we change the following dependent vari
 
 \newpage
 \section{Implementation}
-As mentioned above our code is based on the work of a previous project. In order to answer our question we had to make several adjustments and adapt it to our simulation model. In this chapter we are going to explain the most significant changes we did. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
+As mentioned above our code is based on the work of a previous project. Working on a different problem statement we had to make several adjustments and adapt it to our simulation model. In this chapter we will explain the most significant modifications we made. For the exact understanding of the original code and the process of optimization, please refer to the documentation of the previous project group, especially chapter five and nine\cite{Building} or our code in the Appendix.
 
 \subsection{Basic code}
-The builders of the code we base on created a flexible model to simulate building structures. The floors can be feed as graphic data into the system where different colors stand for different areas. Black are walls, red stairs up, blue stairs down, green exits and purpe agent spawning areas. The data is evaluated in matlab in matrices. Information on parameters such as timestep, simulation time, force characteristics et cetera can be read in using a config file which is evaluated on simulation start.\\
+The builders of the code we base on created a flexible model to simulate building structures. The floors can be feed as graphic data into the system where different colors stand for different areas. Black are walls, red stairs up, blue stairs down, green exits and purple agent spawning areas. The data is evaluated in matlab in matrices. Information on parameters such as timestep, simulation time, force characteristics et cetera can be read in using a config file which is evaluated on simulation start.\\
 With a fast sweeping algorithm in C a vector field is created for every floor pointing in direction of the shortest way towards stairs and exits. In a loop over all passengers the acting forces on them are calculated and via forward Euler converted into velocities. 
 
 \begin{equation}
@@ -215,59 +215,79 @@ Again with the forward Euler scheme positions are calculated that were reached i
 \end{equation}
 
 \subsection{Code adjustments}
+
+This subsection is intended to illustrate the modifications in the code. We explain the difference between our model and the one used in \cite{Building} and therefore the reason a modification was nessecary. Further we define the assumptions we made to minimize the modifications. Finally we specify the modifications and where they take place. 
+\\
+Those parts are however not essential for the results of our reserch. They are ment to be an assistance for continuative projects.
 \subsubsection{Exits}
-\underline{Reason:}
+\textbf{Reason:}
 \newline
 The first change which was necessary was due to the fact that the exits in our simulation are not simply on the lowest floor.
 \newline
-\underline{Assumption:}
+\textbf{Assumption:}
 \newline
 In the case of an emergancy all agents are keen to leave the ship as fast as possible. Therefore in our simulation all passangers above the exits floor are only enabled to move down and passengers lower than the exit floor move upstairs.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-applyForcesAndMove.m
+\textit{applyForcesAndMove.m}
 \newline
-\underline{New variables:}
+\textbf{New variables:}
 \newline 
 To define the floor in which the exits are we introduced a new variable \textit{floor\underline{ }exit} in the config file.
 \newline
-\underline{Modifications:}
+\textbf{Modifications:}
 \newline
-Since we defined our exit, we are able to easily modify the by splitting the loop, in which we calculate the forces and moves of the agents, in two parts. First we loop over all floors higher than the exit floor in which the agents only are allowed to move down or take an exit. Secondly we do the same for all people in the floors lower than the exit floor where the passengers only can move up or take an exit.
+Since we defined our exit, we are able to easily modify the code by splitting the loop, in which the force-calculation and the movement of the agents take place, in two parts. First we loop over all floors higher than the exit floor. In those the agents are only allowed to move down. Secondly we do the same for all people in the floors lower than the exit floor where the passengers only can move up. The only floor left is the exit floor where the agents only move towards exits.
 \newline
-Because of this modification it is not necessary to loop twice over all floors. Consequently our code remains fast and efficient. We also kept the simple concept of vectors out of booleans. Means for each agent there is one number set: If the agent reaches a staircase and therefore changes the floor he is a 1 otherwise he is a 0. The assumption also is a great simplification for the pictures since we do not have to mess with the problem of having overlapping stairs.
+Because of this modification it is not necessary to loop twice over all floors. Consequently our code remains fast and efficient. We also kept the simple concept of vectors out of booleans. Means for each agent there is one number set: 
+\begin{itemize}
+\item If the agent reaches a staircase and therefore changes the floor 1 is stored in the logical array \textit{floorchange}
+\item otherwise a 0 is stored
+\end{itemize}
+The assumption is also a very helpfull simplification for the pictures since we do not have to mess with the problem of stairs overlapping.
+
 
 \subsubsection{Different exits}
-\underline{Reason:}
+\textbf{Reason:}
 \newline
-Because the exits model rescueboats, which can only hold a limited number of agents, we were forced to find a way how to differ the exits from each other and to assign a specific number to every exit.
+In our model the exits are the rescueboats, which can only hold a limited number of agents. Therefore we had to find a way how to differ the exits from each other and to assign a specific number to every exit. This number defines how many agents can stay on that rescueboat.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-loadConfig.m
+\textit{loadConfig.m}
 \newline
-\underline{New variables:}
+\textbf{New variables:}
 \newline
-- \textit{Exit\underline{ }count}, to define the number of exit.\newline
-- For each exit k: \textit{exit\underline{ }k\underline{ }nr}, to define the number of agents it can hold.\newline
-- To store how many agents can exit in one specific exit, we introduced a matrix exit\underline{ }nr matrix, where the number of agents that can exit is indicated for each pixel.
-\underline{Modifications:}
+-\textit{exit\underline{ }count}, to define the number of exits.\newline
+-For each exit \textit{k} a varialbe \textit{exit\underline{ }k\underline{ }nr}, to define the number of agents it can hold.\newline
+-To store how many agents can exit in one specific exit, we introduced a matrix \textit{exit\underline{ }nr matrix}, where the number of agents that can exit is indicated for each pixel.
+\newline
+\textbf{Modifications:}
 \newline 
-We had to make some changes in the decoding of the pictures. The aim was to change as little as possible to the original code. It was clear that we are going to need as many different colors as we have exits, to be able to distinguish them during the simulation.By defining every pixel which is red to value=0, blue value=0 and green value unequal to zero, we can define a lot of different colored exits by using green values from 256 to 256-\textit{exit\underline{ }count}.
+Some changes in the decoding of the pictures were nessecary. The aim was to change as little as possible to the original code. It was clear that we are going to need as many different colors as we have different exits, to be able to distinguish them during the simulation.
+\\
+We define every pixel which has red to value=0, blue value=0 and green value unequal to zero a "exit-pixel". Now we can specify a lot of different colored exits by using green values between 256 and 256-\textit{exit\underline{ }count}.
 \newline
-We implemented the matrix \textit{exit\underline{ }nr} similar to the already existing one \textit{img\underline{}exit}, in which we store a count to number the different exits. The number is defined by the green value of  the pixel we are at.
+We implemented the matrix \textit{exit\underline{ }nr} similar to the already existing one \textit{img\underline{ }exit}, in which we store a count to number the different exits. The number is defined by the green value of the pixel that belongs to this exit.
+
+\definecolor{commentcolor}{RGB}{89, 168, 89}
+\definecolor{keywordcolor}{RGB}{68, 68, 255}
+\definecolor{stringcolor}{RGB}{205, 139, 247}
+\definecolor{numbercolor}{RGB}{128, 128, 128}
+\definecolor{bgcolor}{RGB}{245, 248, 253}
 
 \begin{figure}[h]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\%make a zeros matrix as big as img\underline{ }exit}
+
+\textcolor{commentcolor}{\%make a zeros matrix as big as img\underline{ }exit}
 \newline
 config.exit\underline{ }nr=zeros(size(config.floor(config.floor\underline{ }exit).img\underline{ }exit));
 \newline
-\textcolor{green}{\% build the exit\underline{ }nr matrix}
+\textcolor{commentcolor}{\% build the exit\underline{ }nr matrix}
 \newline
 config.exit\underline{ }nr = config.exit\underline{ }nr + e*( img\underline{ }build(:, :, 1) == 0 \& img\underline{ }build(:, :, 2) == (256-e) \& img\underline{ }build(:, :, 3) == 0 ) ;
 \bigskip
@@ -277,61 +297,59 @@ config.exit\underline{ }nr = config.exit\underline{ }nr + e*( img\underline{ }bu
 \end{figure}
 \subsubsection{Closing exits during simulation}
 
-\underline{Reason:}
+\textbf{Reason:}
 \newline
 To close an exit as soon as it let a specific number of agents in, we have to keep track of the number of agents that already used this exit.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-loadConfig.m and applyForcesAndMove.m
+\textit{loadConfig.m} and \textit{applyForcesAndMove.m}
 \newline
-\underline{New variables:}
-\newline 
-exit\underline{ }left
+ \textbf{New variables:}
 \newline
-\underline{Modifications:}
+\textit{exit\underline{ }left}
 \newline
-For this purpose, we defined the matrix exit\underline{ }left, in which we store the number of agents who can exit for every exit (defined by his number).
+\textbf{Modifications:}
+\newline
+For this purpose, we defined the matrix \textit{exit\underline{ }left}, in which we store the number of agents who can exit for every exit.
 
 \begin{figure}[H]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\%make a zeros vector as long as exit\underline{ }count}
+\textcolor{commentcolor}{\%make a zeros vector as long as exit\underline{ }count}
 \newline
 config.exit\underline{ }left = zeros(1,config.exit\underline{ }count);
 \newline
-\textcolor{green}{\%loop over all exits}
+\textcolor{commentcolor}{\%loop over all exits}
 \newline
-\textcolor{blue}{for} e=1:config.exit\underline{ }count
+\textcolor{keywordcolor}{for} e=1:config.exit\underline{ }count
 \newline
-\textcolor{green}{\%build the exit\underline{ }nr matrix}
+\textcolor{commentcolor}{\%build the exit\underline{ }nr matrix}
 \newline
 config.exit\underline{ }nr = config.exit\underline{ }nr + e*( img\underline{ }build(:, :, 1) == 0 \& img\underline{ }build(:, :, 2) == (256-e) \& img\underline{ }build(:, :, 3) == 0 ) ;
 \newline
-\textcolor{green}{\%build the exit\underline{ }left matrix}
+\textcolor{commentcolor}{\%build the exit\underline{ }left matrix and save the number of agents the exit can hold}
 \newline
-config.exit\underline{ }left(1,e) = config.(sprintf(\textcolor{magenta}{'exit\underline{ }\%d\underline{ }nr'}, e)); save the number of agents the exit can hold
+config.exit\underline{ }left(1,e) = config.(sprintf(\textcolor{stringcolor}{'exit\underline{ }\%d\underline{ }nr'}, e)); 
 \newline
-\textcolor{blue}{end}
+\textcolor{keywordcolor}{end}
 \bigskip
 \\ \hline
 \end{tabular}
 \caption{Implementation of the exit\underline{ }left matrix}
 \end{figure}
-
 \bigskip
-In the loop where the forces are calculated and the agents moved, (in function applyForcesandMove.m) we added a piece of code, which updates the exit\underline{ }left matrix at every time-step.
+In the loop where the forces and velocities are updated, (\textit{applyForcesandMove.m}) we added a piece of code, which updates the exit\underline{ }left matrix at every time-step.
 \newline
 First, we get the number of the current exit.
-
 \begin{figure}[h!]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\%save current exit nr}
+\textcolor{commentcolor}{\%save current exit nr}
 \newline
 data.current\underline{ }exit = data.exit\underline{ }nr(round(newp(1)), round(newp(2)));
 \bigskip
@@ -339,15 +357,14 @@ data.current\underline{ }exit = data.exit\underline{ }nr(round(newp(1)), round(n
 \end{tabular}
 \caption{Implementation to get the current exit number}
 \end{figure}
-
-Then we update the exit\underline{ }left matrix by counting down the number of agents allowed to exit by 1. 
-
+\\
+Then we update the \textit{exit\underline{ }left} matrix by counting down the number of agents allowed to exit by 1. 
 \begin{figure}[h!]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\%update exit\underline{ }left}
+\textcolor{commentcolor}{\%update exit\underline{ }left}
 \newline
 data.exit\underline{ }left(1,data.current\underline{ }exit) = data.exit\underline{ }left(1,data.exit\underline{ }nr(round(newp(1)), round(newp(2)))) - 1;
 \bigskip
@@ -355,19 +372,17 @@ data.exit\underline{ }left(1,data.current\underline{ }exit) = data.exit\underlin
 \end{tabular}
 \caption{Implementation to update the exit\underline{ }left}
 \end{figure}
-
-If the allowed number of agents exited the number is 0. Now we have to close the current exit, by changing it into a wall. Therefore we have to update the img\underline{ }wall matrix.
-
+If the allowed number of agents exited the number is 0. Now we have to close the current exit, by changing it into a wall. Therefore we have to update the \textit{img\underline{ }wall} matrix.
 \begin{figure}[h!]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\%close exit if there is no more free space}
+\textcolor{commentcolor}{\%close exit if there is no more free space}
 \newline
-\textcolor{blue}{if} data.exit\underline{ } left(1,data.current\underline{ }exit) $<$ 1
+\textcolor{keywordcolor}{if} data.exit\underline{ } left(1,data.current\underline{ }exit) $<$ 1
 \newline
-\textcolor{green}{\%change current exit to wall}
+\textcolor{commentcolor}{\%change current exit to wall}
 \newline
 data.floor(data.floor\underline{ }exit).img\underline{ }wall = data.floor(data.floor\underline{ }exit).img\underline{ }wall == 1 \textcolor{blue}{...}
 \newline
@@ -375,136 +390,28 @@ data.floor(data.floor\underline{ }exit).img\underline{ }wall = data.floor(data.f
 \newline
 data.floor(data.floor\underline{ }exit).img\underline{ }exit = data.floor(data.floor\underline{ }exit).img\underline{ }exit == 1 \textcolor{blue}{...}
 \newline
-\& (data.exit\underline{ }nr \~ = (data.current\underline{ }exit));
+\& (data.exit\underline{ }nr ~= (data.current\underline{ }exit));
 \bigskip
 \\ \hline
 \end{tabular}
 \caption{Implementation to close filled  boats}
 \end{figure}
 \newpage
-\subsubsection{Controlled evacuation}
 
-\underline{Reason:}
-\newline
-With the goal of a faster evacuation, we tried to control the agents to go to specific exits. 
-\newline
-\underline{Assumption:}
-\newline
-We realised that the biggest problem-zones are the stairs. So, in order to get the agents as fast as possible away from the stairs, once they changed the floor, we decided to split the agents in two groups. 
-One group only reaches one half of the exits and the other group for the others. 
-\newline
-\underline{Function:}
-\newline
-init\underline{ }agents.m, addDesiredForce.m, initEscapeRoutes\underline{ }even.m, initEscapeRoutes\underline{ }odd.m, addDesiredForce.m, initialize.m, initAgents.m, loadConfig.m
-\newline
-\underline{New variables:}
-\newline 
-- \textit{numbr}, each agents gets a number ( 0 or 1, selected randomly)
-\newline
-- \textit{control\underline{ }exit}, in the config file you can decide whether or not you want to have controlled exits during your simulation
-\newline
-\underline{Modifications:}
-\newline
-Essentially, we had to modify the calculation of the force dragging a specific agent to the nearest exit.  Therefore we wrote two new functions to init the escape routes. 
-\newline
-- initEscapeRoutes\underline{ }even.m, this function only considers the exits  which are identified by an even number.
-
-\begin{figure}[H]
-\centering
-\begin{tabular}
-{|>{\large}m{\textwidth}|} \hline
-\bigskip
-temp1=double(mod(data.exit\underline{ }nr,2)); \textcolor{green}{\%matrix in which every number which is even turns to zero, odd turns to one}
-\newline
-temp2=logical((data.floor(i).img\underline{ }exit)-(temp1));
-\newline
-boundary\underline{ }data(temp2)=-1; \textcolor{green}{\%boundary\underline{ }data considers only the exits with even numbers $-->$ -1 }
-\bigskip
-\\ \hline
-\end{tabular}
-\caption{Implementation to init escape routes for even numbers}
-\end{figure}
-$\rightarrow$ initEscapeRoutes\underline{ }.m, this function only considers the exits which are identified by an odd number
-
-\begin{figure}[H]
-\centering
-\begin{tabular}
-{|>{\large}m{\textwidth}|} \hline
-\bigskip
-temp=logical(mod(data.exit\underline{ }nr,2)); \textcolor{green}{\%matrix in which every number which is even turns to zero, odd turns to one}
-\newline
-boundary\underline{ }data(temp)=-1; \textcolor{green}{\%boundary\underline{ }data considers only the exits with odd numbers}
-\bigskip
-\\ \hline
-\end{tabular}
-\caption{Implementation to init escape routes for odd numbers}
-\end{figure}
-
-This as a basis we got two different directions to the next exit.
-
-\begin{figure}[H]
-\centering
-\begin{tabular}
-{|>{\large}m{\textwidth}|} \hline
-\bigskip
-$\rightarrow$[data.floor(i).img\underline{ }dir\underline{ }x\underline{ }odd, data.floor(i).img\underline{ }dir\underline{ }y\underline{ }odd]
-\newline
-$\rightarrow$[data.floor(i).img\underline{ }dir\underline{ }x\underline{ }even, data.floor(i).img\underline{ }dir\underline{ }y\underline{ }even]
-\bigskip
-\\ \hline
-\end{tabular}
-\caption{Functions used to get the forces which drag the agents to the nearest exit}
-\end{figure}
-
-The agents are splitted in “even-agents” and “odd-agents” defined by the randomly added number (0 or 1).
-
-\begin{figure}[H]
-\centering
-\begin{tabular}
-{|>{\large}m{\textwidth}|} \hline
-\bigskip
-\textcolor{green}{\%even agents}
-\newline
-\textcolor{blue}{if} numbr==0;
-\newline
-\textcolor{green}{\%get direction towards nearest exit}
-\newline
-ex = lerp2(data.floor(fi).img\underline{ }dir\underline{ }x\underline{ }even, p(1), p(2));
-\newline
-ey = lerp2(data.floor(fi).img\underline{ }dir\underline{ }y\underline{ }even, p(1), p(2));
-\newline
-e = [ex ey];
-\newline
-\textcolor{green}{\%get force}
-\newline
-Fi = m * (v0*e - v)/data.tau;
-\newline
-\textcolor{green}{\% add force}
-\newline
-data.floor(fi).agents(ai).f = data.floor(fi).agents(ai).f + Fi;
-\newline
-\textcolor{blue}{end}
-\bigskip
-\\ \hline
-\end{tabular}
-\caption{Implementation to randomly split agents to even and odd}
-\end{figure}
-
-\newpage
 \subsection{Video creation}
-\underline{Reason:}
+\textbf{Reason:}
 \newline
 In the basic code there was a graphical output into eps-formated files possible on every timestep. The images then had to be converted into a video file in a postprocessing part. This is not an optimal implementation for a fast system. Furthermore it turned out that we could increase the simulation speed by factor two just by saving not on every single timestep but only on every 10$^t$$^h$ or 100$^t$$^h$. Another issue was the conversion from eps to a video file. To simplify the handling, we used a MATLAB function to create directly a video out of the figures instead of making a detour via images.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-simulate.m, initialize.m
+\textit{simulate.m, initialize.m}
 \newline
-\underline{New variables:}
+\textbf{New variables:}
 \newline
-save\underline{ }frame
+\textit{save\underline{ }frame}
 \newline
-\underline{Modification:}
+\textbf{Modification:}
 \newline
 
 \begin{figure}[H]
@@ -512,37 +419,37 @@ save\underline{ }frame
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\% prepare video file name}
+\textcolor{commentcolor}{\% prepare video file name}
 \newline
-data.video\underline{ }file\underline{ }name = [\textcolor{magenta}{$'$video\underline{ }$'$} data.frame\underline{ }basename \textcolor{magenta}{$'$.avi$'$}];
+data.video\underline{ }file\underline{ }name = [\textcolor{stringcolor}{$'$video\underline{ }$'$} data.frame\underline{ }basename \textcolor{magenta}{$'$.avi$'$}];
 \newline
 \newline
-\textcolor{green}{\% make video while simulation}
+\textcolor{commentcolor}{\% make video while simulation}
 \newline
-\textcolor{blue}{If} data.save\underline{ }frames==1
+\textcolor{keywordcolor}{If} data.save\underline{ }frames==1
 \newline
              vidObj=VideoWriter(data.video\underline{ }file\underline{ }name);
 \newline
              open(vidObj);
 \newline
-\textcolor{blue}{end}
+\textcolor{keywordcolor}{end}
 \newline
 \newline
-\textcolor{green}{\% make video while simulate   }
-\newline
-currFrame=getframe(data.figure\underline{ }floors);
-\newline
-writeVideo(vidObj,currFrame);
-\newline
-\newline
-\textcolor{green}{\% make video while simulation}
+\textcolor{commentcolor}{\% make video while simulate   }
 \newline
 currFrame=getframe(data.figure\underline{ }floors);
 \newline
 writeVideo(vidObj,currFrame);
 \newline
 \newline
-\textcolor{green}{\% make video while simulation}
+\textcolor{commentcolor}{\% make video while simulation}
+\newline
+currFrame=getframe(data.figure\underline{ }floors);
+\newline
+writeVideo(vidObj,currFrame);
+\newline
+\newline
+\textcolor{commentcolor}{\% make video while simulation}
 \newline
 close(vidObj);
 \bigskip
@@ -552,27 +459,27 @@ close(vidObj);
 \end{figure}
 
 \subsection{System output}
-\underline{Reason:}
+\textbf{Reason:}
 \newline
 Storing the simulation output is important to be able to analyse and optimize the system. The output of the basic code was just a plot with agents left the building over time and the above mentioned graphical output of the floor plans over time. We extended the output and created a dump struct where all the important variables are listed over time. That struct is the system output at simulation end and it can be used in a postprocessing part to generate meaningful graphs and data.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-simulate.m
+\textit{simulate.m}
 \newline
-\underline{New variables:}
+\textbf{New variables:}
 \newline
-output
+\textit{output}
 \newline
 \newpage
-\underline{Modification:}
+\textbf{Modification:}
 
 \begin{figure}[H]
 \centering
 \begin{tabular}
 {|>{\large}m{\textwidth}|} \hline
 \bigskip
-\textcolor{green}{\% init output matrizes}
+\textcolor{commentcolor}{\% init output matrizes}
 \newline
 data.output = struct;
 \newline
@@ -583,71 +490,71 @@ data.output.agents\underline{ }per\underline{ }floor = ones(data.floor\underline
 data.output.exit\underline{ }left = zeros(data.exit\underline{ }count,data.duration/data.dt);
 \newline
 \newline
-\textcolor{green}{\% prepare output file name}
+\textcolor{commentcolor}{\% prepare output file name}
 \newline
 data.output\underline{ }file\underline{ }name = [\textcolor{magenta}{$'$output\underline{ }$'$} data.frame\underline{ }basename];
 \newline
 \newline
-\textcolor{green}{\% set deleted\underline{ }agents to zero}
+\textcolor{commentcolor}{\% set deleted\underline{ }agents to zero}
 \newline
 data.output.deleted\underline{ }agents = 0;
 \newline
 \newline
-\textcolor{green}{\% dump agents\underline{ }per\underline{ }floor to output }
+\textcolor{commentcolor}{\% dump agents\underline{ }per\underline{ }floor to output }
 \newline
-\textcolor{blue}{for} floor=1:data.floor\underline{ }count
+\textcolor{keywordcolor}{for} floor=1:data.floor\underline{ }count
 \newline
 data.output.agents\underline{ }per\underline{ }floor(floor,data.step) = length(data.floor(floor).agents);
 \newline
-\textcolor{blue}{end}
+\textcolor{keywordcolor}{end}
 \newline
 \newline
-\textcolor{green}{\% dump exit\underline{ }left to output}
+\textcolor{commentcolor}{\% dump exit\underline{ }left to output}
 \newline
 data.output.exit\underline{ }left(:,data.step) = data.exit\underline{ }left';
 \newline
 \newline
-\textcolor{green}{\% toc of whole simulation}
+\textcolor{commentcolor}{\% toc of whole simulation}
 \newline
 data.output.simulation\underline{ }time = toc(simstart);
 \newline
 \newline
-\textcolor{green}{\% save output}
+\textcolor{commentcolor}{\% save output}
 \newline
 output = data.output;
 \newline
-save(data.output\underline{ }file\underline{ }name,\textcolor{magenta}{$'$output$'$})
+save(data.output\underline{ }file\underline{ }name,\textcolor{stringcolor}{$'$output$'$})
 \newline
-fprintf('\textcolor{magenta}{$'$Frame \%i done (took \%.3fs; \%.3fs out of \%.3gs simulated). n$'$}, 
+fprintf('\textcolor{stringcolor}{$'$Frame \%i done (took \%.3fs; \%.3fs out of \%.3gs simulated). n$'$}, 
 \newline
 data.step, data.telapsed, data.time, data.duration);
 \newline
 \newline
-\textcolor{green}{\% save complete simulation}
+\textcolor{commentcolor}{\% save complete simulation}
 \newline
 output = data.output;
 \newline
-save(textcolor{magenta}{$'$output$'$,$'$output$'$})
+save(textcolor{stringcolor}{$'$output$'$,$'$output$'$})
 \bigskip
 \\ \hline
 \end{tabular}
 \caption{Implementation to produce the output}
 \end{figure}
 
-\subsection{Postprocesing}
-\underline{Reason:}
+\subsection{Postprocessing}
+\textbf{Reason:}
 \newline
 To analyse the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic \$t\underline{ }10\$, \$t\underline{ }50\$, \$t\underline{ }90\$ and \$t\underline{ }99\$ times.
 \newline
-\underline{Function:}
+\textbf{Function:}
 \newline
-postprocessing.m
+\textit{postprocessing.m}
 \newline
-\underline{New variables:}
+\textbf{New variables:}
 \newline
 none of relevance
 \newline
-\underline{Modification:}
+\textbf{Modification:}
 \newline
 We created the whole script ourself. It can be found in the annex.
 \subsection{Parameter input and config file}
@@ -655,10 +562,9 @@ The social force model can be adjusted using different parameters e.g. to weight
 \newline
 In the table in the annex a typical simulation input of the config file and some explanations can be found.
 
-
 \subsection{Ship Decks}
 
-\underline{Ship Deck Implementation:}
+\textbf{Ship Deck Implementation:}
 \newline
 The Costa Concordia has 14 decks which are all different from each other. They are connected by stairs and elevators in different configurations and they full fill different purposes. There are decks for entertainment, eating, shopping, sport and so on.
 Due to the big differences of each deck, it is enormous time consuming to implement all these decks with all details in a model. So it is necessary to simplify the decks in a reasonable manner.

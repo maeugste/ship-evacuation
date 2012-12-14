@@ -10,30 +10,29 @@
 \contentsline {section}{\numberline {5}Implementation}{11}
 \contentsline {subsection}{\numberline {5.1}Basic code}{11}
 \contentsline {subsection}{\numberline {5.2}Code adjustments}{11}
-\contentsline {subsubsection}{\numberline {5.2.1}Exits}{11}
+\contentsline {subsubsection}{\numberline {5.2.1}Exits}{12}
 \contentsline {subsubsection}{\numberline {5.2.2}Different exits}{12}
 \contentsline {subsubsection}{\numberline {5.2.3}Closing exits during simulation}{13}
-\contentsline {subsubsection}{\numberline {5.2.4}Controlled evacuation}{15}
-\contentsline {subsection}{\numberline {5.3}Video creation}{17}
-\contentsline {subsection}{\numberline {5.4}System output}{18}
-\contentsline {subsection}{\numberline {5.5}Postprocesing}{20}
-\contentsline {subsection}{\numberline {5.6}Parameter input and config file}{20}
-\contentsline {subsection}{\numberline {5.7}Ship Decks}{20}
-\contentsline {section}{\numberline {6}Simulation Results and Discussion}{24}
-\contentsline {subsection}{\numberline {6.1}Expected Results}{24}
-\contentsline {subsection}{\numberline {6.2}Simulation Results}{24}
-\contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{24}
-\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{25}
-\contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{26}
-\contentsline {subsubsection}{\numberline {6.2.4}Crew command}{27}
-\contentsline {subsection}{\numberline {6.3}Comparison}{27}
-\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{27}
-\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{27}
-\contentsline {subsubsection}{\numberline {6.3.3}Standard - Crew command}{27}
-\contentsline {subsection}{\numberline {6.4}Discussion}{27}
-\contentsline {section}{\numberline {7}Summary and Outlook}{27}
-\contentsline {subsection}{\numberline {7.1}Summary}{27}
-\contentsline {subsection}{\numberline {7.2}Outlook}{27}
-\contentsline {section}{\numberline {8}References}{28}
-\contentsline {section}{\numberline {9}Appendix}{29}
-\contentsline {subsection}{\numberline {9.1}Code}{29}
+\contentsline {subsection}{\numberline {5.3}Video creation}{15}
+\contentsline {subsection}{\numberline {5.4}System output}{16}
+\contentsline {subsection}{\numberline {5.5}Postprocessing}{18}
+\contentsline {subsection}{\numberline {5.6}Parameter input and config file}{18}
+\contentsline {subsection}{\numberline {5.7}Ship Decks}{18}
+\contentsline {section}{\numberline {6}Simulation Results and Discussion}{22}
+\contentsline {subsection}{\numberline {6.1}Expected Results}{22}
+\contentsline {subsection}{\numberline {6.2}Simulation Results}{22}
+\contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{22}
+\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{23}
+\contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{24}
+\contentsline {subsubsection}{\numberline {6.2.4}Crew command}{25}
+\contentsline {subsection}{\numberline {6.3}Comparison}{25}
+\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{25}
+\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{25}
+\contentsline {subsubsection}{\numberline {6.3.3}Standard - Crew command}{25}
+\contentsline {subsection}{\numberline {6.4}Discussion}{25}
+\contentsline {section}{\numberline {7}Summary and Outlook}{25}
+\contentsline {subsection}{\numberline {7.1}Summary}{25}
+\contentsline {subsection}{\numberline {7.2}Outlook}{25}
+\contentsline {section}{\numberline {8}References}{26}
+\contentsline {section}{\numberline {9}Appendix}{27}
+\contentsline {subsection}{\numberline {9.1}Code}{27}
