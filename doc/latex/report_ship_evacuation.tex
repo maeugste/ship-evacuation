@@ -101,15 +101,16 @@
 
 
 \section{Abstract}
-The evacuation of a passenger liner is problematic due to a big mass of passengers wanting to reach the rescue boats. Real data can just be gained on accidents. Another way is to simulate the scenario using computer models. Our approach was to take a common ship shape with real floor plans and run simulations on it with a continuous space social force model as introduced by Helbling et al \cite{EscapePanic}. A implementation of this has already been done by a former “MSSSM” group \cite{Building} on building structures. We took this C based code with a MATLAB interface and changed it to our needs. \\\\
-RESULTS!!
-
+The evacuation of a passenger liner is problematic due to a big mass of passengers wanting to reach the rescue boats. Real data can just be gained on accidents. Another way is to simulate such scenarios using computer models. Our approach was to take a common ship shape with real floor plans and run simulations on it with a continuous space social force model as introduced by Helbling et al \cite{EscapePanic}. A implementation of this has already been done by a former MSSSM group \cite{Building} on building structures. We took this C based code with a MATLAB interface and changed it to our needs. \\\\
+Several scenarios were simulated. As a standard we took a simplified floor plan of the passenger liner Costa Serena, a 290 meter long ship with up to more than 4000 passengers. We compared it to modifications in the stair placement as well as rescue boat capacity adjustments. Another idea was to implement the leading and controlling influence of staff on the passengers.\\\\
+Our simulations clarified that there is a potential to decrease the overall evacuation time. The most weightily influence had the stair displacement with up to 20\% faster evacuation. on the other hand, the crew influence model seemed to be to simplified. We did not see a lot of improvement in this scenario. However, a more detailed model would probably lead to better results.\\\\
+In a future work one could merge our modifications to get an even safer evacuation. The potential exists.
 
 
 
 
 \section{Individual contributions}
-The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implenting the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification.
+The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implenting the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification. A more detailled breakdown can be seen by looking at the GitHub timeline of our project.
 
 
 
@@ -129,6 +130,7 @@ Even though modern ocean liners are considered to be safe, the latest occasions 
 \subsection{Fundamental Questions}
 To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localised these places we are interested in the answers of the following questions:\\\\
 
+\newpage
 How much time can be saved by varying the dependent variables mentioned below:
 \begin{itemize}
 \item How much people can be saved by changing the disposition of the specific room types?
@@ -157,8 +159,10 @@ Before making computer simulations we discussed, what we expect as results out o
 \item There are many parameters we do not model in our simulation. For example fire and smoke, the tilt of the ship or handicapped and petrified passengers are disregarded. By leaving out this details we get a very simplified model. However, by starting the optimization process by data of a nowadays passenger liner we hope to see some real evacuation dynamics in this system and therefore make conclusion on the fundamental questions.
 \end{itemize}
 
+\newpage
+
 \section{Description of the model}
-We base our model on the work done by a group of former "MSSSM" students, by name Hans Hardmeier, Andrin Jenal, Beat Kueng and Felix Thaler \cite{Building}. In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in in the language C with a MATLAB interface to rapidly simulate the evacuation of multi-level buildings.\bigskip
+We base our model on the work done by a group of former MSSSM students, by name Hans Hardmeier, Andrin Jenal, Beat Kueng and Felix Thaler \cite{Building}. In their work "Modeling Situations of Evacuation in a Multi-level Building" they wrote a computer program in in the language C with a MATLAB interface to rapidly simulate the evacuation of multi-level buildings.\bigskip
 
 \subsection{Social force model }
 Our approach is the social force model described by Helbling, Farkas and Vicsek \cite{EscapePanic}, as summarised below. In order to observe an escape panic situation and especially bottlenecks, they built up a continuous-space model. In mathematical terms they took Newtons second law and introduced a mix of socio psychological and physical forces for each so called pedestrian. 
@@ -213,8 +217,8 @@ With a fast sweeping algorithm in C a vector field is created for every floor po
 \begin{equation}
 \mathbf{v}_{i,new} = \mathbf{v}_{i,previous} + \frac{\sum {f}}{m_{i}}dt
 \end{equation}
-\\
-Again with the forward Euler scheme positions are calculated that were reached in a finite timestep.\\
+
+Again with the forward Euler scheme positions are calculated that were reached in a finite timestep.
 
 \begin{equation}
 \mathbf{r}_{i,new}=\mathbf{r}_{i,previous}+\mathbf{v}_{i,new}dt
@@ -662,7 +666,10 @@ Floor 08 until 14 differ more from floor 02 but as long as they are far away fro
 
 
 \newpage
-\section{Simulation Results and Discussion}
+\section{Results and Discussion}
+
+\subsection{Simulation issues}
+Some agents always stuck in the walls near the stairways. Those agents did not reach the exits. This is why we could not get a $t_{100}$ time but just saved about 98\% of all passengers. The frequency of this issue was especially high in small areas and with a high total passenger amount. However, there was a trade off between realistic clogging in stairways and good ratio of rescued people out of all passengers. We decided not to decrease the number of passengers or expand the stairs because we did not want to eliminate the realistic clogging behaviour which is important for the simulation.
 
 \subsection{Simulation Results}
 \subsubsection{Standard ship}
@@ -755,6 +762,8 @@ evacuation time & 17s &70s & 154s & 203s \\ \hline \hline
 
 \subsubsection{Crew command}
 
+As already mentioned in the implementation part, we changed our code in order to simulate staff controlling the rescue situation. The results of that extention can be seen below. 
+
 
 \begin{table}[H]
 \centering
@@ -792,19 +801,15 @@ But, there is clearly a difference in the second half of the evacuation. The las
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
 
 \subsubsection{Standard - Crew command}
-The results of the crew command extention are rather disappointing. On the one hand it was clear, that the first part of the simulation would become slower because the agents do not use the nearest boat. But on the other hand it was
+The results of the crew command extention are rather disappointing. On the one hand it was clear, that the first part of the simulation would become slower because the agents do not use the nearest boat. But on the other hand it was mentioned that the last part of the simulation has a significant speed up what is not the case. By looking at the video output the reason can be seen: The opening of the rescue boats near the stairs is useless at the point when only a few passengers are left because then they are already on the exit floor and walked towards the middle of the ship.\\
+However, the idea has not to be thrown away. An implementation with a continuous opening of the next outer boat when the midmost ones are filled would eliminate our problem and a faster total evacuation time could be reached.
+
+\subsection{General discussion}
+
+During our project we revealed a lot of adjustments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
 
 
-
-
-\subsection{Discussion}
-
-During our project we revealed a lot of adjusments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
-
-
-\section{Summary and Outlook}
-\subsection{Summary}
-\subsection{Outlook}
+\section{Outlook}
 During our work, we found a lot of possibilites to improve the model. The target of an ongoing project could be to make the model more realistic. There are a lot of possibilites to achieve this goal.
 \newline
 Some suggestions:
@@ -821,7 +826,7 @@ Some ideas:
 \item In the ideal case, the evacuations on a ship are planned well. A good idea would be to define specific control points at which agents gahter first. From those points the agents would be led in small groups to the rescueboats by a crew member. It would be interesting to analyse the effect of such a efficient control.
 \item The optimal combination of the different modifications we analyzed in this project could be found and therefore a minimal evacuation time.
 \end{itemize}
-For sure further interesting outcomes could be made by simply merging our results, means for example varying rescueboatssize and geometries.
+For sure further interesting outcomes could be made by simply merging our results, means for example varying rescueboat size and geometries.
 \section{References}
 
 \begin{thebibliography}{9}
@@ -870,26 +875,26 @@ For sure further interesting outcomes could be made by simply merging our result
   stringstyle=\color{stringcolor}
 }
 
-%\subsubsection{\textit{standard} code}
-%
-%\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code/addAgentRepulsiveForce.m}
-%\lstinputlisting[caption=addDesiredForce.m]{../../code/addDesiredForce.m}
-%\lstinputlisting[caption=addWallForce.m]{../../code/addWallForce.m}
-%\lstinputlisting[caption=applyForcesAndMove.m]{../../code/applyForcesAndMove.m}
-%\lstinputlisting[caption=checkForIntersection.m]{../../code/checkForIntersection.m}
-%\lstinputlisting[caption=compileC.m]{../../code/compileC.m}
-%\lstinputlisting[caption=initAgents.m]{../../code/initAgents.m}
-%\lstinputlisting[caption=initEscapeRoutes.m]{../../code/initEscapeRoutes.m}
-%\lstinputlisting[caption=initialize.m]{../../code/initialize.m}
-%\lstinputlisting[caption=initWallForces.m]{../../code/initWallForces.m}
-%\lstinputlisting[caption=loadConfig.m]{../../code/loadConfig.m}
-%\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code/plotAgentsPerFloor.m}
-%\lstinputlisting[caption=plotExitedAgents.m]{../../code/plotExitedAgents.m}
-%\lstinputlisting[caption=plotFloor.m]{../../code/plotFloor.m}
-%\lstinputlisting[caption=plotFloor.m]{../../code/postprocessing.m}
-%\lstinputlisting[caption=simulate.m]{../../code/simulate.m}
-%
-%
+\subsubsection{\textit{standard} code}
+
+\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code/addAgentRepulsiveForce.m}
+\lstinputlisting[caption=addDesiredForce.m]{../../code/addDesiredForce.m}
+\lstinputlisting[caption=addWallForce.m]{../../code/addWallForce.m}
+\lstinputlisting[caption=applyForcesAndMove.m]{../../code/applyForcesAndMove.m}
+\lstinputlisting[caption=checkForIntersection.m]{../../code/checkForIntersection.m}
+\lstinputlisting[caption=compileC.m]{../../code/compileC.m}
+\lstinputlisting[caption=initAgents.m]{../../code/initAgents.m}
+\lstinputlisting[caption=initEscapeRoutes.m]{../../code/initEscapeRoutes.m}
+\lstinputlisting[caption=initialize.m]{../../code/initialize.m}
+\lstinputlisting[caption=initWallForces.m]{../../code/initWallForces.m}
+\lstinputlisting[caption=loadConfig.m]{../../code/loadConfig.m}
+\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code/plotAgentsPerFloor.m}
+\lstinputlisting[caption=plotExitedAgents.m]{../../code/plotExitedAgents.m}
+\lstinputlisting[caption=plotFloor.m]{../../code/plotFloor.m}
+\lstinputlisting[caption=plotFloor.m]{../../code/postprocessing.m}
+\lstinputlisting[caption=simulate.m]{../../code/simulate.m}
+
+
 %
 %
 %\subsubsection{\textit{control exit} code}
@@ -912,42 +917,41 @@ For sure further interesting outcomes could be made by simply merging our result
 %\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/plotFloor.m}
 %\lstinputlisting[caption=plotFloor.m]{../../code_control_exit/postprocessing.m}
 %\lstinputlisting[caption=simulate.m]{../../code_control_exit/simulate.m}
-%
-%
-%\subsubsection{\textit{C} code}
-%
-%\lstinputlisting[language=C,caption=createRangeTree.c]{../../code/createRangeTree.c}
-%\lstinputlisting[language=C,caption=fastSweeping.c]{../../code/fastSweeping.c}
-%\lstinputlisting[language=C,caption=getNormalizedGradient.c]{../../code/getNormalizedGradient.c}
-%\lstinputlisting[language=C,caption=lerp2.c]{../../code/lerp2.c}
-%\lstinputlisting[language=C,caption=rangeQuery.c]{../../code/rangeQuery.c}
-%\lstinputlisting[language=C,caption=tree.h]{../../code/tree.h}
-%\lstinputlisting[language=C,caption=tree\_build.h]{../../code/tree_build.h}
-%\lstinputlisting[language=C,caption=tree\_build.c]{../../code/tree_build.c}
-%\lstinputlisting[language=C,caption=tree\_free.c]{../../code/tree_free.c}
-%\lstinputlisting[language=C,caption=tree\_query.h]{../../code/tree_query.h}
-%\lstinputlisting[language=C,caption=tree\_query.c]{../../code/tree_query.c}
-%\lstinputlisting[language=C,caption=tree\_types.h]{../../code/tree_types.h}
-%
-%
-%\subsubsection{\textit{crew command} code}
-%
-%\lstinputlisting[caption=addAgentRepulsiveForce.m]{C:/Users/manuela/Documents/GitHub/ship-evacuation/code_crew_command/addAgentRepulsiveForce.m}
-%\lstinputlisting[caption=addDesiredForce.m]{../../code_crew_command/addDesiredForce.m}
-%\lstinputlisting[caption=addWallForce.m]{../../code_crew_command/addWallForce.m}
-%\lstinputlisting[caption=applyForcesAndMove.m]{../../code_crew_command/applyForcesAndMove.m}
-%\lstinputlisting[caption=checkForIntersection.m]{../../code_crew_command/checkForIntersection.m}
-%\lstinputlisting[caption=compileC.m]{../../code_crew_command/compileC.m}
-%\lstinputlisting[caption=initAgents.m]{../../code_crew_command/initAgents.m}
-%\lstinputlisting[caption=initEscapeRoutes.m]{../../code_crew_command/initEscapeRoutes.m}
-%\lstinputlisting[caption=initialize.m]{../../code_crew_command/initialize.m}
-%\lstinputlisting[caption=initWallForces.m]{../../code_crew_command/initWallForces.m}
-%\lstinputlisting[caption=loadConfig.m]{../../code_crew_command/loadConfig.m}
-%\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_crew_command/plotAgentsPerFloor.m}
-%\lstinputlisting[caption=plotExitedAgents.m]{../../code_crew_command/plotExitedAgents.m}
-%\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/plotFloor.m}
-%\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/postprocessing.m}
-%\lstinputlisting[caption=simulate.m]{../../code_crew_command/simulate.m}
+
+
+\subsubsection{\textit{C} code}
+
+\lstinputlisting[language=C,caption=createRangeTree.c]{../../code/createRangeTree.c}
+\lstinputlisting[language=C,caption=fastSweeping.c]{../../code/fastSweeping.c}
+\lstinputlisting[language=C,caption=getNormalizedGradient.c]{../../code/getNormalizedGradient.c}
+\lstinputlisting[language=C,caption=lerp2.c]{../../code/lerp2.c}
+\lstinputlisting[language=C,caption=rangeQuery.c]{../../code/rangeQuery.c}
+\lstinputlisting[language=C,caption=tree.h]{../../code/tree.h}
+\lstinputlisting[language=C,caption=tree\_build.h]{../../code/tree_build.h}
+\lstinputlisting[language=C,caption=tree\_build.c]{../../code/tree_build.c}
+\lstinputlisting[language=C,caption=tree\_free.c]{../../code/tree_free.c}
+\lstinputlisting[language=C,caption=tree\_query.h]{../../code/tree_query.h}
+\lstinputlisting[language=C,caption=tree\_query.c]{../../code/tree_query.c}
+\lstinputlisting[language=C,caption=tree\_types.h]{../../code/tree_types.h}
+
+
+\subsubsection{\textit{crew command} code}
+
+\lstinputlisting[caption=addAgentRepulsiveForce.m]{../../code_crew_command/addAgentRepulsiveForce.m}
+\lstinputlisting[caption=addDesiredForce.m]{../../code_crew_command/addDesiredForce.m}
+\lstinputlisting[caption=addWallForce.m]{../../code_crew_command/addWallForce.m}
+\lstinputlisting[caption=applyForcesAndMove.m]{../../code_crew_command/applyForcesAndMove.m}
+\lstinputlisting[caption=checkForIntersection.m]{../../code_crew_command/checkForIntersection.m}
+\lstinputlisting[caption=compileC.m]{../../code_crew_command/compileC.m}
+\lstinputlisting[caption=initAgents.m]{../../code_crew_command/initAgents.m}
+\lstinputlisting[caption=initEscapeRoutes.m]{../../code_crew_command/initEscapeRoutes.m}
+\lstinputlisting[caption=initialize.m]{../../code_crew_command/initialize.m}
+\lstinputlisting[caption=initWallForces.m]{../../code_crew_command/initWallForces.m}
+\lstinputlisting[caption=loadConfig.m]{../../code_crew_command/loadConfig.m}
+\lstinputlisting[caption=plotAgentsPerFloor.m]{../../code_crew_command/plotAgentsPerFloor.m}
+\lstinputlisting[caption=plotExitedAgents.m]{../../code_crew_command/plotExitedAgents.m}
+\lstinputlisting[caption=plotFloor.m]{../../code_crew_command/plotFloor.m}
+\lstinputlisting[caption=simulate.m]{../../code_crew_command/simulate.m}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.11)  14 DEC 2012 21:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.11)  14 DEC 2012 22:20
 entering extended mode
 **C:/Users/Raphael*Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/repo
 rt_ship_evacuation.tex
@@ -452,14 +452,17 @@ cs/declaration.jpg>]
 rt_ship_evacuation.toc" [4])
 \tf@toc=\write3
  [5]
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
-Missing character: There is no � in font cmr12!
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
@@ -468,75 +471,71 @@ Missing character: There is no � in font cmr12!
 Missing character: There is no � in font cmr12!
 Missing character: There is no � in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 134.
+[7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 136.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 215--218
-
- []
-
-[12] [13]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 288--302
+[11] [12] [13]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 292--306
  [][] 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 324--347
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 328--351
  [][] 
  []
 
 [14]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 355--364
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 359--368
  [][] 
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 373--377
+Underfull \hbox (badness 4429) in paragraph at lines 377--381
 \OT1/cmr/m/n/12 data.exit$[]$left(1,data.current$[]$exit) = data.exit$[]$left(1
 ,data.exit$[]$nr(round(newp(1)),
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 370--379
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 374--383
  [][] 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 384--403
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 388--407
  [][] 
  []
 
@@ -544,12 +543,12 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 384--403
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 424--482
+Underfull \hbox (badness 10000) in paragraph at lines 428--486
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 484--565
+Underfull \hbox (badness 10000) in paragraph at lines 488--569
 
  []
 
@@ -557,21 +556,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--565
 File: pics/Decksetup-stairs.pdf Graphic file (type pdf)
 
 <use pics/Decksetup-stairs.pdf>
-Package pdftex.def Info: pics/Decksetup-stairs.pdf used on input line 605.
+Package pdftex.def Info: pics/Decksetup-stairs.pdf used on input line 609.
 (pdftex.def)             Requested size: 210.55022pt x 148.62128pt.
 
 <pics/deckconversion2.pdf, id=73, 128.48pt x 96.36pt>
 File: pics/deckconversion2.pdf Graphic file (type pdf)
 
 <use pics/deckconversion2.pdf>
-Package pdftex.def Info: pics/deckconversion2.pdf used on input line 610.
+Package pdftex.def Info: pics/deckconversion2.pdf used on input line 614.
 (pdftex.def)             Requested size: 210.55022pt x 157.92552pt.
  [18]
 <pics/Decktwostairs.pdf, id=77, 59.22125pt x 79.29625pt>
 File: pics/Decktwostairs.pdf Graphic file (type pdf)
 
 <use pics/Decktwostairs.pdf>
-Package pdftex.def Info: pics/Decktwostairs.pdf used on input line 631.
+Package pdftex.def Info: pics/Decktwostairs.pdf used on input line 635.
 (pdftex.def)             Requested size: 105.2751pt x 140.96655pt.
  [19 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/
 pics/Decksetup-stairs.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechb
@@ -583,46 +582,46 @@ Missing character: There is no � in font cmr12!
 File: pics/Decks.pdf Graphic file (type pdf)
 
 <use pics/Decks.pdf>
-Package pdftex.def Info: pics/Decks.pdf used on input line 648.
+Package pdftex.def Info: pics/Decks.pdf used on input line 652.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
 
 <pics/Decksconverted.pdf, id=93, 845.1575pt x 597.23125pt>
 File: pics/Decksconverted.pdf Graphic file (type pdf)
 
 <use pics/Decksconverted.pdf>
-Package pdftex.def Info: pics/Decksconverted.pdf used on input line 653.
+Package pdftex.def Info: pics/Decksconverted.pdf used on input line 657.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
  [20 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/
 pics/Decktwostairs.pdf>] [21 <C:/Users/Raphael Brechbühler/Documents/GitHub/sh
 ip-evacuation/doc/latex/pics/Decks.pdf, page is rotated 90 degrees> <C:/Users/R
 aphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/pics/Decksconver
 ted.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 669--671
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--676
+Underfull \hbox (badness 10000) in paragraph at lines 683--683
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 677--677
+Underfull \hbox (badness 10000) in paragraph at lines 684--684
 []|\OT1/cmr/m/n/12 evacuation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 678--678
+Underfull \hbox (badness 10000) in paragraph at lines 685--685
 []|\OT1/cmr/m/n/12 evacuation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--679
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 []|\OT1/cmr/m/n/12 averaged
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--679
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 \OT1/cmr/m/n/12 evac-u-a-tion
  []
 
@@ -630,147 +629,311 @@ Underfull \hbox (badness 10000) in paragraph at lines 679--679
 File: pics/standard_cap1.pdf Graphic file (type pdf)
 
 <use pics/standard_cap1.pdf>
-Package pdftex.def Info: pics/standard_cap1.pdf used on input line 690.
+Package pdftex.def Info: pics/standard_cap1.pdf used on input line 697.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
 
 <pics/standard_agents1.pdf, id=120, 845.1575pt x 597.45204pt>
 File: pics/standard_agents1.pdf Graphic file (type pdf)
 
 <use pics/standard_agents1.pdf>
-Package pdftex.def Info: pics/standard_agents1.pdf used on input line 694.
+Package pdftex.def Info: pics/standard_agents1.pdf used on input line 701.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
- [22 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/
-pics/standard_cap1.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbüh
-ler/Documents/GitHub/ship-evacuation/doc/latex/pics/standard_agents1.pdf, page 
-is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 706--706
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--713
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--707
+Underfull \hbox (badness 10000) in paragraph at lines 714--714
 []|\OT1/cmr/m/n/12 evacuation
  []
 
-<pics/added_stairs_cap.pdf, id=136, 845.1575pt x 597.45204pt>
+[22] <pics/added_stairs_cap.pdf, id=124, 845.1575pt x 597.45204pt>
 File: pics/added_stairs_cap.pdf Graphic file (type pdf)
 
 <use pics/added_stairs_cap.pdf>
-Package pdftex.def Info: pics/added_stairs_cap.pdf used on input line 715.
+Package pdftex.def Info: pics/added_stairs_cap.pdf used on input line 722.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
 
-<pics/added_stairs_agents.pdf, id=137, 845.1575pt x 597.45204pt>
+<pics/added_stairs_agents.pdf, id=125, 845.1575pt x 597.45204pt>
 File: pics/added_stairs_agents.pdf Graphic file (type pdf)
 
 <use pics/added_stairs_agents.pdf>
-Package pdftex.def Info: pics/added_stairs_agents.pdf used on input line 719.
+Package pdftex.def Info: pics/added_stairs_agents.pdf used on input line 726.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
  [23 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/
-pics/added_stairs_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechb
-ühler/Documents/GitHub/ship-evacuation/doc/latex/pics/added_stairs_agents.pdf,
- page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 735--735
+pics/standard_cap1.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbüh
+ler/Documents/GitHub/ship-evacuation/doc/latex/pics/standard_agents1.pdf, page 
+is rotated 90 degrees> <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-eva
+cuation/doc/latex/pics/added_stairs_cap.pdf, page is rotated 90 degrees> <C:/Us
+ers/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/pics/added_
+stairs_agents.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--736
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
 []|\OT1/cmr/m/n/12 evacuation
  []
 
 <pics/vary_cap.pdf, id=153, 845.1575pt x 597.45204pt>
 File: pics/vary_cap.pdf Graphic file (type pdf)
  <use pics/vary_cap.pdf>
-Package pdftex.def Info: pics/vary_cap.pdf used on input line 745.
+Package pdftex.def Info: pics/vary_cap.pdf used on input line 752.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
 
 <pics/vary_agents.pdf, id=154, 845.1575pt x 597.45204pt>
 File: pics/vary_agents.pdf Graphic file (type pdf)
 
 <use pics/vary_agents.pdf>
-Package pdftex.def Info: pics/vary_agents.pdf used on input line 749.
+Package pdftex.def Info: pics/vary_agents.pdf used on input line 756.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 763--763
+Underfull \hbox (badness 10000) in paragraph at lines 772--772
 []|\OT1/cmr/m/n/12 percentage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 764--764
+Underfull \hbox (badness 10000) in paragraph at lines 773--773
 []|\OT1/cmr/m/n/12 evacuation
- []
-
-<pics/crew_cap.pdf, id=155, 845.1575pt x 597.45204pt>
-File: pics/crew_cap.pdf Graphic file (type pdf)
- <use pics/crew_cap.pdf>
-Package pdftex.def Info: pics/crew_cap.pdf used on input line 773.
-(pdftex.def)             Requested size: 210.55022pt x 148.843pt.
-
-<pics/crew_agents.pdf, id=156, 845.1575pt x 597.45204pt>
-File: pics/crew_agents.pdf Graphic file (type pdf)
-
-<use pics/crew_agents.pdf>
-Package pdftex.def Info: pics/crew_agents.pdf used on input line 777.
-(pdftex.def)             Requested size: 210.55022pt x 148.843pt.
-
-Underfull \hbox (badness 2293) in paragraph at lines 778--778
-[]\OT1/cmr/m/n/10.95 Figure 18: |Crew com-mand sim-u-la-tion:
  []
 
 [24 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/p
 ics/vary_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/Do
 cuments/GitHub/ship-evacuation/doc/latex/pics/vary_agents.pdf, page is rotated 
-90 degrees>] [25 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuatio
-n/doc/latex/pics/crew_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Br
-echbühler/Documents/GitHub/ship-evacuation/doc/latex/pics/crew_agents.pdf, pag
-e is rotated 90 degrees>] [26]
-Underfull \hbox (badness 1286) in paragraph at lines 831--832
+90 degrees>] <pics/crew_cap.pdf, id=170, 845.1575pt x 597.45204pt>
+File: pics/crew_cap.pdf Graphic file (type pdf)
+
+<use pics/crew_cap.pdf>
+Package pdftex.def Info: pics/crew_cap.pdf used on input line 782.
+(pdftex.def)             Requested size: 210.55022pt x 148.843pt.
+
+<pics/crew_agents.pdf, id=171, 845.1575pt x 597.45204pt>
+File: pics/crew_agents.pdf Graphic file (type pdf)
+
+<use pics/crew_agents.pdf>
+Package pdftex.def Info: pics/crew_agents.pdf used on input line 786.
+(pdftex.def)             Requested size: 210.55022pt x 148.843pt.
+
+Underfull \hbox (badness 2293) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 Figure 18: |Crew com-mand sim-u-la-tion:
+ []
+
+[25 <C:/Users/Raphael Brechbühler/Documents/GitHub/ship-evacuation/doc/latex/p
+ics/crew_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/Do
+cuments/GitHub/ship-evacuation/doc/latex/pics/crew_agents.pdf, page is rotated 
+90 degrees>] [26]
+Underfull \hbox (badness 1286) in paragraph at lines 836--837
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--832
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--832
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+[27] (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [27]
+)
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\addAgentR
+epulsiveForce.m" [28] [29])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\addDesire
+dForce.m" [30])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\addWallFo
+rce.m" [31])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\applyForc
+esAndMove.m" [32]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][]  
+ []
+
+[33] [34] [35]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+[36]
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[37])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\checkForI
+ntersection.m" [38])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\compileC.
+m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initAgent
+s.m" [39]) [40]
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initEscap
+eRoutes.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initializ
+e.m" [41] [42])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\initWallF
+orces.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\loadConfi
+g.m" [43] [44]
+Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+)
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\plotAgent
+sPerFloor.m" [45])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\plotExite
+dAgents.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\plotFloor
+.m"
+Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+[46])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\postproce
+ssing.m" [47] [48] [49])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\simulate.
+m" [50] [51] [52]) (C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\createRan
+geTree.c") [53]
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\fastSweep
+ing.c" [54] [55] [56] [57] [58]) [59]
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\getNormal
+izedGradient.c" [60] [61])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\lerp2.c"
+[62])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\rangeQuer
+y.c" [63])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree.h"
+[64])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_buil
+d.h")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_buil
+d.c" [65] [66] [67] [68] [69])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_free
+.c")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_quer
+y.h" [70])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_quer
+y.c" [71] [72] [73])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code\tree_type
+s.h" [74])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\addAgentRepulsiveForce.m" [75] [76] [77])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\addDesiredForce.m" [78])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\addWallForce.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\applyForcesAndMove.m" [79] [80]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][]  
+ []
+
+[81] [82] [83]
+Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[84] [85]
+Overfull \hbox (32.25404pt too wide) in paragraph at lines 291--292
+[][][][][][][][][][][][][][][][][][][][]  
+ []
+
+)
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\checkForIntersection.m" [86])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\compileC.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\initAgents.m" [87]) [88]
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\initEscapeRoutes.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\initialize.m" [89] [90])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\initWallForces.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\loadConfig.m" [91] [92]
+Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[93])
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\plotAgentsPerFloor.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\plotExitedAgents.m")
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\plotFloor.m" [94]
+Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+)
+("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\code_crew_comm
+and\simulate.m" [95] [96]) [97] [98]
 ("C:\Users\Raphael Brechbühler\Documents\GitHub\ship-evacuation\doc\latex\repo
 rt_ship_evacuation.aux") ) 
 Here is how much of TeX's memory you used:
- 7012 strings out of 494045
- 102796 string characters out of 3146016
- 203026 words of memory out of 3000000
- 10167 multiletter control sequences out of 15000+200000
- 16015 words of font info for 61 fonts, out of 3000000 for 9000
+ 8517 strings out of 494045
+ 127403 string characters out of 3146016
+ 266993 words of memory out of 3000000
+ 11545 multiletter control sequences out of 15000+200000
+ 17008 words of font info for 65 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,15n,40p,776b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,52p,776b,2062s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report_ship_evacuation.pdf (27 pages, 4973133 bytes).
+7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on report_ship_evacuation.pdf (98 pages, 5232991 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
+ 479 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
