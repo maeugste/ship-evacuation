@@ -110,7 +110,7 @@ In a future work one could merge our modifications to get an even safer evacuati
 
 
 \section{Individual contributions}
-The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implenting the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification. A more detailled breakdown can be seen by looking at the GitHub timeline of our project.
+The whole project was completed as a team. For sure we took into consideration all the personal backgrounds and  knowledge. That is the reason why Raphael and Manuela focused on implementing the computer code. Whereas Andreas and Fabian concentrated on providing background information, compared the results with the reality and doing its verification. A more detailed breakdown can be seen by looking at the GitHub time line of our project.
 
 
 
@@ -121,14 +121,14 @@ The whole project was completed as a team. For sure we took into consideration a
 \subsection{Introduction}
 The evacuation of a passenger liner due to fire, sinking or other issues leads to several problems. A large amount of passengers try to safe their lives and get to a rescue boat. Narrow and branched floors, smoke, inflowing water, the absence of illumination, rude passengers and so forth can make the evacuation difficult and reduce the number of survivors.
 There are a lot of norms how to minimize the harm of such an evacuation. For example there are rules on the number of rescue boats dependent on the amount of passengers \cite{SOLAS}. With dry runs the staff is prepared for the case of emergency et cetera. In real life ship corridor reproductions, the behavior of distressed people is studied.
-Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a computer based evacuation and pedestrian dynamics model that is capable of simulating individual people, behaviour and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat, toxic gases and angle of heel” \cite{EXODUS}.
+Another approach is to model such ship evacuations numerically on the computer. As an example the software maritimeEXODUS by a development team from the University of Greenwich is a computer based evacuation and pedestrian dynamics model that is capable of simulating individual people, behavior and vessel details. The model includes aspects of people-people, people-structure and people-environment interaction. It is capable of simulating thousands of people in very large ship geometries and can incorporate interaction with fire hazard data such as smoke, heat, toxic gases and angle of heel” \cite{EXODUS}.
 Our approach is similarly to model a passenger ship with a common geometrical outline and ground view. In an optimization process we will thereafter look for an ideal ground view, rescue boat distribution and their size to minimize the time needed for evacuation. Finally we will make a statement on possible improvements.
 \subsection{Motivation}
-Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements \cite{concordia}. Certainly we know that this science is very advanced and practised since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
+Even though modern ocean liners are considered to be safe, the latest occasions attested that there is still potential for evacuation and safety improvements \cite{concordia}. Certainly we know that this science is very advanced and practiced since the sinking of the Titanic. Nevertheless knowing that there are still bottlenecks on the ships we are very motivated to detect and eliminate them with our mathematical models.
 
 
 \subsection{Fundamental Questions}
-To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localised these places we are interested in the answers of the following questions:\\\\
+To find these bottlenecks we run a mathematical model of a ship structure  with several decks and its passengers \cite{shipdecks}. After we localized these places we are interested in the answers of the following questions:\\\\
 
 \newpage
 How much time can be saved by varying the dependent variables mentioned below:
@@ -141,7 +141,7 @@ What is the influence of the rescue boats?
 \item Are small or bigger boats better?
 \item Where do they have to be positioned?
 \end{itemize}
-We analyse the difference between uncontrolled and controlled passenger flow:
+We analyze the difference between uncontrolled and controlled passenger flow:
 \begin{itemize}
 \item Is the crew able to prevent chaos in the evacuation process?
 \item What is the best way to lead the passengers out of the ship?
@@ -153,7 +153,7 @@ Before making computer simulations we discussed, what we expect as results out o
 \begin{itemize}
 \item Even though modern ships are quite optimized in regard to evacuation time, they are always a compromise between safety and luxury. Therefore we are convinced to find a superior adjustment of the decks geometries to increase the survival rate.
 \item Since the rescue boats can not be averaged but are rather concentrated over one or two decks, we consider the staircases as the bottlenecks.
-\item In alinging this variables we are persuaded of a reduction of the overall evacuation time.
+\item In aligning this variables we are persuaded of a reduction of the overall evacuation time.
 \item We suppose that smaller and evenly spread rescue boats combined with a higher quantity will scale the evacuation time down. Certainly there is going to be an optimum in size which we are willing to find.
 \item By controlling the rescue we assume to detect a huge decrease in evacuation time. Further we have the hypothesis that disorder can be minimized. The crew who is familiar with the decks and the emergency exits is able to guide the passengers in minimum time to the rescue boats.
 \item There are many parameters we do not model in our simulation. For example fire and smoke, the tilt of the ship or handicapped and petrified passengers are disregarded. By leaving out this details we get a very simplified model. However, by starting the optimization process by data of a nowadays passenger liner we hope to see some real evacuation dynamics in this system and therefore make conclusion on the fundamental questions.
@@ -228,7 +228,7 @@ Again with the forward Euler scheme positions are calculated that were reached i
 
 This subsection is intended to illustrate the modifications in the code. We explain the difference between our model and the one used in \cite{Building} and the reason why a modification was necessary. Further we define the assumptions we made to minimize the modifications. Finally we specify the modifications and where they take place. 
 \\
-Those parts are however not essential for the results of our research. They are ment to be an assistance for continuative projects.
+Those parts are however not essential for the results of our research. They are meant to be an assistance for following projects.
 \subsubsection{Exits}
 \textbf{Reason:}
 \newline
@@ -255,13 +255,13 @@ Because of this modification it is not necessary to loop twice over all floors. 
 \item If the agent reaches a staircase and therefore changes the floor 1 is stored in the logical array \textit{floorchange}
 \item otherwise a 0 is stored
 \end{itemize}
-The assumption is also a very helpfull simplification for the pictures since we do not have to mess with the problem of stairs overlapping.
+The assumption is also a very helpful simplification for the pictures since we do not have to mess with the problem of stairs overlapping.
 
 
 \subsubsection{Different exits}
 \textbf{Reason:}
 \newline
-In our model the exits are the rescueboats, which can only hold a limited number of agents. Therefore we had to find a way how to differ the exits from each other and to assign a specific number to every exit. This number defines how many agents can stay on that rescueboat.
+In our model the exits are the rescue boats, which can only hold a limited number of agents. Therefore we had to find a way how to differ the exits from each other and to assign a specific number to every exit. This number defines how many agents can stay on that rescueboat.
 \newline
 \textbf{Function:}
 \newline
@@ -275,7 +275,7 @@ In our model the exits are the rescueboats, which can only hold a limited number
 \newline
 \textbf{Modifications:}
 \newline 
-Some changes in the decoding of the pictures were nessecary. The aim was to change as little as possible to the original code. It was clear that we are going to need as many different colors as we have different exits, to be able to distinguish them during the simulation.
+Some changes in the decoding of the pictures were necessary. The aim was to change as little as possible to the original code. It was clear that we are going to need as many different colors as we have different exits, to be able to distinguish them during the simulation.
 \\
 We define every pixel which has red to value=0, blue value=0 and green value unequal to zero a "exit-pixel". Now we can specify a lot of different colored exits by using green values between 256 and 256-\textit{exit\underline{ }count}.
 \newline
@@ -411,7 +411,7 @@ data.floor(data.floor\underline{ }exit).img\underline{ }exit = data.floor(data.f
 \subsection{Crew command simulation}
 \textbf{Reason:}
 \newline 
-In reality an evacuation is coordinated. Loudspeaker announcements and crew members lead the people to the exit floor. In some cases there are even assembly points on the deck where people meet. Afterwards they go with crew members to the rescue boats.
+In reality an evacuation is coordinated. Loudspeaker announcements and crew members lead the people to the exit floor. In some cases there are even assembly points on the deck where people meet. Afterward they go with crew members to the rescue boats.
 In our first simulations we saw, that the last passengers escaping the ship have to walk all the way along the ship to get into a rescue boat in the middle of the deck. Those boats are the only ones that are not fully loaded at this time. To counteract, we tried to implement somehow the interaction of the passengers and the crew members. 
 \newline
 \textbf{Assumption:}
@@ -420,7 +420,7 @@ In order not to change to much the structure of our standard evacuation code, we
  \newline
 \textbf{Function:}
 \newline 
-The whole basic code has been copied and ajusted in several positions, mainly in loadConfig.m and applyForcesAndMove.m.
+The whole basic code has been copied and adjusted in several positions, mainly in loadConfig.m and applyForcesAndMove.m.
 
 
 
@@ -487,7 +487,7 @@ In the basic code there was a graphical output into eps-formated files possible 
 \subsection{System output}
 \textbf{Reason:}
 \newline
-Storing the simulation output is important to be able to analyse and optimize the system. The output of the basic code was just a plot with agents left the building over time and the above mentioned graphical output of the floor plans over time. We extended the output and created a dump struct where all the important variables are listed over time. That struct is the system output at simulation end and it can be used in a postprocessing part to generate meaningful graphs and data.
+Storing the simulation output is important to be able to analyze and optimize the system. The output of the basic code was just a plot with agents left the building over time and the above mentioned graphical output of the floor plans over time. We extended the output and created a dump struct where all the important variables are listed over time. That struct is the system output at simulation end and it can be used in a postprocessing part to generate meaningful graphs and data.
 \newline
 \textbf{Function:}
 \newline
@@ -570,7 +570,7 @@ Storing the simulation output is important to be able to analyse and optimize th
 \subsection{Postprocessing}
 \textbf{Reason:}
 \newline
-To analyse the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic $t_{10}$, $t_{50}$, $t_{90}$ and $t_{95}$ times.
+To analyze the gathered data in a systematic way and to create consistent plots we created a postprocessing file. The output file can be loaded in MATLAB using the load command and is thereafter automatically evaluated. Plots with agents per floor over time, left space in rescue boats over time and agents that left the ship over time are created with proper axis label and so on. Additionally there is an output in the MATLAB command window with timestep, number of steps, total simulation time, agents on ship on start, agents on ship on simulation end, agents deleted due to Not-a-Number-positions and the characteristic $t_{10}$, $t_{50}$, $t_{90}$ and $t_{95}$ times.
 \newline
 \textbf{Function:}
 \newline
@@ -590,7 +590,7 @@ In the annex a typical simulation input of the config file and some explanations
 
 \subsection{Ship Decks}
 
-The Costa Concordia has 14 decks which are all different from each other. They are connected by stairs and elevators in different configurations and they fulfilll different purposes. There are decks for entertainment, eating, shopping, sports and so on.
+The Costa Concordia has 14 decks which are all different from each other. They are connected by stairs and elevators in different configurations and they fulfil different purposes. There are decks for entertainment, eating, shopping, sports and so on.
 Due to the big differences of each deck, it is enormous time consuming to implement all these decks with all details in a model. So it is necessary to simplify the decks in a reasonable manner.
 Further the picture source is not perfect in size and data type so there is a manual conversion needed.
 In this chapter it is shown what assumptions were made and with which conversion techniques the decks were implemented into the model.
@@ -599,7 +599,7 @@ In this chapter it is shown what assumptions were made and with which conversion
 First of all the decks have to match each other in pixel size and position to allow a flawless connection of the decks. So the size of some decks has to be adjusted and the stair overlay has to be matched as good as possible.
 Secondly doors, numbers, names and symbols are removed to have one connected surface without unreal obstacles.
 \newline
-Now that the surfaces are clean and connected, the colours have to be replaced by predefined colours of the code (purple for spawn of agents, black for walls, red for upstairs, blue for downstairs and different green type for each rescue boat).
+Now that the surfaces are clean and connected, the colors have to be replaced by predefined colors of the code (purple for spawn of agents, black for walls, red for upstairs, blue for downstairs and different green type for each rescue boat).
 \newline
 In figures \ref{Deck-stairs} and \ref{Deck-elevator} a small portion of a deck with stairs, rooms, doors and elevators is shown before and after conversion. In the converted picture is a blue block included for the stairs, which conversion will just be explained in the next part.
 
@@ -623,11 +623,11 @@ There are special additional floors to overcome the mentioned problem in the wor
 \newline
 While the agents on the ship march only in the direction of the rescue floor the connection can be simplified. So there is a new technique used to get rid of these additional floors.
 \newline
-In figure \ref{Decktwostairs} a spiralling stairs connection between floor 01 and floor 02 is shown as example. The arrows in light blue are used to clarify the technique.
+In figure \ref{Decktwostairs} a spiraling stairs connection between floor 01 and floor 02 is shown as example. The arrows in light blue are used to clarify the technique.
 \newline
 The agents arrive from the left on floor 11 and go into the direction of the arrow until they reach the blue box. There they are skipped down on  the floor 10 and try to go to the blue box again. So they have to go around to be skipped down again on floor 09 and go around in the other direction. That continues until they reach floor 04 which is the floor with the rescue boats.
 
-With that technique no additional floors are needed and we get very close to the real spiralling stairs. For the ship in that project this is sufficient, because the modelling fault will be in a lower degree than the one of other assumptions.
+With that technique no additional floors are needed and we get very close to the real spiraling stairs. For the ship in that project this is sufficient, because the modeling fault will be in a lower degree than the one of other assumptions.
 
 \begin{figure}[H]
 \centering
@@ -639,7 +639,7 @@ With that technique no additional floors are needed and we get very close to the
 \end{figure}
 
 \subsubsection{Similarities and reduction}
-The most important floor for the simulation is of course floor 04 because it holds all the rescue boats as seen in figure \ref{Decksconverted}. There all agents have to pass and it is reasonable to have it very detailed. Floor 05 and 03 are the ones just above and beyond and will also have a non neglectable influence on the agent’s movement.
+The most important floor for the simulation is of course floor 04 because it holds all the rescue boats as seen in figure \ref{Decksconverted}. There all agents have to pass and it is reasonable to have it very detailed. Floor 05 and 03 are the ones just above and beyond and will also have a non negligible influence on the agent’s movement.
 \newline
 The further we move the less important the deck configuration gets, because it is assumed that the stairs will be the bottlenecks. As long as the stair setup corresponds good to reality, the further decks can differ more.
 So we decided to convert deck 02, 03, 04 and 05 in detail and make a copy with adjusted stairs for each other floor. Floor 02 is used for the copy because it gets the closest to floor 01, 06 and 07 and is by that still a good approximation.
@@ -669,7 +669,7 @@ Floor 08 until 14 differ more from floor 02 but as long as they are far away fro
 \section{Results and Discussion}
 
 \subsection{Simulation issues}
-Some agents always stuck in the walls near the stairways. Those agents did not reach the exits. This is why we could not get a $t_{100}$ time but just saved about 98\% of all passengers. The frequency of this issue was especially high in small areas and with a high total passenger amount. However, there was a trade off between realistic clogging in stairways and good ratio of rescued people out of all passengers. We decided not to decrease the number of passengers or expand the stairs because we did not want to eliminate the realistic clogging behaviour which is important for the simulation.
+Some agents always stuck in the walls near the stairways. Those agents did not reach the exits. This is why we could not get a $t_{100}$ time but just saved about 98\% of all passengers. The frequency of this issue was especially high in small areas and with a high total passenger amount. However, there was a trade off between realistic clogging in stairways and good ratio of rescued people out of all passengers. We decided not to decrease the number of passengers or expand the stairs because we did not want to eliminate the realistic clogging behavior which is important for the simulation.
 
 \subsection{Simulation Results}
 \subsubsection{Standard ship}
@@ -729,7 +729,7 @@ evacuation time & 16s &67s & 145s & 182s \\ \hline \hline
 \end{figure}
  
 \subsubsection{Modified rescueboat size}
-As we could see in the simulations with the standard ship, the rescueboats which are nearest to the stairs are filled first. This behavior is very intuitive. As soon as the nearest lifeboats are full, the agents continue to fill the other lifeboats. 
+As we could see in the simulations with the standard ship, the rescue boats which are nearest to the stairs are filled first. This behavior is very intuitive. As soon as the nearest lifeboats are full, the agents continue to fill the other lifeboats. 
 The greatest extension of the evacuation time occurs as follows:
 Towards the end of the simulation, not all lifeboats are still open. Therefore leftover agents, which walked in the direction of a lifeboat that closed in the meantime, have to cross a big distance to reach a lifeboat with free space.\newline
 We tried to avoid this delay by increasing the capacity of lifeboats near the stairs and removed some, which are the farthest away for the agents left over towards the end of the evacuation.
@@ -762,7 +762,7 @@ evacuation time & 17s &70s & 154s & 203s \\ \hline \hline
 
 \subsubsection{Crew command}
 
-As already mentioned in the implementation part, we changed our code in order to simulate staff controlling the rescue situation. The results of that extention can be seen below. 
+As already mentioned in the implementation part, we changed our code in order to simulate staff controlling the rescue situation. The results of that extension can be seen below. 
 
 
 \begin{table}[H]
@@ -793,7 +793,7 @@ evacuation time & 20s &78s & 162s & 219s \\ \hline \hline
 
 \subsection{Comparison}
 \subsubsection{Standard - Modified room disposition}
-The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by 42 seconds. Further 50\% of all agents entered the exits approximately 2 seconds earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same.
+The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by 42 seconds. Further 50\% of all agents entered the exits approximately 2 seconds earlier compared to the standard model. In contrast to that the rescueboat capacity utilization remains basically the same.
 \subsubsection{Standard - Modified rescueboat size}
 
 As the results above show, there is no significant acceleration in the first part of the evacuation achieved by changing the distribution of the lifeboats .  
@@ -801,21 +801,21 @@ But, there is clearly a difference in the second half of the evacuation. The las
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
 
 \subsubsection{Standard - Crew command}
-The results of the crew command extention are rather disappointing. On the one hand it was clear, that the first part of the simulation would become slower because the agents do not use the nearest boat. But on the other hand it was mentioned that the last part of the simulation has a significant speed up what is not the case. By looking at the video output the reason can be seen: The opening of the rescue boats near the stairs is useless at the point when only a few passengers are left because then they are already on the exit floor and walked towards the middle of the ship.\\
+The results of the crew command extension are rather disappointing. On the one hand it was clear, that the first part of the simulation would become slower because the agents do not use the nearest boat. But on the other hand it was mentioned that the last part of the simulation has a significant speed up what is not the case. By looking at the video output the reason can be seen: The opening of the rescue boats near the stairs is useless at the point when only a few passengers are left because then they are already on the exit floor and walked towards the middle of the ship.\\
 However, the idea has not to be thrown away. An implementation with a continuous opening of the next outer boat when the midmost ones are filled would eliminate our problem and a faster total evacuation time could be reached.
 
 \subsection{General discussion}
 
-During our project we revealed a lot of adjustments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
+During our project we revealed a lot of adjustments which could make cruise ships safer. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
 
 
 \section{Outlook}
-During our work, we found a lot of possibilites to improve the model. The target of an ongoing project could be to make the model more realistic. There are a lot of possibilites to achieve this goal.
+During our work, we found a lot of possibilities to improve the model. The target of an ongoing project could be to make the model more realistic. There are a lot of possibilities to achieve this goal.
 \newline
 Some suggestions:
 \begin{itemize}
-\item To take into account that not all people automatically know where exactly the nearest exit is, the initialisation of the escape routes should be modified.
-\item In our model the agents are evenly distributed over the floors and decks at the beginning of the simulation. This is however a very unrealistic scenario. In reality the agents will be uneavenly spread. The evacuation time would depend very much on the form of this distribution.
+\item To take into account that not all people automatically know where exactly the nearest exit is, the initialization of the escape routes should be modified.
+\item In our model the agents are evenly distributed over the floors and decks at the beginning of the simulation. This is however a very unrealistic scenario. In reality the agents will be unevenly spread. The evacuation time would depend very much on the form of this distribution.
 \item Different scenarios like night, dinner-time etc. that would change the distribution of the agents significantly could be compared.
 \item In reality there are a lot of effects that could occur like fire, tilt of the ship, flooded areas, power failure, mass panic etc.
 \end{itemize}
@@ -823,7 +823,7 @@ There are a lot of other interesting effects that could be looked at as well.
 \\
 Some ideas:
 \begin{itemize}
-\item In the ideal case, the evacuations on a ship are planned well. A good idea would be to define specific control points at which agents gahter first. From those points the agents would be led in small groups to the rescueboats by a crew member. It would be interesting to analyse the effect of such a efficient control.
+\item In the ideal case, the evacuations on a ship are planned well. A good idea would be to define specific control points at which agents gather first. From those points the agents would be led in small groups to the rescue boats by a crew member. It would be interesting to analyze the effect of such a efficient control.
 \item The optimal combination of the different modifications we analyzed in this project could be found and therefore a minimal evacuation time.
 \end{itemize}
 For sure further interesting outcomes could be made by simply merging our results, means for example varying rescueboat size and geometries.
