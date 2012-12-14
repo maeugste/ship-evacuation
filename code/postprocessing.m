@@ -67,14 +67,14 @@ if t90~=0
     t90=t90+dt;
 end
 
-t99=0;
+t95=0;
 for i=1:steps
-    if agents_left(i)<agents_start*0.99
-        t99=t99+dt;
+    if agents_left(i)<agents_start*0.95
+        t95=t95+dt;
     end
 end
-if t99~=0
-    t99=t99+dt;
+if t95~=0
+    t95=t95+dt;
 end
 
 t100=0;
@@ -170,7 +170,7 @@ fprintf('Agents deleted due to NaN-positions: %i\n', deleted_agents)
 fprintf('t_10: %f\n', t10)
 fprintf('t_50: %f\n', t50)
 fprintf('t_90: %f\n', t90)
-fprintf('t_99: %f\n', t99)
+fprintf('t_95: %f\n', t95)
 fprintf('t_100: %f\n', t100)
 
 
