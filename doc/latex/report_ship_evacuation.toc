@@ -26,18 +26,18 @@
 \contentsline {subsection}{\numberline {6.1}Simulation issues}{22}
 \contentsline {subsection}{\numberline {6.2}Simulation Results}{22}
 \contentsline {subsubsection}{\numberline {6.2.1}Standard ship}{22}
-\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{22}
+\contentsline {subsubsection}{\numberline {6.2.2}Modified room disposition}{23}
 \contentsline {subsubsection}{\numberline {6.2.3}Modified rescueboat size}{24}
-\contentsline {subsubsection}{\numberline {6.2.4}Crew command}{24}
-\contentsline {subsection}{\numberline {6.3}Comparison}{25}
-\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{25}
-\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{25}
+\contentsline {subsubsection}{\numberline {6.2.4}Crew command}{25}
+\contentsline {subsection}{\numberline {6.3}Comparison}{26}
+\contentsline {subsubsection}{\numberline {6.3.1}Standard - Modified room disposition}{26}
+\contentsline {subsubsection}{\numberline {6.3.2}Standard - Modified rescueboat size}{26}
 \contentsline {subsubsection}{\numberline {6.3.3}Standard - Crew command}{26}
-\contentsline {subsection}{\numberline {6.4}General discussion}{26}
-\contentsline {section}{\numberline {7}Outlook}{26}
-\contentsline {section}{\numberline {8}References}{27}
+\contentsline {subsection}{\numberline {6.4}General discussion}{27}
+\contentsline {section}{\numberline {7}Outlook}{27}
+\contentsline {section}{\numberline {8}References}{28}
 \contentsline {section}{\numberline {9}Appendix}{28}
 \contentsline {subsection}{\numberline {9.1}Code}{28}
 \contentsline {subsubsection}{\numberline {9.1.1}\textit {standard} code}{28}
 \contentsline {subsubsection}{\numberline {9.1.2}\textit {C} code}{53}
-\contentsline {subsubsection}{\numberline {9.1.3}\textit {crew command} code}{75}
+\contentsline {subsubsection}{\numberline {9.1.3}\textit {crew command} code}{76}
