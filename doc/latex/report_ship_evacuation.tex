@@ -416,7 +416,7 @@ In order not to change to much the structure of our standard evacuation code, we
  \newline
 \textbf{Function:}
 \newline 
-The whole basic code has been copied and ajusted in several 
+The whole basic code has been copied and ajusted in several positions, mainly in loadConfig.m and applyForcesAndMove.m.
 
 
 
@@ -684,17 +684,17 @@ averaged evacuation time & 16s &69s &166s &226s \\ \hline \hline
 
 Further our standard ship simulation showed the following performance:
 
-%\begin{figure}[htbp]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{Standard simulation: Boat capacities during simulation}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{Standard simulation: Number of agents per floor}
-%\end{minipage}}
-%\end{figure}
+\begin{figure}[htbp]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/standard_cap1.pdf}
+\caption{Standard simulation: Boat capacities during first simulation}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/standard_agents1.pdf}
+\caption{Standard simulation: Number of agents per floor in first simulation}
+\end{minipage}}
+\end{figure}
 
 \subsubsection{Modified room disposition}
 As we expected the standard simulation revealed that hold-up problems occur because of the staircases. As the flow everywhere else was quite dynamic we abstained from adjusting the room disposition but instead we inserted an additional staircase. This simulation yielded the following results:
@@ -709,17 +709,17 @@ evacuation time & 16s &67s & 145s & 182s \\ \hline \hline
 \caption{Added stairs simulation: Needed time to evacuate a certain percentage of all agents.}
 \end{table}
 
-%\begin{figure}[H]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{run1-added-stairs-small-rescueboatcapacity.pdf}
-%\caption{Added stairs simulation: Boat capacities during simulation}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{run1-added-stairs-small-agentsperfloor.pdf}
-%\caption{Added stairs simulation: Number of agents per floor}
-%\end{minipage}}
-%\end{figure}
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/added_stairs_cap.pdf}
+\caption{Added stairs simulation: Boat capacities during simulation}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/added_stairs_agents.pdf}
+\caption{Added stairs simulation: Number of agents per floor}
+\end{minipage}}
+\end{figure}
  
 \subsubsection{Modified rescueboat size}
 As we could see in the simulations with the standard ship, the rescueboats which are nearest to the stairs are filled first. This behavior is very intuitive. As soon as the nearest lifeboats are full, the agents continue to fill the other lifeboats. 
@@ -739,17 +739,17 @@ evacuation time & 17s &70s & 154s & 203s \\ \hline \hline
 \end{table}
 
 
-%\begin{figure}[H]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{Varied boatsize simulation: Boat capacities during simulation}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{Varied boatsize simulation: Number of agents per floor}
-%\end{minipage}}
-%\end{figure}
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/vary_cap.pdf}
+\caption{Varied boatsize simulation: Boat capacities during simulation}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/vary_agents.pdf}
+\caption{Varied boatsize simulation: Number of agents per floor}
+\end{minipage}}
+\end{figure}
 
 
 
@@ -761,40 +761,40 @@ evacuation time & 17s &70s & 154s & 203s \\ \hline \hline
 \begin{tabular}
 {|>{\large}m{2cm} |>{\center}b{1.1cm} |>{\center}b{1.1cm}|>{}b{1.1cm}|>{}b{1.1cm}|} \hline \hline
 percentage of agents & 10\% &  50\% & 90\% & 95\% \\ \hline
-evacuation time & XXXs &XXXs & XXXs & XXXs \\ \hline \hline
+evacuation time & 20s &78s & 162s & 219s \\ \hline \hline
 \end{tabular}
-\caption{XXXXXXXXXXXXXXXXX.}
+\caption{Crew command implementation: Needed time to evacuate a certain percentage of all agents.}
 \end{table}
 
 
-%\begin{figure}[H]
-%\centering
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{XXXXXXXXXXXXXXXXXXX}
-%\end{minipage}}
-%{\begin{minipage}[t]{7.4cm}
-%\includegraphics[width=\textwidth]{ente.pdf}
-%\caption{XXXXXXXXXXXXXXXXXXXXXXXXXXXX}
-%\end{minipage}}
-%\end{figure}
+\begin{figure}[H]
+\centering
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/crew_cap.pdf}
+\caption{Crew command simulation: Boat capacities during simulation}
+\end{minipage}}
+{\begin{minipage}[t]{7.4cm}
+\includegraphics[width=\textwidth]{pics/crew_agents.pdf}
+\caption{Crew command simulation: Number of agents per floor}
+\end{minipage}}
+\end{figure}
 
 
 
 
 \subsection{Comparison}
 \subsubsection{Standard - Modified room disposition}
-The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by almost \textcolor{red}{XXXX} seconds. Further 50\% of all agents entered the exits approximately 2 seconds earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same.
+The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by 42 seconds. Further 50\% of all agents entered the exits approximately 2 seconds earlier compared to the stanard model. In contrast to that the rescueboat capacity utilisation remains basically the same.
 \subsubsection{Standard - Modified rescueboat size}
 
 As the results above show, there is no significant acceleration in the first part of the evacuation achieved by changing the distribution of the lifeboats .  
-But, there is clearly a difference in the second half of the evacuation. The last 10\% of agents are evacuated\textcolor{red}{XXXX} seconds faster and the last 1\% even\textcolor{red}{XXXX} seconds faster. 
+But, there is clearly a difference in the second half of the evacuation. The last 5\% of agents are evacuated 23 seconds faster what is a huge speed up.
 This decrease in evacuation time is an effect of the reduced time the last agents need to leave the exit-deck.
 
 \subsubsection{Standard - Crew command}
 \subsection{Discussion}
 
-During our project we revealed a lot of adjusments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboatsize. However we proved that there is a capability to save further time by varying its size and position.
+During our project we revealed a lot of adjusments which could make cruise ships saver. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
 \newline
 \textcolor{red}{crew command discussion}
 
