@@ -6,20 +6,20 @@
 clc
 
 % read in data from output a
-agents_per_floor_1 = a.agents_per_floor_1;
-config_1 = a.config;
-exit_left_1 = a.exit_left;
-simulation_time_real_1 = a.simulation_time;
+agents_per_floor_1 = a.output.agents_per_floor;
+config_1 = a.output.config;
+exit_left_1 = a.output.exit_left;
+simulation_time_real_1 = a.output.simulation_time;
 dt_1 = config_1.dt;
-deleted_agents_1 = a.deleted_agents;
+deleted_agents_1 = a.output.deleted_agents;
 
 % read in data from output b
-agents_per_floor_2 = b.agents_per_floor_2;
-config_2 = b.config;
-exit_left_2 = b.exit_left;
-simulation_time_real_2 = b.simulation_time;
+agents_per_floor_2 = b.output.agents_per_floor;
+config_2 = b.output.config;
+exit_left_2 = b.output.exit_left;
+simulation_time_real_2 = b.output.simulation_time;
 dt_2 = config_2.dt;
-deleted_agents_2 = b.deleted_agents;
+deleted_agents_2 = b.output.deleted_agents;
 
 % get users screen size
 screen_size = get(0, 'ScreenSize');
@@ -32,7 +32,7 @@ agents_on_boat_2 = sum(agents_per_floor_2(:,1:1:length(agents_per_floor_2)));
 
 
 % check if whole simulation was performed
-steps=config.duration_1/dt_1-1;
+steps=a.output.config.duration/dt_1-1;
 for i=1:steps
     if agents_on_boat_1(i)<0
         steps=i-2;
@@ -42,27 +42,25 @@ end
 
 simulation_time_sim = steps*dt_1;
 % create time axis
-if t100~=0
-    time = [0:dt:t100];
-else
-    time = [0:dt:simulation_time_sim];
-end
+
+    time = [0:dt_1:simulation_time_sim];
+
 steps = length(time);
 
 
 % recalculate agents on boat
-agents_on_boat_1 = sum(agents_per_floor_1(:,1:1:steps_1));
+agents_on_boat_1 = sum(agents_per_floor_1(:,1:1:steps));
 agents_start_1 = agents_on_boat_1(1);
 agents_left_1 = agents_start_1-agents_on_boat_1;
-agents_per_floor_1 = agents_per_floor_1(:,1:1:steps_1);
-exit_left_1 = exit_left_1(:,1:1:steps_1);
+agents_per_floor_1 = agents_per_floor_1(:,1:1:steps);
+exit_left_1 = exit_left_1(:,1:1:steps);
 
 
 
 
 agents_on_boat_2 = sum(agents_per_floor_2(:,1:1:steps));
 agents_start_2 = agents_on_boat_2(1);
-agents_left_2 = agents_start-agents_on_boat_2;
+agents_left_2 = agents_start_2-agents_on_boat_2;
 agents_per_floor_2 = agents_per_floor_2(:,1:1:steps);
 exit_left_2 = exit_left_2(:,1:1:steps);
 
