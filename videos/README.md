@@ -1,3 +1,3 @@
 # Videos Folder 
 
-If you produced interesting videos during your simulations please add them here. Remember to compress them before. 
+Videos in higher quality and proper axis label etc are available. Please contact raphabre@student.ethz.ch.

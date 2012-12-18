@@ -1,5 +1,15 @@
 # Data Folder 
 
+## Structure
+Prefixes of folders and their meaning:
+"final_" - final version data, that we used for our documentation, ship length ca 290 meters
+"ship_deck_" - final version deck data, that we used for the simulations of the data given in the "final_" folder.
+
+"first_" - version with too big ship (900 meters instead of feets used :)
+"second_" - version with a lot of colisions, no wall fixes.
+
+
+
 ## How to make a new configuration?
 
 (1) put floor plans in the data folder
