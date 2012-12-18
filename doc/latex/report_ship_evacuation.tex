@@ -792,6 +792,15 @@ evacuation time & 20s &78s & 162s & 219s \\ \hline \hline
 
 
 \subsection{Comparison}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics [width=0.75\textwidth]{pics/left_over_time.pdf}
+\caption{Agents that left the ship are plotted over time. The averaged standard simulation (blue) can be seen as a reference.}
+\label{f:left_over_time}
+\end{figure}
+
 \subsubsection{Standard - Modified room disposition}
 The Analysis of the simulation results showed that there is a huge potential in saving evacuation time. By adding just one additional staircase we were able to reduce the overall evacuation time by 42 seconds. Further 50\% of all agents entered the exits approximately 2 seconds earlier compared to the standard model. In contrast to that the rescueboat capacity utilization remains basically the same.
 \subsubsection{Standard - Modified rescueboat size}
@@ -806,7 +815,7 @@ However, the idea has not to be thrown away. An implementation with a continuous
 
 \subsection{General discussion}
 
-During our project we revealed a lot of adjustments which could make cruise ships safer. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown above. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position.
+During our project we revealed a lot of adjustments which could make cruise ships safer. Definitely we are aware of the simplicity of our model. Nevertheless we achieved to decrease the evacuation time with our improvements as shown impressively in figure \ref{f:left_over_time}. Further we were able to attest that the staircases are the bottlenecks and it is possible to save time by adapting the ship geometry. Due to lack of time and simulation problems we unfortunately did not manage to find the optimal rescueboat size. However we proved that there is a capability to save further time by varying its size and position. On a more concrete level one could merge our approaches, e.g. the version with the added stairs and the variation of lifeboat capacities.
 
 
 \section{Outlook}
@@ -827,10 +836,12 @@ Some ideas:
 \item The optimal combination of the different modifications we analyzed in this project could be found and therefore a minimal evacuation time.
 \end{itemize}
 For sure further interesting outcomes could be made by simply merging our results, means for example varying rescueboat size and geometries.
-\section{References}
 
+\newpage
+\section{References}
 \begin{thebibliography}{9}
-\bibitem{Building} Hardmeier,Jenal,Kueng,Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
+\bibitem{EscapePanic} Helbling, Dirk et al. (2000): Simulating dynamical features of escape panic.
+\bibitem{Building} Hardmeier, Jenal, Kueng, Thaler (2012): Modelling Situations of Evacuation in a Multi-level Building.
 \bibitem{SOLAS} SOLAS (1974): International Convention for the Safety of Life at Sea. \url{http://www.imo.org/about/conventions/listofconventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx}
 \bibitem{ship} SHIP EVACUATION: \url{http://www.shipevacuation.com/}
 \bibitem{shipdecks} CRUISE DECK PLANS PUBLIC SITE: \url{http://www.cruisedeckplans.com/DP/Main/decks.php?ship=Costa Serena}
@@ -838,6 +849,7 @@ For sure further interesting outcomes could be made by simply merging our result
 \bibitem{concordia} Haverie of Costa Concordia (2012): \url{http://de.wikipedia.org/wiki/Costa_Concordia#Havarie_2012}
 	
 \end{thebibliography}
+
 \section{Appendix}
 
 \subsection{Code}

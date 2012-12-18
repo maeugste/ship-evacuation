@@ -1,21 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  14 DEC 2012 23:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.11)  18 DEC 2012 20:50
 entering extended mode
-**C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/report_ship_evacua
-tion.tex
+**C:/Users/Raphael*Brechbühler/ship-evacuation/doc/latex/report_ship_evacuatio
+n.tex
 
-(C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/report_ship_evacuat
-ion.tex
+("C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/report_ship_evacuatio
+n.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
@@ -69,7 +69,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count90
 \lst@gtempboxa=\box26
 \lst@token=\toks16
@@ -83,13 +83,13 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 \lst@lineno=\count95
 \lst@maxwidth=\dimen114
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count96
 \lst@skipnumbers=\count97
 \lst@framebox=\box27
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
@@ -176,7 +176,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
@@ -249,7 +249,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip48
 \backup@length=\skip49
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -268,13 +268,13 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count114
 \calc@Cskip=\skip52
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
 Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -291,7 +291,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
 File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box30
@@ -307,10 +307,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box33
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\caption\caption3.sty
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen130
 \captionmargin@=\dimen131
@@ -323,13 +323,13 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\caption\subcaption.sty
 Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count118
 \c@subtable=\count119
 )
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacuat
-ion.aux)
+("C:\Users\Raphael Brechbühler\ship-evacuation\doc\latex\report_ship_evacuatio
+n.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
@@ -378,7 +378,7 @@ LaTeX Font Info:    ... okay on input line 27.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count120
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\ProgramData\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
 \scratchdimen=\dimen136
@@ -395,12 +395,12 @@ LaTeX Font Info:    ... okay on input line 27.
 \AtBeginShipoutBox=\box35
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\cover.tex
+ ("C:\Users\Raphael Brechbühler\ship-evacuation\doc\latex\cover.tex"
 Package epstopdf Info: Source file: <ETHlogo.eps>
-(epstopdf)                    date: 2012-12-14 23:12:13
+(epstopdf)                    date: 2012-12-17 14:37:05
 (epstopdf)                    size: 179075 bytes
 (epstopdf)             Output file: <ETHlogo-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-12-14 23:12:13
+(epstopdf)                    date: 2012-12-17 14:37:05
 (epstopdf)                    size: 14376 bytes
 (epstopdf)             Command: <epstopdf --outfile=ETHlogo-eps-converted-to.pd
 f ETHlogo.eps>
@@ -424,8 +424,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Fabian/Documents
-/GitHub/ship-evacuation/doc/latex/ETHlogo-eps-converted-to.pdf>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Raphael Brechbü
+hler/ship-evacuation/doc/latex/ETHlogo-eps-converted-to.pdf>]
 Overfull \hbox (5.3226pt too wide) in paragraph at lines 53--80
  [] 
  []
@@ -445,17 +445,12 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 87--88
 Overfull \vbox (51.06302pt too high) has occurred while \output is active []
 
 
-[3 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/declaration
-.jpg>]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacuat
-ion.toc [4])
+[3 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/declaration.jp
+g>]
+("C:\Users\Raphael Brechbühler\ship-evacuation\doc\latex\report_ship_evacuatio
+n.toc" [4])
 \tf@toc=\write3
  [5]
-
-Package natbib Warning: Citation `EscapePanic' on page 6 undefined on input lin
-e 104.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
@@ -502,12 +497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[8] [9]
-
-Package natbib Warning: Citation `EscapePanic' on page 10 undefined on input li
-ne 168.
-
-[10]
+[8] [9] [10]
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
@@ -581,9 +571,9 @@ File: pics/Decktwostairs.pdf Graphic file (type pdf)
 <use pics/Decktwostairs.pdf>
 Package pdftex.def Info: pics/Decktwostairs.pdf used on input line 635.
 (pdftex.def)             Requested size: 105.2751pt x 140.96655pt.
- [19 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/Decksetup
--stairs.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship
--evacuation/doc/latex/pics/deckconversion2.pdf>]
+ [19 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/Decksetup-st
+airs.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacu
+ation/doc/latex/pics/deckconversion2.pdf>]
 Missing character: There is no � in font cmr12!
 Missing character: There is no � in font cmr12!
 Missing character: There is no � in font cmr12!
@@ -600,10 +590,10 @@ File: pics/Decksconverted.pdf Graphic file (type pdf)
 <use pics/Decksconverted.pdf>
 Package pdftex.def Info: pics/Decksconverted.pdf used on input line 657.
 (pdftex.def)             Requested size: 845.15544pt x 597.22978pt.
- [20 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/Decktwost
-airs.pdf>] [21 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics
-/Decks.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship-
-evacuation/doc/latex/pics/Decksconverted.pdf, page is rotated 90 degrees>]
+ [20 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/Decktwostair
+s.pdf>] [21 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/Decks
+.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacuatio
+n/doc/latex/pics/Decksconverted.pdf, page is rotated 90 degrees>]
 Underfull \hbox (badness 10000) in paragraph at lines 676--678
 
  []
@@ -669,9 +659,9 @@ File: pics/added_stairs_agents.pdf Graphic file (type pdf)
 <use pics/added_stairs_agents.pdf>
 Package pdftex.def Info: pics/added_stairs_agents.pdf used on input line 726.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
- [23 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/standard_
-cap1.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship-ev
-acuation/doc/latex/pics/standard_agents1.pdf, page is rotated 90 degrees>]
+ [23 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/standard_cap
+1.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacuati
+on/doc/latex/pics/standard_agents1.pdf, page is rotated 90 degrees>]
 Underfull \hbox (badness 10000) in paragraph at lines 742--742
 []|\OT1/cmr/m/n/12 percentage
  []
@@ -693,10 +683,9 @@ File: pics/vary_agents.pdf Graphic file (type pdf)
 <use pics/vary_agents.pdf>
 Package pdftex.def Info: pics/vary_agents.pdf used on input line 756.
 (pdftex.def)             Requested size: 210.55022pt x 148.843pt.
- [24 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/added_sta
-irs_cap.pdf, page is rotated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship
--evacuation/doc/latex/pics/added_stairs_agents.pdf, page is rotated 90 degrees>
-]
+ [24 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/added_stairs
+_cap.pdf, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacu
+ation/doc/latex/pics/added_stairs_agents.pdf, page is rotated 90 degrees>]
 Underfull \hbox (badness 10000) in paragraph at lines 772--772
 []|\OT1/cmr/m/n/12 percentage
  []
@@ -723,50 +712,57 @@ Underfull \hbox (badness 2293) in paragraph at lines 787--787
 []\OT1/cmr/m/n/10.95 Figure 18: |Crew com-mand sim-u-la-tion:
  []
 
-[25 <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pics/vary_cap.p
-df, page is rotated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship-evacuati
-on/doc/latex/pics/vary_agents.pdf, page is rotated 90 degrees>] [26 <C:/Users/F
-abian/Documents/GitHub/ship-evacuation/doc/latex/pics/crew_cap.pdf, page is rot
-ated 90 degrees> <C:/Users/Fabian/Documents/GitHub/ship-evacuation/doc/latex/pi
-cs/crew_agents.pdf, page is rotated 90 degrees>] [27]
-Underfull \hbox (badness 1286) in paragraph at lines 834--835
+[25 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/vary_cap.pdf,
+ page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacuation/doc
+/latex/pics/vary_agents.pdf, page is rotated 90 degrees>]
+<pics/left_over_time.pdf, id=176, 845.1575pt x 597.45204pt>
+File: pics/left_over_time.pdf Graphic file (type pdf)
+
+<use pics/left_over_time.pdf>
+Package pdftex.def Info: pics/left_over_time.pdf used on input line 799.
+(pdftex.def)             Requested size: 322.50346pt x 227.98224pt.
+ [26 <C:/Users/Raphael Brechbühler/ship-evacuation/doc/latex/pics/crew_cap.pdf
+, page is rotated 90 degrees> <C:/Users/Raphael Brechbühler/ship-evacuation/do
+c/latex/pics/crew_agents.pdf, page is rotated 90 degrees> <C:/Users/Raphael Bre
+chbühler/ship-evacuation/doc/latex/pics/left_over_time.pdf, page is rotated 90
+ degrees>] [27] [28]
+Underfull \hbox (badness 1286) in paragraph at lines 845--846
 []\OT1/cmr/m/n/12 SOLAS (1974): In-ter-na-tional Con-ven-tion for the Safety of
  Life at Sea.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
 $\OT1/cmtt/m/n/12 http : / / www . imo . org / about / conventions / listofconv
 entions / pages /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
 $\OT1/cmtt/m/n/12 international-[]convention-[]for-[]the-[]safety-[]of-[]life-[
 ]at-[]sea-[](solas )$
  []
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\addAgentRepulsiveForce.m
-[28] [29] [30])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\addDesiredForce.m
-[31]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\addWallForce.m)
-[32]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\applyForcesAndMove.m
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\addAgentRepulsiveForce.m"
+[29] [30] [31])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\addDesiredForce.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\addWallForce.m" [32])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\applyForcesAndMove.m"
 [33]
 Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][]  
  []
 
-
+[34]
 Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
 [][][][][][][][][][][][][][][]  
  []
 
-[34] [35] [36]
+[35] [36] [37]
 Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][]  
@@ -777,152 +773,144 @@ Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
 [][][][][][][][][][][][][][][][][]  
  []
 
-[37] [38])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\checkForIntersection.m
-[39]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\compileC.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\initAgents.m [40])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\initEscapeRoutes.m
-[41]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\initialize.m
-[42]) [43]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\initWallForces.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\loadConfig.m [44]
+[38] [39])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\checkForIntersection.m")
+[40] ("C:\Users\Raphael Brechbühler\ship-evacuation\code\compileC.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\initAgents.m" [41])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\initEscapeRoutes.m"
+[42]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\initialize.m"
+[43]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\initWallForces.m"
+[44]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\loadConfig.m"
+[45]
 Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[45])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\plotAgentsPerFloor.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\plotExitedAgents.m
-[46]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\plotFloor.m
+[46]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\plotAgentsPerFloor.m
+") ("C:\Users\Raphael Brechbühler\ship-evacuation\code\plotExitedAgents.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\plotFloor.m" [47]
 Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\postprocessing.m
-[47] [48] [49] [50])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\simulate.m [51] [52])
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\postprocessing.m"
+[48] [49] [50] [51])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\simulate.m" [52] [53])
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(C:\ProgramData\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\createRangeTree.c
-[53]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\fastSweeping.c
-[54] [55] [56] [57] [58] [59])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\getNormalizedGradient.c
-[60] [61] [62]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\lerp2.c
-[63]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\rangeQuery.c
-[64]) (C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree.h [65])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_build.h)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_build.c [66]
-[67] [68] [69] [70])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_free.c)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_query.h)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_query.c [71]
-[72] [73] [74])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code\tree_types.h [75])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\addAgentRep
-ulsiveForce.m [76] [77] [78])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\addDesiredF
-orce.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\addWallForc
-e.m [79])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\applyForces
-AndMove.m [80]
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\createRangeTree.c"
+[54]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\fastSweeping.c"
+[55] [56] [57] [58] [59] [60])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\getNormalizedGradient.c"
+[61] [62] [63]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\lerp2.c"
+[64]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\rangeQuery.c"
+[65]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree.h")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_build.h" [66])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_build.c" [67]
+[68] [69] [70]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_free.
+c" [71]) ("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_query.h")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_query.c" [72]
+[73] [74] [75])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code\tree_types.h" [76])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\addAgentRepul
+siveForce.m" [77] [78] [79])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\addDesiredFor
+ce.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\addWallForce.
+m" [80])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\applyForcesAn
+dMove.m" [81]
 Overfull \hbox (60.60396pt too wide) in paragraph at lines 61--62
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][]  
  []
 
-[81]
+[82]
 Overfull \hbox (23.59401pt too wide) in paragraph at lines 77--78
 [][][][][][][][][][][][][][][]  
  []
 
-[82] [83] [84]
+[83] [84]
 Overfull \hbox (60.60396pt too wide) in paragraph at lines 206--207
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][]  
  []
 
-
+[85]
 Overfull \hbox (23.59401pt too wide) in paragraph at lines 222--223
 [][][][][][][][][][][][][][][][][]  
  []
 
-[85] [86]
+[86]
 Overfull \hbox (32.25404pt too wide) in paragraph at lines 291--292
 [][][][][][][][][][][][][][][][][][][][]  
  []
 
-)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\checkForInt
-ersection.m [87])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\compileC.m)
-
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\initAgents.
-m [88])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\initEscapeR
-outes.m [89])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\initialize.
-m [90]) [91]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\initWallFor
-ces.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\loadConfig.
-m [92]
+[87])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\checkForInter
+section.m" [88])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\compileC.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\initAgents.m"
+[89])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\initEscapeRou
+tes.m" [90])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\initialize.m"
+[91])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\initWallForce
+s.m" [92])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\loadConfig.m"
+[93]
 Overfull \hbox (6.58406pt too wide) in paragraph at lines 71--73
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[93])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\plotAgentsP
-erFloor.m [94])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\plotExitedA
-gents.m)
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\plotFloor.m
-
+[94])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\plotAgentsPer
+Floor.m" [95])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\plotExitedAge
+nts.m")
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\plotFloor.m"
 Overfull \hbox (3.90413pt too wide) in paragraph at lines 6--8
 [][][][][][][][][][][][][][][][][][][]  
  []
 
-[95])
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\code_crew_command\simulate.m
-[96] [97])
-
-Package natbib Warning: There were undefined citations.
-
-[98]
-(C:\Users\Fabian\Documents\GitHub\ship-evacuation\doc\latex\report_ship_evacuat
-ion.aux) ) 
+[96])
+("C:\Users\Raphael Brechbühler\ship-evacuation\code_crew_command\simulate.m"
+[97] [98]) [99]
+("C:\Users\Raphael Brechbühler\ship-evacuation\doc\latex\report_ship_evacuatio
+n.aux") ) 
 Here is how much of TeX's memory you used:
- 8512 strings out of 493921
- 126221 string characters out of 3144873
- 276150 words of memory out of 3000000
- 11541 multiletter control sequences out of 15000+200000
+ 8520 strings out of 494045
+ 125819 string characters out of 3146016
+ 272805 words of memory out of 3000000
+ 11547 multiletter control sequences out of 15000+200000
  17008 words of font info for 65 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 42i,15n,52p,762b,2062s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report_ship_evacuation.pdf (98 pages, 5233174 bytes).
+ 715 hyphenation exceptions out of 8191
+ 42i,15n,52p,868b,2062s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on report_ship_evacuation.pdf (99 pages, 5340477 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
+ 489 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
